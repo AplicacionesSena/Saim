@@ -1,0 +1,108 @@
+<%# add navigation links to this file %>
+<div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="colort" href="index.html">Bienvenido Admin</p> 
+            </div>
+  <div class="brand"><div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a></div> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <%= image_tag("find_user.png") %>
+					</li>
+				
+					
+                    <li>
+                        <a class="active-menu"  href="perfil.html"><i class="glyphicon glyphicon-user"></i> Perfil</a>
+                    </li>                  
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-inbox"></i> Gestion<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/tipo_elems">Elementos</a>
+                            </li>
+                            <li>
+                                <a href="/tipo_docs">Cuentadantes</a>
+                            </li>
+                            <li>
+                                <a href="#">Planos</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-transfer"></i> Movimientos<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Traspasos</a>
+                            </li>
+                            <li>
+                                <a href="#">Reintegros</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-cog"></i> Seguridad<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Usuarios</a>
+                            </li>
+                            <li>
+                                <a href="#">Bloqueos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="glyphicon glyphicon-globe"></i> Ubicacion</a>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="glyphicon glyphicon-stats"></i> Estadisticas</a>
+                    </li>                  
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-calendar"></i> Cronogramas</a>
+                      </li>  
+                    <li>
+                        <a  href="#"><i class="glyphicon glyphicon-list-alt"></i> Trazabilidades</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>Admin Dashboard</h2>   
+                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                        <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+                        <br>
+                        <br>
+                        <hr>
+                        <%= yield %>
+                    </div>
+                </div>
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="jquery.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="raphael-2.1.0.min.js"></script>
+    <script src="morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="custom.js"></script>

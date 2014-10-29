@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipo_elem.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipo_elem.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_elem_path(@tipo_elem) %> |
+<%= link_to 'Back', tipo_elems_path %>

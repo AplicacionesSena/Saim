@@ -1,0 +1,91 @@
+ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}			
+			/*ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+				width: 260px;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			*/
+.mov{
+	margin-left: 204px;
+	margin-top: -100px;
+}
+.tams{
+	width: 160px;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+.colort{
+	color: white;
+background: #238276;
+width: 260px;
+text-align: center;
+height: 60px;
+font-size: 30px;
+font-weight: 700;
+}
+.colort:hover{
+	color: white;
+	background: #238276;
+	width: 260px;
+	text-align: center;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 700;
+}
+.brand{
+	color: white;
+font-size: 16px;
+background: #238276;
+width: 1037px;
+margin-left: 250px;
+height: 70px;
+text-align: left;
+}
+.header{
+	margin-left: 730px;
+	position: absolute;
+	margin-top: 30px;
+}

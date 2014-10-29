@@ -1,0 +1,2 @@
+module TipoDocsHelper
+end
