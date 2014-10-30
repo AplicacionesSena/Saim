@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :elementos
+
+  resources :cuentadantes
+
+  get 'pagina/saim'
+
   resources :tipo_elems
 
   resources :tipo_docs
@@ -7,7 +13,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'tipo_docs#index'
+  root 'pagina#saim'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

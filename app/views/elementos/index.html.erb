@@ -1,0 +1,43 @@
+<h1>Listing elementos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Tipo elem</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Modelo</th>
+      <th>Serial</th>
+      <th>Fecha adquisicion</th>
+      <th>Valor</th>
+      <th>Estado</th>
+      <th>Cuentadante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elementos.each do |elemento| %>
+      <tr>
+        <td><%= elemento.placa %></td>
+        <td><%= elemento.tipo_elem %></td>
+        <td><%= elemento.nombre %></td>
+        <td><%= elemento.descripcion %></td>
+        <td><%= elemento.modelo %></td>
+        <td><%= elemento.serial %></td>
+        <td><%= elemento.fecha_adquisicion %></td>
+        <td><%= elemento.valor %></td>
+        <td><%= elemento.estado %></td>
+        <td><%= elemento.cuentadante %></td>
+        <td><%= link_to 'Show', elemento %></td>
+        <td><%= link_to 'Edit', edit_elemento_path(elemento) %></td>
+        <td><%= link_to 'Destroy', elemento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Elemento', new_elemento_path %>

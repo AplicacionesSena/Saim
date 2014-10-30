@@ -19,3 +19,4 @@
 //= require bootstrap
 //= require jquery.metisMenu
 //= require morris/morris
+//= require script

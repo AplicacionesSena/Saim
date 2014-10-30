@@ -1,0 +1,35 @@
+<h1>Listing cuentadantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo doc</th>
+      <th>Documento</th>
+      <th>Cantidad elementos</th>
+      <th>Nombre elementos</th>
+      <th>Valor elementos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuentadantes.each do |cuentadante| %>
+      <tr>
+        <td><%= cuentadante.nombre %></td>
+        <td><%= cuentadante.tipo_doc %></td>
+        <td><%= cuentadante.documento %></td>
+        <td><%= cuentadante.cantidad_elementos %></td>
+        <td><%= cuentadante.nombre_elementos %></td>
+        <td><%= cuentadante.valor_elementos %></td>
+        <td><%= link_to 'Show', cuentadante %></td>
+        <td><%= link_to 'Edit', edit_cuentadante_path(cuentadante) %></td>
+        <td><%= link_to 'Destroy', cuentadante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuentadante', new_cuentadante_path %>

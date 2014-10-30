@@ -18,7 +18,7 @@ body {
 
  #wrapper {
     width: 100%;
-    background:#202020;
+    background:#fc7323;
 }
 
 #page-wrapper {
@@ -28,11 +28,13 @@ body {
    
 }
 #page-inner {
-    width:100%;
-    margin:10px 20px 10px 0px;
+    width:112%;
+    margin:20px 20px 10px 10px;
     background-color:#fff!important;
     padding:10px;
     min-height:1200px;
+    margin-left: -140px;
+    border-radius: 10px;
 }
 
 .text-center {
@@ -235,10 +237,13 @@ font-weight: 700;
 .nav-second-level li,
 .nav-third-level li {
     border-bottom: none !important;
+
 }
 
 .nav-second-level li a {
     padding-left: 60px;
+    border-radius: 10px;
+    
 }
 
 .nav-third-level li a {
@@ -262,7 +267,19 @@ font-weight: 700;
 	color:#fff;
 	background:#238276;
 	text-shadow:none;
-	
+	border-radius: 10px;
+    width:78px;
+    height: 78px;
+    margin-left: 10px;
+}
+.tam1 .nav-second-level li a {
+    color:black;
+    background:#1D675D;
+    text-shadow:none;
+    border-radius: 10px;
+    width:78px;
+    height: 78px;
+    margin-left: 10px;
 }
 /*_--------------------------------------------------------------------------------------------------------------------------_*/
 
@@ -277,13 +294,11 @@ font-weight: 700;
 }
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
-	
-	background:#0A0A0A;
+    background:#28998A;
 	outline:0;
 }
 
-.nav-second-level > li > a:before ,
-.nav-third-level > li > a:before {
+.nav-second-level > li > a:before{
 	display:block;
 	position:absolute;
 	left:20px;
@@ -292,8 +307,7 @@ font-weight: 700;
 	background:#ff0000;
 	top:20px;
 }
-.nav-second-level > li > a:after,
-.nav-third-level > li > a:after {
+.nav-second-level > li > a:after{
 	display:block;
 	position:absolute;
 	left:20px;
@@ -303,13 +317,8 @@ font-weight: 700;
 	top:0px;
 	z-index:10;
 }
-.nav-second-level  > li:last-child > a:after,
-.nav-third-level  > li:last-child > a:after {
+.nav-second-level  > li:last-child > a:after{
 	height:50%;
-}
-.nav-third-level > li > a:after,
-.nav-third-level > li > a:before  {
-	left:40px;
 }
 .navbar-side {
 	border:none;
@@ -330,7 +339,6 @@ color:#fff;
 
 .navbar-default {
 border:0px solid black;
-     
 }
 .navbar-header {
     background-color: #238276;
@@ -380,7 +388,8 @@ line-height: 1.428571429;
     .navbar-side {
         z-index: 1;
         position: absolute;
-        width: 260px;
+        width: 100px;
+        margin-left: 0px;
     }
 
    .navbar {

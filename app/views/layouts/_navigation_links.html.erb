@@ -11,70 +11,100 @@
                 <p class="colort" href="index.html">Bienvenido Admin</p> 
             </div>
   <div class="brand"><div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a></div> </div>
-        </nav>   
+        </nav>
            <!-- /. NAV TOP  -->
-                <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-				<li class="text-center">
+        <nav class="navbar-default navbar-side" role="navigation">
+        <ul class="menu">
+        	<li class="tex-center">
                     <%= image_tag("find_user.png") %>
+                    <p class="text3">Perfil</p>
 					</li>
-				
-					
-                    <li>
-                        <a class="active-menu"  href="perfil.html"><i class="glyphicon glyphicon-user"></i> Perfil</a>
+		   <li class="tam1">
+                        <a href="#"><%= image_tag("013.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text">Gestion</p>
+                        </a>
+                        <ul>
+                            <li class="tam1">
+                        		<a href="/elementos"><%= image_tag("047.png", height: '55', width: '55', class: 'img1') %><p class="text1">Elementos</p>
+                        		</a>
+                            </li>
+                            <li class="tam1">
+                        		<a href="/cuentadantes"><%= image_tag("002.png", height: '55', width: '55', class: 'img1') %><p class="text2">Cuentadantes</p>
+                        		</a>
+                            </li>
+                            <li class="tam1">
+                        		<a href="#"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text1">Planos</p>
+                        		</a>
+                            </li>
+                        </ul>
+		   </li>
+		   <li class="tam1">
+                        <a href="#"><%= image_tag("067.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text1">Movimiento</p>
+                        </a>
+                        <ul>
+                            <li class="tam1">
+                        		<a href="#"><%= image_tag("040p.png", height: '55', width: '55', class: 'img1') %><p class="text1">Traspasos</p>
+                        		</a>
+                            </li>
+                            <li class="tam1">
+                        		<a href="#"><%= image_tag("039.png", height: '55', width: '55', class: 'img1') %><p class="text1">Reintegros</p>
+                        		</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tam1">
+                        <a href="#" ><%= image_tag("027.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text">Seguridad</p>
+                        </a>
+                        <ul>
+                            <li class="tam1">
+                        		<a href="#"><%= image_tag("006.png", height: '55', width: '55', class: 'img1') %><p class="text1">Usuarios</p>
+                        		</a>
+                            </li>
+                            <li class="tam1">
+                        		<a href="#"><%= image_tag("030.png", height: '55', width: '55', class: 'img1') %><p class="text1">Usuarios</p>
+                        		</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tam1">
+                        <a href="#" ><%= image_tag("026.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text4">Configurar Tipos</p>
+                        </a>
+                        <ul>
+                            <li class="tam1">
+                        		<a href="/tipo_docs"><%= image_tag("005.png", height: '55', width: '55', class: 'img1') %><p class="text4">Tipos De Documentos</p>
+                        		</a>
+                            </li>
+                            <li class="tam1">
+                        		<a href="/tipo_elems"><%= image_tag("045.png", height: '55', width: '55', class: 'img1') %><p class="text4">Tipos De Elementos</p>
+                        		</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tam1">
+                        <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text">Ubicacion</p>
+                        </a>
+                    </li>
+                    <li class="tam1">
+                        <a href="#"><%= image_tag("058.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text1"> Estadistica</p>
+                        </a>
                     </li>                  
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-inbox"></i> Gestion<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="/tipo_elems">Elementos</a>
-                            </li>
-                            <li>
-                                <a href="/tipo_docs">Cuentadantes</a>
-                            </li>
-                            <li>
-                                <a href="#">Planos</a>
-                            </li>
-                        </ul>
-                    </li>  
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-transfer"></i> Movimientos<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Traspasos</a>
-                            </li>
-                            <li>
-                                <a href="#">Reintegros</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-cog"></i> Seguridad<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Usuarios</a>
-                            </li>
-                            <li>
-                                <a href="#">Bloqueos</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a  href="#"><i class="glyphicon glyphicon-globe"></i> Ubicacion</a>
-                    </li>
-                    <li>
-                        <a  href="#"><i class="glyphicon glyphicon-stats"></i> Estadisticas</a>
-                    </li>                  
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-calendar"></i> Cronogramas</a>
+                    <li class="tam1">
+                        <a href="#"><%= image_tag("019.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text1"> Cronograma</p>
+                        </a>
                       </li>  
-                    <li>
-                        <a  href="#"><i class="glyphicon glyphicon-list-alt"></i> Trazabilidades</a>
+                    <li class="tam1">
+                        <a href="#"><%= image_tag("059.png", height: '55', width: '55', class: 'img1') %>
+                        	<p class="text1"> Trazabilidad</p>
+                        </a>
                     </li>
-                </ul>
-            </div>
-            
+		 </ul>
+        
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
@@ -83,7 +113,7 @@
                     <div class="col-md-12">
                      <h2>Admin Dashboard</h2>   
                         <h5>Welcome Jhon Deo , Love to see you back. </h5>
-                        <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+                        
                         <br>
                         <br>
                         <hr>

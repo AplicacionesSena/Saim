@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cuentadante.nombre %>
+</p>
+
+<p>
+  <strong>Tipo doc:</strong>
+  <%= @cuentadante.tipo_doc %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @cuentadante.documento %>
+</p>
+
+<p>
+  <strong>Cantidad elementos:</strong>
+  <%= @cuentadante.cantidad_elementos %>
+</p>
+
+<p>
+  <strong>Nombre elementos:</strong>
+  <%= @cuentadante.nombre_elementos %>
+</p>
+
+<p>
+  <strong>Valor elementos:</strong>
+  <%= @cuentadante.valor_elementos %>
+</p>
+
+<%= link_to 'Edit', edit_cuentadante_path(@cuentadante) %> |
+<%= link_to 'Back', cuentadantes_path %>

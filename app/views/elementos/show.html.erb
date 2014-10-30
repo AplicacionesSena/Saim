@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @elemento.placa %>
+</p>
+
+<p>
+  <strong>Tipo elem:</strong>
+  <%= @elemento.tipo_elem %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @elemento.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @elemento.descripcion %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @elemento.modelo %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @elemento.serial %>
+</p>
+
+<p>
+  <strong>Fecha adquisicion:</strong>
+  <%= @elemento.fecha_adquisicion %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @elemento.valor %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @elemento.estado %>
+</p>
+
+<p>
+  <strong>Cuentadante:</strong>
+  <%= @elemento.cuentadante %>
+</p>
+
+<%= link_to 'Edit', edit_elemento_path(@elemento) %> |
+<%= link_to 'Back', elementos_path %>
