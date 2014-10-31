@@ -43,9 +43,53 @@ ul {
 				top:0px;
 			}
 			*/
+.mo0{
+	margin-left: 55px;
+	width: 190px;
+	text-align: center;
+}
+.mo0g{
+	margin-left: 300px;
+	width: 190px;
+	text-align: center;
+}
+.mo0a{
+	margin-left: 446px;
+	width: 190px;
+	text-align: center;
+}
 .mov{
-	margin-left: 204px;
-	margin-top: -100px;
+	margin-left: 286px;
+	margin-top: -93px;
+}
+.mov01{
+	margin-left: 286px;
+	margin-top: -93px;
+	width: 202px;
+	text-align: center;
+}
+.mov1{
+	margin-left: 520px;
+	margin-top: -82px;
+	width: 190px;
+	text-align: center;
+}
+.mov2{
+	margin-left: 520px;
+	margin-top: -90px;
+	width: 190px;
+	text-align: center;
+}
+.mov3{
+	margin-left: 520px;
+	margin-top: -99px;
+	width: 190px;
+	text-align: center;
+}
+.mov4{
+	margin-left: 296px;
+	width: 190px;
+	text-align: center;
 }
 .tams{
 	width: 160px;
@@ -116,4 +160,31 @@ text-align: left;
 .text4{
 	margin-top: -39px;
 	margin-left: -5px;
+}
+.fondc1{
+	width: 600px;
+	height: auto;
+	margin-left: 240px;
+	border:2px solid #ddd;
+	border-radius: 6px;
+	/*overflow-x:hidden;
+	overflow-y:scroll;*/
+	text-align: center;
+	box-shadow: 0px 0px 8px 0px black;
+}
+.fondc2{
+	width: auto;
+	height: auto;
+	border:2px solid #ddd;
+	border-radius: 6px;
+	/*overflow-x:hidden;
+	overflow-y:scroll;*/
+	text-align: center;
+	box-shadow: 0px 0px 8px 0px black;
+}
+.centro{
+	text-align: center;
+}
+.bienvenida{
+	text-align: center;
 }

@@ -12,30 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nombre %><br>
+    <%= f.label :Nombre %><br>
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <%= f.label :tipo_doc_id %><br>
-    <%= f.text_field :tipo_doc_id %>
+  <label>Tipo de Documento</label><br>
+    <%= f.collection_select :tipo_doc_id, TipoDoc.all, :id, :sigla, class: "form-control", prompt: "Seleccione Tipo De Documento" %>
   </div>
   <div class="field">
-    <%= f.label :documento %><br>
+    <%= f.label :Documento %><br>
     <%= f.number_field :documento %>
   </div>
   <div class="field">
-    <%= f.label :cantidad_elementos %><br>
+    <%= f.label :Cantidad_de_Elementos %><br>
     <%= f.number_field :cantidad_elementos %>
   </div>
   <div class="field">
-    <%= f.label :nombre_elementos %><br>
+    <%= f.label :Nombre_Elementos %><br>
     <%= f.text_field :nombre_elementos %>
   </div>
   <div class="field">
-    <%= f.label :valor_elementos %><br>
+    <%= f.label :Valor_Elementos %><br>
     <%= f.text_field :valor_elementos %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar" %>
   </div>
 <% end %>

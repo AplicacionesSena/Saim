@@ -1,43 +1,47 @@
-<h1>Listing elementos</h1>
+<div class="fondc2" >
+<h1>Listado De Elementos</h1>
+<div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Cuentadante</th>
+            <th colspan="3" class="centro">Opciones</th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Placa</th>
-      <th>Tipo elem</th>
-      <th>Nombre</th>
-      <th>Descripcion</th>
-      <th>Modelo</th>
-      <th>Serial</th>
-      <th>Fecha adquisicion</th>
-      <th>Valor</th>
-      <th>Estado</th>
-      <th>Cuentadante</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @elementos.each do |elemento| %>
-      <tr>
-        <td><%= elemento.placa %></td>
-        <td><%= elemento.tipo_elem %></td>
-        <td><%= elemento.nombre %></td>
-        <td><%= elemento.descripcion %></td>
-        <td><%= elemento.modelo %></td>
-        <td><%= elemento.serial %></td>
-        <td><%= elemento.fecha_adquisicion %></td>
-        <td><%= elemento.valor %></td>
-        <td><%= elemento.estado %></td>
-        <td><%= elemento.cuentadante %></td>
-        <td><%= link_to 'Show', elemento %></td>
-        <td><%= link_to 'Edit', edit_elemento_path(elemento) %></td>
-        <td><%= link_to 'Destroy', elemento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <tr>
+              <td><%= elemento.placa %></td>
+              <td><%= elemento.tipo_elem.nombre %></td>
+              <td><%= elemento.nombre %></td>
+              <td><%= elemento.descripcion %></td>
+              <td><%= elemento.modelo %></td>
+              <td><%= elemento.serial %></td>
+              <td><%= elemento.fecha_adquisicion %></td>
+              <td><%= elemento.valor %></td>
+              <td><%= elemento.estado %></td>
+              <td><%= elemento.cuentadante.nombre %></td>
+              <td><%= button_to 'Ver', elemento, method: "get", class: 'btn btn-info' %></td>
+              <td><%= button_to 'Editar', edit_elemento_path(elemento), method: "get", class: 'btn btn-warning' %></td>
+              <td><%= button_to 'Eliminar', elemento, method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
 <br>
 
-<%= link_to 'New Elemento', new_elemento_path %>
+<%= button_to 'Nuevo Elemento', new_elemento_path, method: "get", class: 'btn btn-primary' %>
+</div>
