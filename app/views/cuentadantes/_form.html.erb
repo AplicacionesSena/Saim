@@ -10,32 +10,57 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :Nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-  <label>Tipo de Documento</label><br>
-    <%= f.collection_select :tipo_doc_id, TipoDoc.all, :id, :sigla, class: "form-control", prompt: "Seleccione Tipo De Documento" %>
-  </div>
-  <div class="field">
-    <%= f.label :Documento %><br>
-    <%= f.number_field :documento %>
-  </div>
-  <div class="field">
-    <%= f.label :Cantidad_de_Elementos %><br>
-    <%= f.number_field :cantidad_elementos %>
-  </div>
-  <div class="field">
-    <%= f.label :Nombre_Elementos %><br>
-    <%= f.text_field :nombre_elementos %>
-  </div>
-  <div class="field">
-    <%= f.label :Valor_Elementos %><br>
-    <%= f.text_field :valor_elementos %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Guardar" %>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <% if @cuentadante.nombre == nil %>
+              <h3 class="centro">Campos Para Registrar Un Cuentadante</h3>
+            <% else %>
+              <h3 class="centro">Campos Para Editar Un Cuentadante</h3>
+            <% end %>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+               <div class="form-group mo0">
+                  <%= f.label :Nombre %><br>
+                  <%= f.text_field :nombre, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group movcedu">
+                  <label>Tipo de Documento</label><br>
+                  <%= f.collection_select :tipo_doc_id, TipoDoc.all, :id, :sigla, class: "form-control tams", prompt: "Seleccione Tipo De Documento" %>
+                </div>
+                <br>
+                <div class="form-group mov1">
+                  <%= f.label :Documento %><br>
+                  <%= f.number_field :documento, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Cantidad_de_Elementos %><br>
+                  <%= f.number_field :cantidad_elementos, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Nombre_Elementos %><br>
+                  <%= f.text_field :nombre_elementos, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mov3">
+                  <%= f.label :Valor_Elementos %><br>
+                  <%= f.text_field :valor_elementos, class: 'form-control tams'  %>
+                </div>
+                <div class="actions mo0g">
+                  <%= f.submit "Guardar" %>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

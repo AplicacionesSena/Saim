@@ -1,6 +1,11 @@
-<h1>Editando Elemento</h1>
+<h1 class="centro">Editando Elemento</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Ver', @elemento %> |
-<%= link_to 'Atras', elementos_path %>
+<div class="contdiv">
+	<div class="mo0a1">
+	<%= button_to 'Ver', @elemento, method: "get", class: 'btn btn-primary' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', elementos_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>

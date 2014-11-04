@@ -58,9 +58,24 @@ ul {
 	width: 190px;
 	text-align: center;
 }
+.mo0a1{
+	margin-left: 422px;
+	width: 190px;
+	text-align: center;
+}
+.mo0a2{
+	margin-left: 476px;
+	margin-top: -34px;
+	width: 190px;
+	text-align: center;
+}
 .mov{
-	margin-left: 286px;
+	text-align: center;
 	margin-top: -93px;
+}
+.movcedu{
+	margin-top: -93px;
+	text-align: center;
 }
 .mov01{
 	margin-left: 286px;
@@ -90,6 +105,10 @@ ul {
 	margin-left: 296px;
 	width: 190px;
 	text-align: center;
+}
+.contdiv{
+	margin-top: -40px;
+	position: absolute;
 }
 .tams{
 	width: 160px;

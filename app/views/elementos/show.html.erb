@@ -7,7 +7,7 @@
 
 <p>
   <strong>Tipo De Elemento:</strong>
-  <%= @elemento.tipo_elem %>
+  <%= @elemento.tipo_elem.nombre %>
 </p>
 
 <p>
@@ -47,7 +47,7 @@
 
 <p>
   <strong>Cuentadante:</strong>
-  <%= @elemento.cuentadante %>
+  <%= @elemento.cuentadante.nombre %>
 </p>
 
 <%= link_to 'Editar', edit_elemento_path(@elemento) %> |

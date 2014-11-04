@@ -19,7 +19,7 @@
           <% @cuentadantes.each do |cuentadante| %>
             <tr>
               <td><%= cuentadante.nombre %></td>
-              <td><%= cuentadante.tipo_doc %></td>
+              <td><%= cuentadante.tipo_doc.sigla %></td>
               <td><%= cuentadante.documento %></td>
               <td><%= cuentadante.cantidad_elementos %></td>
               <td><%= cuentadante.nombre_elementos %></td>

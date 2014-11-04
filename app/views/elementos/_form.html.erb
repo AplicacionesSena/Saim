@@ -16,14 +16,19 @@
       <div class="col-md-6">
         <div class="col-md-4 col-sm-4">
           <div class="panel panel-default">
+
             <div class="panel-heading">
+            <% if @elemento.placa == nil %>
               <h3 class="centro">Campos Para Registrar Un Elemento</h3>
+            <% else %>
+               <h3 class="centro">Campos Para Editar Un Elemento</h3>
+            <% end %>
             </div>
             <div class="panel-body">
               <form role="form">
                 <div class="form-group mo0">
                   <%= f.label :Placa %><br>
-                  <%= f.number_field :placa, class: 'form-control tams' %>
+                  <%= f.text_field :placa, class: 'form-control tams' %>
                 </div>
                 <hr>
                 <div class="form-group mov">
@@ -58,7 +63,7 @@
                 <br>
                 <div class="form-group mov01">
                   <%= f.label :Valor %><br>
-                  <%= f.number_field :valor, class: 'form-control tams' %>
+                  <%= f.text_field :valor, class: 'form-control tams' %>
                 </div>
                 <hr>
                 <div class="form-group mov2">
