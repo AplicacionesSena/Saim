@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p class="colort" href="index.html">Bienvenido Admin</p> 
+                <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido Admin</a></p> 
             </div>
   <div class="brand"><div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a></div> </div>
         </nav>
@@ -63,7 +63,7 @@
                         		</a>
                             </li>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("030.png", height: '55', width: '55', class: 'img1') %><p class="text1">Usuarios</p>
+                        		<a href="#"><%= image_tag("030.png", height: '55', width: '55', class: 'img1') %><p class="text1">Bloqueos</p>
                         		</a>
                             </li>
                         </ul>
@@ -111,11 +111,10 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2 class="bienvenida">Admin Dashboard</h2>   
-                        <h5 class="bienvenida">Welcome Jhon Deo , Love to see you back. </h5>
-                        
-                        <br>
-                        <br>
+                     <h4 class="bienvenida">Admin Dashboard</h4>
+                        <div class="contvid">
+                            <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
+                        </div>
                         <hr>
                         <%= yield %>
                     </div>

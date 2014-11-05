@@ -3013,10 +3013,11 @@ input[type="button"].btn-block {
   position: absolute;
   top: 100%;
   left: 0;
+  text-align: center;
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 50px;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
@@ -3041,8 +3042,11 @@ input[type="button"].btn-block {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 0px 6px;
+  margin-top: -2px;
   clear: both;
+  width: 58px;
+  height: 20px;
   font-weight: normal;
   line-height: 1.42857143;
   color: #333;

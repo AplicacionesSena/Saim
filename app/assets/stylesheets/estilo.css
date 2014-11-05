@@ -113,21 +113,61 @@ ul {
 .tams{
 	width: 160px;
 }
+.mov{
+	text-align: center;
+	margin-top: -93px;
+}
+.contabla{
+	margin-top: -20px;
+}
+.bottam{
+	width: 30px;
+	height: 26px;
+}
+.bottam2{
+	width: 40px;
+	height: 26px;
+}
+.bottam3{
+	width: 52px;
+	height: 26px;
+	margin-left: -3px;
+}
+.ahov:hover{
+	;
+}
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
-
+.dc{
+	border:1px solid transparent;
+	width: 120px;
+	height: 40px;
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow-y:scroll;
+	overflow-x:none;
+}
+.dc2{
+	border:1px solid transparent;
+	width: 170px;
+	height: 40px;
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow-y:scroll;
+	overflow-x:none;
+}
 .colort{
 	color: white;
-background: #238276;
-width: 260px;
-text-align: center;
-height: 60px;
-font-size: 30px;
-font-weight: 700;
+	background: #238276;
+	width: 260px;
+	text-align: center;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 700;
 }
 .colort:hover{
 	color: white;

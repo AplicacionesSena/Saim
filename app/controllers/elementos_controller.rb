@@ -4,7 +4,7 @@ class ElementosController < ApplicationController
   # GET /elementos
   # GET /elementos.json
   def index
-    @elementos = Elemento.all
+    @elementos = Elemento.search(params[:search], params[:page])
   end
 
   # GET /elementos/1
