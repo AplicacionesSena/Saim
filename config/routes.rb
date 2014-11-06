@@ -1,13 +1,23 @@
 Rails.application.routes.draw do
+  resources :cuentadantes
+
   resources :elementos
 
-  resources :cuentadantes
+  resources :cuentadantes do
+    resources :elementos
+  end
 
   get 'pagina/saim'
 
   resources :tipo_elems
 
   resources :tipo_docs
+
+
+
+  resources :elementos do
+     get 'allelementos', :on => :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

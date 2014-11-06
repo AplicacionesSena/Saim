@@ -17,9 +17,7 @@
             <th class="centro">Nombre</th>
             <th class="centro">Tipo De Documento</th>
             <th class="centro">Documento</th>
-            <th class="centro">Cantidad De Elementos</th>
-            <th class="centro">Nombre Elementos</th>
-            <th class="centro">Valor Elementos</th>
+            <th class="centro">Cantidad Elementos</th>
             <th class="centro">Opciones</th>
           </tr>
         </thead>
@@ -30,9 +28,7 @@
               <td><%= cuentadante.nombre %></td>
               <td><%= cuentadante.tipo_doc.sigla %></td>
               <td><%= cuentadante.documento %></td>
-              <td><%= cuentadante.cantidad_elementos %></td>
-              <td><%= cuentadante.nombre_elementos %></td>
-              <td><%= cuentadante.valor_elementos %></td>
+              <td><%= button_to 'Ver Elementos ⇨ '+ cuentadante.elementos.count.to_s + '', cuentadante_elementos_path(cuentadante), :method=>"get", class: "btn btn-default btn-sm" %></td>
               <td>
                 <div class="btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>

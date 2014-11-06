@@ -1,4 +1,4 @@
-<%= form_for(@elemento) do |f| %>
+<%= form_for ([@cuentadante, @elemento]) do |f| %>
   <% if @elemento.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@elemento.errors.count, "error") %> prohibited this elemento from being saved:</h2>
@@ -69,11 +69,6 @@
                 <div class="form-group mov2">
                   <%= f.label :Estado %><br>
                   <%= f.check_box :estado, class: 'form-control tams' %>
-                </div>
-                <hr>
-                <div class="form-group mov4">
-                  <label>Cuentadante Encargado</label><br>
-                  <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: 'form-control tams', prompt: "Seleccione Cuentadante" %>
                 </div>
                 <hr>
                 <div class="actions mo0g">

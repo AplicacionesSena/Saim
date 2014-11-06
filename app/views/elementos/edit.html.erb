@@ -3,9 +3,9 @@
 <%= render 'form' %>
 <div class="contdiv">
 	<div class="mo0a1">
-	<%= button_to 'Ver', @elemento, method: "get", class: 'btn btn-primary' %>
+	<%= button_to 'Ver', edit_cuentadante_elemento_path(@cuentadante,@elemento), method: "get", class: 'btn btn-primary' %>
 	</div>
 	<div class="mo0a2">
-	<%= button_to 'Atras', elementos_path, method: "get", class: 'btn btn-primary' %>
+	<%= button_to 'Atras', cuentadante_elementos_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
 	</div>
 </div>

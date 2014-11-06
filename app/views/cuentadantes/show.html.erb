@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Tipo De Documento:</strong>
+  <strong>Tipo doc:</strong>
   <%= @cuentadante.tipo_doc.sigla %>
 </p>
 
@@ -15,20 +15,5 @@
   <%= @cuentadante.documento %>
 </p>
 
-<p>
-  <strong>Cantidad De Elementos:</strong>
-  <%= @cuentadante.cantidad_elementos %>
-</p>
-
-<p>
-  <strong>Nombre Elementos:</strong>
-  <%= @cuentadante.nombre_elementos %>
-</p>
-
-<p>
-  <strong>Valor Elementos:</strong>
-  <%= @cuentadante.valor_elementos %>
-</p>
-
-<%= link_to 'Editar', edit_cuentadante_path(@cuentadante) %> |
-<%= link_to 'Atras', cuentadantes_path %>
+<%= link_to 'Edit', edit_cuentadante_path(@cuentadante) %> |
+<%= link_to 'Back', cuentadantes_path %>

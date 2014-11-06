@@ -1,0 +1,35 @@
+          Prefix Verb   URI Pattern                      Controller#Action
+       elementos GET    /elementos(.:format)             elementos#index
+                 POST   /elementos(.:format)             elementos#create
+    new_elemento GET    /elementos/new(.:format)         elementos#new
+   edit_elemento GET    /elementos/:id/edit(.:format)    elementos#edit
+        elemento GET    /elementos/:id(.:format)         elementos#show
+                 PATCH  /elementos/:id(.:format)         elementos#update
+                 PUT    /elementos/:id(.:format)         elementos#update
+                 DELETE /elementos/:id(.:format)         elementos#destroy
+    cuentadantes GET    /cuentadantes(.:format)          cuentadantes#index
+                 POST   /cuentadantes(.:format)          cuentadantes#create
+ new_cuentadante GET    /cuentadantes/new(.:format)      cuentadantes#new
+edit_cuentadante GET    /cuentadantes/:id/edit(.:format) cuentadantes#edit
+     cuentadante GET    /cuentadantes/:id(.:format)      cuentadantes#show
+                 PATCH  /cuentadantes/:id(.:format)      cuentadantes#update
+                 PUT    /cuentadantes/:id(.:format)      cuentadantes#update
+                 DELETE /cuentadantes/:id(.:format)      cuentadantes#destroy
+     pagina_saim GET    /pagina/saim(.:format)           pagina#saim
+      tipo_elems GET    /tipo_elems(.:format)            tipo_elems#index
+                 POST   /tipo_elems(.:format)            tipo_elems#create
+   new_tipo_elem GET    /tipo_elems/new(.:format)        tipo_elems#new
+  edit_tipo_elem GET    /tipo_elems/:id/edit(.:format)   tipo_elems#edit
+       tipo_elem GET    /tipo_elems/:id(.:format)        tipo_elems#show
+                 PATCH  /tipo_elems/:id(.:format)        tipo_elems#update
+                 PUT    /tipo_elems/:id(.:format)        tipo_elems#update
+                 DELETE /tipo_elems/:id(.:format)        tipo_elems#destroy
+       tipo_docs GET    /tipo_docs(.:format)             tipo_docs#index
+                 POST   /tipo_docs(.:format)             tipo_docs#create
+    new_tipo_doc GET    /tipo_docs/new(.:format)         tipo_docs#new
+   edit_tipo_doc GET    /tipo_docs/:id/edit(.:format)    tipo_docs#edit
+        tipo_doc GET    /tipo_docs/:id(.:format)         tipo_docs#show
+                 PATCH  /tipo_docs/:id(.:format)         tipo_docs#update
+                 PUT    /tipo_docs/:id(.:format)         tipo_docs#update
+                 DELETE /tipo_docs/:id(.:format)         tipo_docs#destroy
+            root GET    /                                pagina#saim

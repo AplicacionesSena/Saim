@@ -69,6 +69,6 @@ class CuentadantesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cuentadante_params
-      params.require(:cuentadante).permit(:nombre, :tipo_doc_id, :documento, :cantidad_elementos, :nombre_elementos, :valor_elementos)
+      params.require(:cuentadante).permit(:nombre, :tipo_doc_id, :documento)
     end
 end

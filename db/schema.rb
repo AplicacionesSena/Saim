@@ -11,15 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030203205) do
+ActiveRecord::Schema.define(version: 20141106151109) do
 
   create_table "cuentadantes", force: true do |t|
     t.string   "nombre"
     t.integer  "tipo_doc_id"
     t.integer  "documento"
-    t.integer  "cantidad_elementos"
-    t.string   "nombre_elementos"
-    t.string   "valor_elementos"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,22 +24,19 @@ ActiveRecord::Schema.define(version: 20141030203205) do
   add_index "cuentadantes", ["tipo_doc_id"], name: "index_cuentadantes_on_tipo_doc_id"
 
   create_table "elementos", force: true do |t|
-    t.integer  "placa"
+    t.string   "placa"
     t.integer  "tipo_elem_id"
     t.string   "nombre"
     t.text     "descripcion"
     t.string   "modelo"
     t.string   "serial"
     t.datetime "fecha_adquisicion"
-    t.integer  "valor"
+    t.string   "valor"
     t.boolean  "estado"
     t.integer  "cuentadante_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "elementos", ["cuentadante_id"], name: "index_elementos_on_cuentadante_id"
-  add_index "elementos", ["tipo_elem_id"], name: "index_elementos_on_tipo_elem_id"
 
   create_table "tipo_docs", force: true do |t|
     t.string   "sigla"

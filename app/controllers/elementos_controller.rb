@@ -1,15 +1,16 @@
 class ElementosController < ApplicationController
-  before_action :set_elemento, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]
   # GET /elementos
   # GET /elementos.json
   def index
-    @elementos = Elemento.search(params[:search], params[:page])
+    @elementos = @cuentadante.elementos.all
   end
+  
 
   # GET /elementos/1
   # GET /elementos/1.json
   def show
+
   end
 
   # GET /elementos/new
@@ -25,10 +26,10 @@ class ElementosController < ApplicationController
   # POST /elementos.json
   def create
     @elemento = Elemento.new(elemento_params)
-
+    @elemento.cuentadante_id = @cuentadante.id
     respond_to do |format|
       if @elemento.save
-        format.html { redirect_to @elemento, notice: 'Elemento was successfully created.' }
+        format.html { redirect_to cuentadante_elementos_path(@cuentadante)}
         format.json { render :show, status: :created, location: @elemento }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class ElementosController < ApplicationController
   def update
     respond_to do |format|
       if @elemento.update(elemento_params)
-        format.html { redirect_to @elemento, notice: 'Elemento was successfully updated.' }
+        format.html { redirect_to cuentadante_elementos_path(@cuentadante)}
         format.json { render :show, status: :ok, location: @elemento }
       else
         format.html { render :edit }
@@ -56,15 +57,20 @@ class ElementosController < ApplicationController
   def destroy
     @elemento.destroy
     respond_to do |format|
-      format.html { redirect_to elementos_url, notice: 'Elemento was successfully destroyed.' }
+      format.html { redirect_to cuentadante_elementos_url(@cuentadante), notice: 'Elemento was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
+  def allelementos
+    @elementos = Elemento.all
+  end 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_elemento
-      @elemento = Elemento.find(params[:id])
+      @cuentadante = Cuentadante.find(params[:cuentadante_id])
+      @elemento = Elemento.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
