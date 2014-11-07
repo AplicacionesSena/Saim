@@ -56,7 +56,9 @@
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(@cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(@cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(@cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><%= button_to 'Traspaso', elemento_traspasos_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
                   </ul>
                 </div>
               </td>

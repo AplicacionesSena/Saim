@@ -28,7 +28,7 @@
               <td><%= cuentadante.nombre %></td>
               <td><%= cuentadante.tipo_doc.sigla %></td>
               <td><%= cuentadante.documento %></td>
-              <td><%= button_to 'Ver Elementos ⇨ '+ cuentadante.elementos.count.to_s + '', cuentadante_elementos_path(cuentadante), :method=>"get", class: "btn btn-default btn-sm" %></td>
+              <td><%= link_to 'Ver Elementos ⇨ '+ cuentadante.elementos.count.to_s + '', cuentadante_elementos_path(cuentadante), class: "btn btn-default btn-sm" %></td>
               <td>
                 <div class="btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>

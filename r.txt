@@ -48,13 +48,5 @@ edit_cuentadante_elemento GET    /cuentadantes/:cuentadante_id/elementos/:id/edi
                           PATCH  /tipo_docs/:id(.:format)                                   tipo_docs#update
                           PUT    /tipo_docs/:id(.:format)                                   tipo_docs#update
                           DELETE /tipo_docs/:id(.:format)                                   tipo_docs#destroy
-   allelementos_elementos GET    /elementos/allelementos(.:format)                          elementos#allelementos
-                          GET    /elementos(.:format)                                       elementos#index
-                          POST   /elementos(.:format)                                       elementos#create
-                          GET    /elementos/new(.:format)                                   elementos#new
-                          GET    /elementos/:id/edit(.:format)                              elementos#edit
-                          GET    /elementos/:id(.:format)                                   elementos#show
-                          PATCH  /elementos/:id(.:format)                                   elementos#update
-                          PUT    /elementos/:id(.:format)                                   elementos#update
-                          DELETE /elementos/:id(.:format)                                   elementos#destroy
+                  objetos GET    /allelemento(.:format)                                     elementos#allelemento
                      root GET    /                                                          pagina#saim

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106151109) do
+ActiveRecord::Schema.define(version: 20141107191731) do
 
   create_table "cuentadantes", force: true do |t|
     t.string   "nombre"
@@ -51,5 +51,16 @@ ActiveRecord::Schema.define(version: 20141106151109) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "traspasos", force: true do |t|
+    t.integer  "elemento_id"
+    t.integer  "cuentadante_id"
+    t.datetime "fechaTraspaso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "traspasos", ["cuentadante_id"], name: "index_traspasos_on_cuentadante_id"
+  add_index "traspasos", ["elemento_id"], name: "index_traspasos_on_elemento_id"
 
 end

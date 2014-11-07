@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Elemento:</strong>
+  <%= @traspaso.elemento %>
+</p>
+
+<p>
+  <strong>Cuentadantedestino:</strong>
+  <%= @traspaso.cuentadanteDestino %>
+</p>
+
+<p>
+  <strong>Fechatraspaso:</strong>
+  <%= @traspaso.fechaTraspaso %>
+</p>
+
+<%= link_to 'Edit', edit_traspaso_path(@traspaso) %> |
+<%= link_to 'Back', traspasos_path %>

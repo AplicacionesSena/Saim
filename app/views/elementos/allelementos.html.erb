@@ -23,6 +23,7 @@
             <th class="centro">Fecha De Adquisicion</th>
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
+            <th class="centro">Cuentadante</th>
             <th class="centro">Opciones</th>
           </tr>
         </thead>
@@ -47,16 +48,17 @@
               <td><%= elemento.fecha_adquisicion %></td>
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
+              <td><%= elemento.cuentadante.nombre %></td>
               <td>
                 <div class="btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
                   </button>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(@cuentadante,elemento) , method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-info bottam' %></a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(@cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(@cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(elemento.cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
                   </ul>
                 </div>
               </td>
