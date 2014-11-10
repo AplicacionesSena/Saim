@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Elemento:</strong>
+  <%= @reintegro.elemento %>
+</p>
+
+<p>
+  <strong>Cuentadante:</strong>
+  <%= @reintegro.cuentadante %>
+</p>
+
+<p>
+  <strong>Fechareintegro:</strong>
+  <%= @reintegro.fechaReintegro %>
+</p>
+
+<%= link_to 'Edit', edit_reintegro_path(@reintegro) %> |
+<%= link_to 'Back', reintegros_path %>

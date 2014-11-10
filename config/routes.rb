@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reintegros
+
   resources :traspasos
 
   resources :cuentadantes
@@ -11,6 +13,10 @@ Rails.application.routes.draw do
 
   resources :elementos do
     resources :traspasos
+  end
+
+  resources :elementos do
+    resources :reintegros
   end
 
   get 'pagina/saim'

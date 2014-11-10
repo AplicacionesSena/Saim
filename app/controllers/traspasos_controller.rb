@@ -20,6 +20,7 @@ class TraspasosController < ApplicationController
 
   # GET /traspasos/1/edit
   def edit
+
   end
 
   # POST /traspasos
@@ -27,6 +28,8 @@ class TraspasosController < ApplicationController
   def create
     @traspaso = Traspaso.new(traspaso_params)
     @traspaso.elemento_id = @elemento.id
+    @elemento.cuentadante_id = @traspaso.cuentadante_id
+    @elemento.save
     respond_to do |format|
       if @traspaso.save
         format.html { redirect_to elemento_traspasos_path(@elemento), notice: 'Traspaso was successfully created.' }
@@ -42,6 +45,9 @@ class TraspasosController < ApplicationController
   # PATCH/PUT /traspasos/1.json
   def update
     @traspaso = Traspaso.find(params[:id])
+    @traspaso.update_attributes(traspaso_params)
+    @elemento.cuentadante_id = @traspaso.cuentadante_id
+    @elemento.save
     respond_to do |format|
       if @traspaso.update(traspaso_params)
         format.html { redirect_to elemento_traspasos_path(@elemento), notice: 'Traspaso was successfully updated.' }

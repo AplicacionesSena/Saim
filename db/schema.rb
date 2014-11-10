@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107191731) do
+ActiveRecord::Schema.define(version: 20141110190827) do
 
   create_table "cuentadantes", force: true do |t|
     t.string   "nombre"
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20141107191731) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "reintegros", force: true do |t|
+    t.integer  "elemento_id"
+    t.integer  "cuentadante_id"
+    t.datetime "fechaReintegro"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reintegros", ["cuentadante_id"], name: "index_reintegros_on_cuentadante_id"
+  add_index "reintegros", ["elemento_id"], name: "index_reintegros_on_elemento_id"
 
   create_table "tipo_docs", force: true do |t|
     t.string   "sigla"
