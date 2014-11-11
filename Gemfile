@@ -50,3 +50,5 @@ end
 gem 'will_paginate'
 
 gem 'simple_form'
+gem 'sorcery'
+gem 'lazybox'

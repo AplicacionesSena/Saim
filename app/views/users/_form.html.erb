@@ -1,0 +1,54 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <label>Tipo de Documento</label><br>
+    <%= f.collection_select :tipo_doc_id, TipoDoc.all, :id, :sigla, class: "form-control tams", prompt: "Seleccione Tipo De Documento" %>
+  </div>
+  <div class="field">
+    <%= f.label :Documento %><br>
+    <%= f.number_field :documento %>
+  </div>
+  <div class="field">
+    <%= f.label :Cargo %><br>
+    <label>Cargo De Usuario</label><br>
+    <%= f.collection_select :cargo_id, Cargo.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Un Cargo" %>
+  </div>
+  <div class="field">
+    <%= f.label :Genero %><br>
+    <%= f.check_box :genero %>
+  </div>
+  <div class="field">
+    <%= f.label :Password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :Confirmacion_De_Password %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -5792,3 +5792,20 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+
+
+/* lazybox */
+
+
+
+#lazybox.lazybox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  width: 45%;
+  box-shadow: none;
+  ul li { list-style: none; }
+  img { width: 100%; }
+}

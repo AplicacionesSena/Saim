@@ -10,7 +10,18 @@
                 </button>
                 <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido Admin</a></p> 
             </div>
-  <div class="brand"><div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a></div> </div>
+            <div class="brand">
+                <div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp;
+                <br>
+                    <% if current_user %>
+                        <%= link_to "Edit Perfil", edit_user_path(current_user.id), class: 'btn btn-info square-btn-adjust' %>
+                        <%= link_to "Logout", :logout, method: :get, class: 'btn btn-danger square-btn-adjust' %>
+                    <% else %>
+                        <%= link_to "Register", new_user_path, class: 'btn btn-info square-btn-adjust' %>
+                        <%= link_to "Login", new_user_session_path, remote: true, class: 'btn btn-warning square-btn-adjust' %>
+                    <% end %>
+                </div>
+            </div>          
         </nav>
            <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -112,9 +123,10 @@
                 <div class="row">
                     <div class="col-md-12">
                      <h4 class="bienvenida">Admin Dashboard</h4>
-                        <div class="contvid">
+                        <%#<div class="contvid">
                             <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
-                        </div>
+                        <%#</div> %>
+                        <%= render 'layouts/messages' %>
                         <hr>
                         <%= yield %>
                     </div>

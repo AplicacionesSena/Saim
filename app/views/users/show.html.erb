@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @user.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @user.apellido %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @user.tipodoc %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @user.documento %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @user.cargo %>
+</p>
+
+<p>
+  <strong>Crypted password:</strong>
+  <%= @user.crypted_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @user.salt %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

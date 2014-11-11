@@ -1,3 +1,3 @@
-class TipoDoc < ActiveRecord::Base
+class Cargo < ActiveRecord::Base
 	has_many :users, :dependent => :destroy
 end
