@@ -4,9 +4,9 @@ class SorceryCore < ActiveRecord::Migration
     	t.string :nombre,			:null => false
     	t.string :apellido,			:null => false
       	t.string :email,            :null => false
-      	t.integer :tipo_doc, 		index: true
+      	t.integer :tipo_doc_id, 		index: true
       	t.integer :documento,		:null => false
-      	t.integer :cargo,			index: true
+      	t.integer :cargo_id,			index: true
       	t.boolean :genero,			:null => false
       	t.string :crypted_password, :null => false
       	t.string :salt,             :null => false

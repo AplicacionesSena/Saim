@@ -122,13 +122,28 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h4 class="bienvenida">Admin Dashboard</h4>
-                        <%#<div class="contvid">
-                            <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
-                        <%#</div> %>
-                        <%= render 'layouts/messages' %>
-                        <hr>
-                        <%= yield %>
+                    <% if current_user %>
+                        <h4 class="bienvenida">
+                            <span><%= current_user.cargo.nombre %></span>
+                            <br>
+                            <span><%= current_user.nombre %></span>
+                        </h4>
+                            <%#<div class="contvid">
+                                <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
+                            <%#</div> %>
+                            <%= render 'layouts/messages' %>
+                            <hr>
+                            <%= yield %>
+                    <% else %>
+                    <h4 class="bienvenida"><span>Por favor Usuario ingresa En Saim</span></h4>
+                            <%#<div class="contvid">
+                                <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
+                            <%#</div> %>
+                            <%= render 'layouts/messages' %>
+                            <hr>
+                            <%= yield %>
+                        <span>Por favor ingresa</span>
+                    <% end %>
                     </div>
                 </div>
             </div>

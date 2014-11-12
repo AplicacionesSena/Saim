@@ -1,6 +1,11 @@
-<h1>Editing user</h1>
+<h1 class="centro">Editando Usuario</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="contdiv">
+	<div class="mo0a1">
+	<%= button_to 'Ver', @user, method: "get", class: 'btn btn-primary' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', users_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>
