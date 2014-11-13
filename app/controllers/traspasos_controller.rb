@@ -1,5 +1,5 @@
 class TraspasosController < ApplicationController
-  before_action :set_traspaso, only: [:show, :edit, :update, :destroy, :index, :new, :create]
+  before_action :set_traspaso, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:alltraspasos]
   
   # GET /traspasos
   # GET /traspasos.json
@@ -67,6 +67,10 @@ class TraspasosController < ApplicationController
       format.html { redirect_to elemento_traspasos_url(@elemento), notice: 'Traspaso was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def alltraspasos
+    @traspasos = Traspaso.all
   end
 
   private

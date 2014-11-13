@@ -1,5 +1,5 @@
 class ReintegrosController < ApplicationController
-  before_action :set_reintegro, only: [:show, :edit, :update, :destroy, :index, :new, :create]
+  before_action :set_reintegro, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allreintegros]
 
   # GET /reintegros
   # GET /reintegros.json
@@ -66,6 +66,10 @@ class ReintegrosController < ApplicationController
       format.html { redirect_to elemento_reintegros_url(@elemento), notice: 'Reintegro was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def allreintegros
+    @reintegros = Reintegro.all
   end
 
   private

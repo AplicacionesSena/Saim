@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   
     get 'allelementos/', to: 'elementos#allelementos', as: 'objetos'
 
+    get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
+    
+    get 'alltraspasos/', to: 'traspasos#alltraspasos', as: 'objetos2'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

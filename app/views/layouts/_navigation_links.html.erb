@@ -8,17 +8,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido Admin</a></p> 
+                <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido</a></p> 
             </div>
             <div class="brand">
                 <div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp;
                 <br>
                     <% if current_user %>
-                        <%= link_to "Edit Perfil", edit_user_path(current_user.id), class: 'btn btn-info square-btn-adjust' %>
-                        <%= link_to "Logout", :logout, method: :get, class: 'btn btn-danger square-btn-adjust' %>
+                        <div class="btn-group movdro">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= current_user.nombre %>
+                            </button>
+                            <ul class="dropdown-menu1" role="menu">
+                              <li><a href="#"><%= button_to "Editar Perfil", edit_user_path(current_user.id), method: "get", class: 'btn btn-info botonlog' %></a></li>
+                              <li class="divider"></li>
+                              <li><a href="#"><%= button_to "Logout", :logout, method: :get, class: 'btn btn-danger botonlog1' %></a></li>
+                            </ul>
+                        </div>
                     <% else %>
-                        <%= link_to "Register", new_user_path, class: 'btn btn-info square-btn-adjust' %>
-                        <%= link_to "Login", new_user_session_path, remote: true, class: 'btn btn-warning square-btn-adjust' %>
+                        <div class="btn-group movdro">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Cuenta
+                            </button>
+                            <ul class="dropdown-menu1" role="menu">
+                              <li><a href="#"><%= button_to "Regstrate", new_user_path, method: "get", class: 'btn btn-info botonlog' %></a></li>
+                              <li class="divider"></li>
+                              <li><a href="#"><%= button_to "Login", new_user_session_path, method: "get", remote: true, class: 'btn btn-warning botonlog1' %></a></li>
+                            </ul>
+                        </div>
                     <% end %>
                 </div>
             </div>          
@@ -27,8 +41,8 @@
         <nav class="navbar-default navbar-side" role="navigation">
         <ul class="menu">
         	<li class="tex-center">
-                    <%= image_tag("find_user.png") %>
-                    <p class="text3">Perfil</p>
+                    <%= image_tag (current_user.foto.url), height: '90', width: '90' %>
+                    <p class="text3"><center><%= current_user.cargo.nombre %></center></p>
 					</li>
 		   <li class="tam1">
                         <a href="#"><%= image_tag("013.png", height: '55', width: '55', class: 'img1') %>
@@ -55,11 +69,11 @@
                         </a>
                         <ul>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("040p.png", height: '55', width: '55', class: 'img1') %><p class="text1">Traspasos</p>
+                        		<a href="/alltraspasos"><%= image_tag("040p.png", height: '55', width: '55', class: 'img1') %><p class="text1">Traspasos</p>
                         		</a>
                             </li>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("039.png", height: '55', width: '55', class: 'img1') %><p class="text1">Reintegros</p>
+                        		<a href="/allreintegros"><%= image_tag("039.png", height: '55', width: '55', class: 'img1') %><p class="text1">Reintegros</p>
                         		</a>
                             </li>
                         </ul>
@@ -70,7 +84,7 @@
                         </a>
                         <ul>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("006.png", height: '55', width: '55', class: 'img1') %><p class="text1">Usuarios</p>
+                        		<a href="/users"><%= image_tag("006.png", height: '55', width: '55', class: 'img1') %><p class="text1">Usuarios</p>
                         		</a>
                             </li>
                             <li class="tam1">
