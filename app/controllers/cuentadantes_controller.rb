@@ -5,6 +5,7 @@ class CuentadantesController < ApplicationController
   # GET /cuentadantes.json
   def index
     @cuentadantes = Cuentadante.search(params[:search], params[:page])
+    
   end
 
   # GET /cuentadantes/1
