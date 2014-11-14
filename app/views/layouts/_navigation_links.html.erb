@@ -93,7 +93,7 @@
                         		</a>
                             </li>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("030.png", height: '55', width: '55', class: 'img1') %><p class="text1">Bloqueos</p>
+                        		<a href="/pagina/bloqueo"><%= image_tag("030.png", height: '55', width: '55', class: 'img1') %><p class="text1">Bloqueos</p>
                         		</a>
                             </li>
                         </ul>
@@ -124,7 +124,7 @@
                         </a>
                     </li>                  
                     <li class="tam1">
-                        <a href="#"><%= image_tag("019.png", height: '55', width: '55', class: 'img1') %>
+                        <a href="/events"><%= image_tag("019.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1"> Cronograma</p>
                         </a>
                       </li>  
@@ -154,14 +154,13 @@
                             <hr>
                             <%= yield %>
                     <% else %>
-                    <h4 class="bienvenida"><span>Por favor Usuario ingresa En Saim</span></h4>
+                    <h4 class="bienvenida"><span>Ingresa En Saim</span></h4>
                             <%#<div class="contvid">
                                 <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
                             <%#</div> %>
                             <%= render 'layouts/messages' %>
                             <hr>
                             <%= yield %>
-                        <span>Por favor ingresa</span>
                     <% end %>
                     </div>
                 </div>

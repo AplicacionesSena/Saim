@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :events
+
   resources :user_sessions
   resources :users
 
@@ -29,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   get 'pagina/saim'
+  get 'pagina/bloqueo'
 
   resources :tipo_elems
 

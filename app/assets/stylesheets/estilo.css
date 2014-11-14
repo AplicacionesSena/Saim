@@ -327,7 +327,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 .contenido{
   background-color: white;
   width: 1000px;
-  margin-left: 180px;
+  margin-left: 0px;
   margin-top: 50px;
   height: auto;
   -webkit-box-shadow: -5px 4px 9px 0px rgba(0, 0, 0, 0.87);

@@ -3,4 +3,7 @@ class PaginaController < ApplicationController
 
   def saim
   end
+  def bloqueo
+  	@users = User.all
+  end
 end

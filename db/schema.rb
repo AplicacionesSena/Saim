@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112155125) do
+ActiveRecord::Schema.define(version: 20141114145945) do
 
   create_table "cargos", force: true do |t|
     t.string   "nombre"
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 20141112155125) do
     t.string   "valor"
     t.boolean  "estado"
     t.integer  "cuentadante_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start"
+    t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
