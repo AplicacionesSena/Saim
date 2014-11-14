@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20141114145945) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "events", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -57,6 +58,10 @@ ActiveRecord::Schema.define(version: 20141114145945) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+=======
+  add_index "elementos", ["cuentadante_id"], name: "index_elementos_on_cuentadante_id"
+  add_index "elementos", ["tipo_elem_id"], name: "index_elementos_on_tipo_elem_id"
+>>>>>>> 2b9e818f408fcb0da45bb6857986beb42abf2878
 
   create_table "reintegros", force: true do |t|
     t.integer  "elemento_id"
@@ -95,17 +100,17 @@ ActiveRecord::Schema.define(version: 20141114145945) do
   add_index "traspasos", ["elemento_id"], name: "index_traspasos_on_elemento_id"
 
   create_table "users", force: true do |t|
+    t.string   "nombre",            null: false
+    t.string   "apellido",          null: false
     t.string   "email",             null: false
+    t.integer  "tipo_doc_id"
+    t.integer  "documento",         null: false
+    t.integer  "cargo_id"
+    t.boolean  "genero",            null: false
     t.string   "crypted_password",  null: false
     t.string   "salt",              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "nombre"
-    t.string   "apellido"
-    t.integer  "tipo_doc_id"
-    t.integer  "documento"
-    t.integer  "cargo_id"
-    t.boolean  "genero"
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
