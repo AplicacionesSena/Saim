@@ -6,4 +6,13 @@ class PaginaController < ApplicationController
   def bloqueo
   	@users = User.all
   end
+
+  def elementosxcuentadantes
+  	@cuentadantes = Cuentadante.all
+  end
+
+  def etraspasos
+  	@traspasos = Traspaso.all
+  	@elementos = Elemento.all
+  end
 end

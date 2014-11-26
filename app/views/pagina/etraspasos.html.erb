@@ -1,0 +1,26 @@
+<% @traspasosxdia = Traspaso.group("DATE(fechaTraspaso)").count
+        @cantidad = @traspasosxdia.values
+        @fecha = @traspasosxdia.keys
+%>
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    new Highcharts.Chart({
+          chart: { renderTo: 'orders_chart', type: 'line' },
+          title: { text: 'Traspasos por dia' },
+          xAxis: { categories: <%= @traspasos.map { |x| x.fechaTraspaso.mday } %> },
+          yAxis: { title: { text: '# traspasos' } },
+      series: [{
+        name: 'Traspasos',
+        type: 'line',
+        data: <%= @cantidad %>
+      }]
+    });
+  });
+</script>
+
+
+<center><div id="orders_chart" style="width: 960px; height: 500px;"></div></center>
+
+<table class="pretty">
+  <!-- Orders table code here -->
+</table>
