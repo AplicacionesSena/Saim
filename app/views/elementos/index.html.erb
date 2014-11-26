@@ -24,6 +24,7 @@
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
             <th class="centro">Opciones</th>
+            <th class="centro">Movimientos</th>
           </tr>
         </thead>
 
@@ -53,14 +54,25 @@
                   </button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(@cuentadante,elemento) , method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <% if can? :update, elemento %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(@cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <% end %>
+                    <% if can? :destroy, elemento %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(@cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></a></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="tamli"><a href="#"><%= button_to 'Traspaso', elemento_traspasos_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Traspaso', elemento_traspasos_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Reintegro', elemento_reintegros_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
+                    <li class="tamli"><a href="#"><%= button_to 'Reintegro', elemento_reintegros_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
                   </ul>
                 </div>
               </td>
@@ -70,9 +82,11 @@
       </table>
     </div>
 </div>
-<br>
 
+<% if can? :create, @elemento %>
+<br>
 <%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
+<% end %>
 <%#<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 <br>

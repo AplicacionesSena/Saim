@@ -1,4 +1,19 @@
-
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    new Highcharts.Chart({
+          chart: { renderTo: 'orders_chart', type: 'line' },
+          title: { text: 'Elementos por cuentadantes' },
+          xAxis: { categories: <%= @cuentadantes.map { |x| x.documento } %> },
+          yAxis: { title: { text: '# elementos' } },
+      series: [{
+        name: 'Elementos',
+        type: 'line',
+        // pointInterval: <%= @cuentadantes.map { |cue| cue.nombre.to_i } %>,
+        data: <%= @cuentadantes.map { |cue| cue.elementos.count } %>
+      }]
+    });
+  });
+</script>
 
 
 <div class="fondc2" >
@@ -38,10 +53,14 @@
                   </button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#"><%= button_to 'Ver', cuentadante, method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <% if can? :update, cuentadante %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Editar', edit_cuentadante_path(cuentadante), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <% end %>
+                    <% if can? :destroy, cuentadante %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Eliminar', cuentadante, method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                    <% end %>
                   </ul>
                 </div>
               </td>
@@ -59,7 +78,11 @@
 <br>
 Cuentadantes: <%= @cuentadantes.count %>
 
+<div id="orders_chart" style="width: 560px; height: 300px;"></div>
 
+<table class="pretty">
+  <!-- Orders table code here -->
+</table>
 
 
 

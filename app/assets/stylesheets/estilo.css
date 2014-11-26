@@ -54,6 +54,11 @@ ul {
 	width: 190px;
 	text-align: center;
 }
+.mo01b{
+	margin-left: 282px;
+	width: 190px;
+	text-align: center;
+}
 .mo02{
 	margin-left: 505px;
 	margin-top: -64px;
@@ -159,6 +164,16 @@ ul {
 .bottam3{
 	width: 52px;
 	height: 26px;
+	margin-left: -3px;
+}
+.bottam4{
+	width: 82px;
+	height: 36px;
+	margin-left: -3px;
+}
+.bottam5{
+	width: 82px;
+	height: 36px;
 	margin-left: -3px;
 }
 .ahov:hover{
@@ -272,6 +287,9 @@ text-align: left;
 .centro{
 	text-align: center;
 }
+.centrob{
+	margin-left: 510px;
+}
 .bienvenida{
 	text-align: center;
 }
@@ -334,4 +352,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
   -moz-box-shadow:    -5px 4px 9px 0px rgba(0, 0, 0, 0.87);
   box-shadow:         -5px 4px 9px 0px rgba(0, 0, 0, 0.87);
   border-radius: 5px;
+}
+.tamli{
+	width: 100px;
+	height: 29px;
+}
+.cfdcm{
+	position: absolute;
+	margin-left: 250px;
+	width: 650px;
+	height: 60px;
+	margin-top: -30px;
+}
+
+/* BANNER CAMBIANTE
+----------------------------------------------- */
+#rotator {
+	overflow: hidden;
+	margin: 0px ;
+	padding:2px;
+	position: relative;
+	width: 1050px;
+	height: 90px;
+	margin-left: -120px;
+}
+#rotator img {
+	margin: auto;
+	position: auto;
+	width: auto;
+	height: auto;
+}
+
+
+
+
+
+.ocultar{
+	visibility: hidden;
 }

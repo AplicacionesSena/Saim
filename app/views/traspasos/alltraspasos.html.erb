@@ -27,10 +27,14 @@
                 </button>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#"><%= button_to 'Ver', elemento_traspaso_path(traspaso.elemento,traspaso), method: "get", class: 'btn btn-info bottam' %></a></li>
+                  <% if can? :update, traspaso %>
                   <li class="divider"></li>
                   <li><a href="#"><%= button_to 'Editar', edit_elemento_traspaso_path(traspaso.elemento,traspaso), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                  <% end %>
+                  <% if can? :destroy, traspaso %>
                   <li class="divider"></li>
                   <li><a href="#"><%= button_to 'Eliminar', elemento_traspaso_path(traspaso.elemento,traspaso), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                  <% end %>
                 </ul>
               </div>
             </td>

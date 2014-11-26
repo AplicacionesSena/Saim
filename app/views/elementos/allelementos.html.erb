@@ -55,10 +55,14 @@
                   </button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <% if can? :update, elemento %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <% end %>
+                    <% if can? :destroy, elemento %>
                     <li class="divider"></li>
                     <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(elemento.cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                    <% end %>
                   </ul>
                 </div>
               </td>

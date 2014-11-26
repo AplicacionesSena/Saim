@@ -30,7 +30,12 @@
 
 <p>
   <strong>Cargo:</strong>
-  <%= @user.cargo.nombre %>
+  <%= @user.cargo.rol %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @user.estado %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

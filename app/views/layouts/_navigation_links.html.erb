@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido</a></p> 
+                <p class="colort"><a style="text-decoration:none; background-color: transparent;" class="ahov" href="/pagina/saim">Bienvenido <%= image_tag ("centro.png"), height: '130', width: '600', class: 'cfdcm' %></a></p> 
             </div>
             <div class="brand">
                 <div class="header"> Ultimo Acceso: 30 Mayo 2014 &nbsp;
@@ -42,14 +42,20 @@
         <ul class="menu">
         	<li class="tex-center">
                 <% if current_user %>
-                    <%= image_tag (current_user.foto.url), height: '90', width: '90' %>
-                    <p class="text3"><center><%= current_user.cargo.nombre %></center></p>
+                    <% if current_user.foto_file_name == nil %>
+                        <%= image_tag("find_user.png") %>
+                        <p class="text3"><center><%= current_user.cargo.rol %></center></p>
+                    <% else %>
+                        <%= image_tag (current_user.foto.url), height: '90', width: '90' %>
+                        <p class="text3"><center><%= current_user.cargo.rol %></center></p>
+                    <% end %>
                 <% else %>
                     <%= image_tag("find_user.png") %>
                     <p class="text3"><center>Saim</center></p>
                 <% end %>    
 			</li>
-		   <li class="tam1">
+                <% if current_user %>
+                    <li class="tam1">
                         <a href="#"><%= image_tag("013.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text">Gestion</p>
                         </a>
@@ -67,8 +73,8 @@
                         		</a>
                             </li>
                         </ul>
-		   </li>
-		   <li class="tam1">
+                    </li>
+                    <li class="tam1">
                         <a href="#"><%= image_tag("067.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1">Movimiento</p>
                         </a>
@@ -122,17 +128,19 @@
                         <a href="#"><%= image_tag("058.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1"> Estadistica</p>
                         </a>
-                    </li>                  
+                    </li>     
                     <li class="tam1">
                         <a href="/events"><%= image_tag("019.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1"> Cronograma</p>
                         </a>
-                      </li>  
+                    </li>
                     <li class="tam1">
                         <a href="#"><%= image_tag("059.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1"> Trazabilidad</p>
                         </a>
                     </li>
+                <% else %>
+                <% end %>
 		 </ul>
         
         </nav>  
@@ -141,27 +149,24 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                    <% if current_user %>
-                        <h4 class="bienvenida">
-                            <span><%= current_user.cargo.nombre %></span>
-                            <br>
-                            <span><%= current_user.nombre %></span>
-                        </h4>
+                    <h4 class="bienvenida">
+                            <span>
+                            <div class="content-box">
+                                <div id="rotator">
+                                    <a href="#"><%= image_tag("banner1.jpg", height: '80', width: '800') %></a>
+                                    <a href="#"><%= image_tag("banner2.jpg", height: '80', width: '800') %></a>
+                                    <a href="#"><%= image_tag("banner3.jpg", height: '80', width: '800') %></a>
+                                    <a href="#"><%= image_tag("banner4.jpg", height: '80', width: '800') %></a>
+                                </div>
+                            </div>                                
+                            </span>
+                    </h4>
                             <%#<div class="contvid">
                                 <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
                             <%#</div> %>
                             <%= render 'layouts/messages' %>
                             <hr>
                             <%= yield %>
-                    <% else %>
-                    <h4 class="bienvenida"><span>Ingresa En Saim</span></h4>
-                            <%#<div class="contvid">
-                                <%= video_tag("Animaci_n_Ubicaci_n_Mapa.mp4", autobuffer: true, height: '160', width: '1075', autoplay: true, class: 'video') %>
-                            <%#</div> %>
-                            <%= render 'layouts/messages' %>
-                            <hr>
-                            <%= yield %>
-                    <% end %>
                     </div>
                 </div>
             </div>
