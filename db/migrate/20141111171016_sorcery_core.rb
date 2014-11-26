@@ -10,6 +10,7 @@ class SorceryCore < ActiveRecord::Migration
       	t.boolean :genero,			:null => false
       	t.string :crypted_password, :null => false
       	t.string :salt,             :null => false
+        t.boolean :estado,          :null => false
 
       	t.timestamps
     end

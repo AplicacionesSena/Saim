@@ -1,7 +1,7 @@
 class CreateCargos < ActiveRecord::Migration
   def change
     create_table :cargos do |t|
-      t.string :nombre
+      t.string :rol
       t.text :descripcion
       t.boolean :privilegioVer
       t.boolean :privilegioEditar
