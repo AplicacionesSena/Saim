@@ -43,49 +43,29 @@ ul {
 				top:0px;
 			}
 			*/
-.mo0{
-	margin-left: 55px;
-	width: 190px;
+/*  fredy form  */
+.fm0{ text-align: center;}
+.fm1{
+	display: inline-block;
 	text-align: center;
+	margin-right: 40px;
 }
-.mo01{
-	margin-left: 282px;
-	margin-top: -64px;
-	width: 190px;
+.fm2{
+	display: inline-block;
 	text-align: center;
+	margin-right: 40px;
 }
-.mo01b{
-	margin-left: 282px;
-	width: 190px;
+.fm3{
+	display: inline-block;
+}
+.fm4{
 	text-align: center;
+	width: 500px;
+	margin-left: 130px;
 }
-.mo02{
-	margin-left: 505px;
-	margin-top: -64px;
-	width: 190px;
-	text-align: center;
-}
-.movcedu1{
-	margin-left: 55px;
-	width: 190px;
-	text-align: center;
-}
-.movcarg{
-	margin-left: 488px;
-	margin-top: -60px;
-	width: 190px;
-	text-align: center;
-}
-.mofoto{
-	margin-left: 282px;
-	width: 190px;
-	text-align: center;
-}
-.mo0g{
-	margin-left: 300px;
-	width: 190px;
-	text-align: center;
-}
+/*  */
+
+
 .mo0a{
 	margin-left: 446px;
 	width: 190px;
@@ -153,9 +133,14 @@ ul {
 .contabla{
 	margin-top: -20px;
 }
+.drop1{
+	width: 70px;
+	text-align: center;
+}
 .bottam{
 	width: 30px;
 	height: 26px;
+	padding: 1px;
 }
 .bottam2{
 	width: 40px;
@@ -242,6 +227,11 @@ text-align: left;
 }
 .img1{
 	margin-top: -5px;
+}
+.img11{
+	position: relative;
+	top: -25px;
+	left: 90px;
 }
 .text{
 	margin-top: -30px;

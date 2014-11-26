@@ -15,7 +15,7 @@
                 <br>
                     <% if current_user %>
                         <div class="btn-group movdro">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= current_user.nombre %>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= current_user.nombre %> ▼
                             </button>
                             <ul class="dropdown-menu1" role="menu">
                               <li><a href="#"><%= button_to "Editar Perfil", edit_user_path(current_user.id), method: "get", class: 'btn btn-info botonlog' %></a></li>
@@ -25,7 +25,7 @@
                         </div>
                     <% else %>
                         <div class="btn-group movdro">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Cuenta
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Cuenta ▼
                             </button>
                             <ul class="dropdown-menu1" role="menu">
                               <li><a href="#"><%= button_to "Regstrate", new_user_path, method: "get", class: 'btn btn-info botonlog' %></a></li>

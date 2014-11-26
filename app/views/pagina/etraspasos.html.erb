@@ -7,11 +7,13 @@
     new Highcharts.Chart({
           chart: { renderTo: 'orders_chart', type: 'line' },
           title: { text: 'Traspasos por dia' },
-          xAxis: { categories: <%= @traspasos.map { |x| x.fechaTraspaso.mday } %> },
+          xAxis: { type: 'datetime'},
           yAxis: { title: { text: '# traspasos' } },
       series: [{
         name: 'Traspasos',
         type: 'line',
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 0.2.weeks.ago.at_midnight.to_i * 1000 %>,
         data: <%= @cantidad %>
       }]
     });

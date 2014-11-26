@@ -13,9 +13,9 @@ class UserSessionsController < ApplicationController
         redirect_to(root_url, alert: 'Has sido bloqueado por el administrador del sistema.')
       else
           if @user.genero == true
-            redirect_back_or_to(:users, notice: 'Bienvenido '+ current_user.nombre )
+            redirect_back_or_to(root_url, notice: 'Bienvenido '+ current_user.nombre )
           else
-            redirect_back_or_to(:users, notice: 'Bienvenida '+ current_user.nombre )
+            redirect_back_or_to(root_url, notice: 'Bienvenida '+ current_user.nombre )
           end
       end
     else
