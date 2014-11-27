@@ -65,9 +65,12 @@ ul {
 }
 /*  */
 
-
+.mo0{
+	width: 190px;
+	text-align: center;
+}
 .mo0a{
-	margin-left: 446px;
+	margin-left: 436px;
 	width: 190px;
 	text-align: center;
 }
@@ -87,6 +90,7 @@ ul {
 	margin-top: -93px;
 }
 .movcedu{
+	margin-left: 10px;
 	margin-top: -93px;
 	text-align: center;
 }
@@ -97,7 +101,7 @@ ul {
 	text-align: center;
 }
 .mov1{
-	margin-left: 520px;
+	margin-left: 580px;
 	margin-top: -82px;
 	width: 190px;
 	text-align: center;
@@ -129,6 +133,9 @@ ul {
 .mov{
 	text-align: center;
 	margin-top: -93px;
+}
+.mo0g{
+	text-align: center;
 }
 .contabla{
 	margin-top: -20px;

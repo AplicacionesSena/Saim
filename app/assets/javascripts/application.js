@@ -19,6 +19,7 @@
 //= require bootstrap
 //= require lazybox
 //= require script
+//= require circular
 
 $(document).on('ready page:load', function () {
      $.lazybox.settings={ cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary' }

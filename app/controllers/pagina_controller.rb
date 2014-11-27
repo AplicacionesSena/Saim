@@ -7,6 +7,9 @@ class PaginaController < ApplicationController
   	@users = User.all
   end
 
+  def estadisticas
+  end
+
   def elementosxcuentadantes
   	@cuentadantes = Cuentadante.all
   end
@@ -14,5 +17,9 @@ class PaginaController < ApplicationController
   def etraspasos
   	@traspasos = Traspaso.all
   	@elementos = Elemento.all
+  end
+  def ereintgros
+    @reintegros = Reintegro.all
+    @elementos = Elemento.all
   end
 end

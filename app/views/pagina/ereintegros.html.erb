@@ -1,16 +1,16 @@
-<% @traspasosxdia = Traspaso.group("DATE(fechaTraspaso)").count
-        @cantidad = @traspasosxdia.values
-        @fecha = @traspasosxdia.keys
+<% @reintegrosxdia = Reintegro.group("DATE(fechaReintegro)").count
+        @cantidad = @reintegrosxdia.values
+        @fecha = @reintegrosxdia.keys
 %>
 <script type="text/javascript" charset="utf-8">
   $(function () {
     new Highcharts.Chart({
           chart: { renderTo: 'orders_chart', type: 'line' },
-          title: { text: 'Traspasos por dia' },
+          title: { text: 'Reintegros por dia' },
           xAxis: { type: 'datetime'},
-          yAxis: { title: { text: '# traspasos' } },
+          yAxis: { title: { text: '# reintegros' } },
       series: [{
-        name: 'Traspasos',
+        name: 'Reintegros',
         type: 'line',
         pointInterval: <%= 1.day * 1000 %>,
         pointStart: <%= 0.2.weeks.ago.at_midnight.to_i * 1000 %>,

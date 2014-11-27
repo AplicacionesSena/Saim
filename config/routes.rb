@@ -32,8 +32,10 @@ Rails.application.routes.draw do
 
   get 'pagina/saim'
   get 'pagina/bloqueo'
+  get 'pagina/estadisticas'
   get 'pagina/elementosxcuentadantes'
   get 'pagina/etraspasos'
+  get 'pagina/ereintegros'
 
   resources :tipo_elems
 

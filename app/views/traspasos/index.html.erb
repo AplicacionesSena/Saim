@@ -33,7 +33,7 @@
                   <% end %>
                   <% if can? :destroy, traspaso %>
                   <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Eliminar', elemento_traspaso_path(@elemento,traspaso), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
+                  <li><a href="#"><%= link_to 'Eliminar', elemento_traspaso_path(@elemento,traspaso), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td></a></li>
                   <% end %>
                 </ul>
               </div>
