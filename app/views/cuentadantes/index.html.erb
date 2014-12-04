@@ -43,7 +43,7 @@
                     <% end %>
                     <% if can? :destroy, cuentadante %>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Eliminar', cuentadante, method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger btn-xs' %></td></a></li>
+                    <li><a href="#"><%= link_to 'Eliminar', cuentadante, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td></a></li>
                     <% end %>
                   </ul>
                 </div>

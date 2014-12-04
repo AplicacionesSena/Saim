@@ -4,6 +4,8 @@ class CuentadantesController < ApplicationController
   # GET /cuentadantes
   # GET /cuentadantes.json
   def index
+    puts "Session is #{session.class.name}"
+    puts "#{method(:session).inspect}"
     @cuentadantes = Cuentadante.search(params[:search], params[:page])
     
   end

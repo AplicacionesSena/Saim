@@ -1,0 +1,41 @@
+<%= form_for(@traceability) do |f| %>
+  <% if @traceability.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traceability.errors.count, "error") %> prohibited this traceability from being saved:</h2>
+
+      <ul>
+      <% @traceability.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cuentadantes_id %><br>
+    <%= f.text_field :cuentadantes_id %>
+  </div>
+  <div class="field">
+    <%= f.label :elementos_id %><br>
+    <%= f.text_field :elementos_id %>
+  </div>
+  <div class="field">
+    <%= f.label :events_id %><br>
+    <%= f.text_field :events_id %>
+  </div>
+  <div class="field">
+    <%= f.label :reintegros_id %><br>
+    <%= f.text_field :reintegros_id %>
+  </div>
+  <div class="field">
+    <%= f.label :traspasos_id %><br>
+    <%= f.text_field :traspasos_id %>
+  </div>
+  <div class="field">
+    <%= f.label :users_id %><br>
+    <%= f.text_field :users_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

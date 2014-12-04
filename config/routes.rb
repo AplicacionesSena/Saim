@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :traceabilities
+
   resources :events
 
   resources :user_sessions

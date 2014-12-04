@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
 
   def index
+    puts "Session is #{session.class.name}"
+    puts "#{method(:session).inspect}"
     @users = User.search(params[:search], params[:page])
   end
 
