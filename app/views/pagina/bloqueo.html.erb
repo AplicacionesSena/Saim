@@ -1,1 +1,19 @@
-<%= render 'users/user' %>
+<% if current_user %>
+	<% if current_user.email == "Saim@gmail.com" %>
+		<%= render 'users/user' %>
+	<% else %>
+		<div class="panel panel-danger">
+    		<div class="panel-heading">Acceso Denegado</div>
+    		<div class="panel-body">
+      			<p>No Esta Autorizado Para Entrar En Este Sitio</p>
+    		</div>
+  		</div>
+	<% end %>
+<% else %>
+	<div class="panel panel-danger">
+    	<div class="panel-heading">Acceso Denegado</div>
+    	<div class="panel-body">
+      		<p>Por Favor Loguese Primero</p>
+    	</div>
+  	</div>
+<% end %>
