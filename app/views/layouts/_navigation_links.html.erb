@@ -107,6 +107,7 @@
                             <% end %>
                         </ul>
                     </li>
+                    <% if current_user.email == "Saim@gmail.com" %>
                     <li class="tam1">
                         <a href="#" ><%= image_tag("026.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text4">Configurar Tipos</p>
@@ -122,6 +123,8 @@
                             </li>
                         </ul>
                     </li>
+                    <% else %>
+                    <% end %>
                     <li class="tam1">
                         <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text">Ubicacion</p>

@@ -1,3 +1,4 @@
+<% if current_user.email == "Saim@gmail.com" %>
 <div class="fondc1">
 <h1>Listado De Tipo De Documentos</h1>
   <div class="panel-body">
@@ -29,4 +30,12 @@
 
   <%= button_to 'Nuevo Tipo De Documento', new_tipo_doc_path, method: "get", class: 'btn btn-primary' %>
 </div>
+<% else %>
+    <div class="panel panel-danger">
+        <div class="panel-heading">Acceso Denegado</div>
+        <div class="panel-body">
+            <p>No Esta Autorizado Para Entrar En Este Sitio</p>
+        </div>
+      </div>
+<% end %>
 
