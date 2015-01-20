@@ -140,7 +140,7 @@ ul {
 .contabla{
 	margin-top: -20px;
 }
-.drop1{
+.drop{
 	width: 70px;
 	text-align: center;
 }
@@ -167,6 +167,9 @@ ul {
 	width: 82px;
 	height: 36px;
 	margin-left: -3px;
+}
+.bt3{
+	margin-top: 50px;
 }
 .ahov:hover{
 	;
@@ -289,6 +292,7 @@ text-align: left;
 }
 .bienvenida{
 	text-align: center;
+	border-radius: 20px;
 }
 #lazybox.confirm {
   border-radius: 5;
@@ -366,12 +370,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 ----------------------------------------------- */
 #rotator {
 	overflow: hidden;
-	margin: 0px ;
-	padding:2px;
+	padding:0px;
 	position: relative;
 	width: 1050px;
 	height: 90px;
 	margin-left: -120px;
+	margin-top: -8px;
 }
 #rotator img {
 	margin: auto;
@@ -386,4 +390,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 
 .ocultar{
 	visibility: hidden;
+}
+
+
+.op1{
+	margin-top: -16px;
+}
+.op1, a{
+	margin-left: 2px;
+}
+.col1{
+	color:red;
+}
+
+.content-box{
+	border-radius: 15px;
 }
