@@ -29,6 +29,12 @@ class Ability
                 can :read, Tipo_doc
                 can :read, Tipo_elem
             end
+            if user.cargo.privilegioEditar == true
+                can :update, Elemento
+            end
+            if user.cargo.privilegioCrear == true
+                can :create, Cuentadante
+            end
         end
     end
     #

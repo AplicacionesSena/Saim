@@ -7,7 +7,7 @@
           yAxis: { title: { text: '# elementos' } },
       series: [{
         name: 'Elementos',
-        type: 'line',
+        type: 'column',
         // pointInterval: <%= @cuentadantes.map { |cue| cue.nombre.to_i } %>,
         data: <%= @cuentadantes.map { |cue| cue.elementos.count } %>
       }]

@@ -33,10 +33,6 @@
                   <li class="divider"></li>
                   <li><a href="#"><%= button_to 'Editar', edit_elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                   <% end %>
-                  <% if can? :destroy, reintegro %>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Eliminar', elemento_reintegro_path(@elemento,reintegro), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
-                  <% end %>
                 </ul>
               </div>
             </td>

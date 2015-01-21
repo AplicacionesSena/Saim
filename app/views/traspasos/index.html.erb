@@ -31,10 +31,6 @@
                   <li class="divider"></li>
                   <li><a href="#"><%= button_to 'Editar', edit_elemento_traspaso_path(@elemento,traspaso), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                   <% end %>
-                  <% if can? :destroy, traspaso %>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= link_to 'Eliminar', elemento_traspaso_path(@elemento,traspaso), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td></a></li>
-                  <% end %>
                 </ul>
               </div>
             </td>

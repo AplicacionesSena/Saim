@@ -29,10 +29,6 @@
                 </button>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#"><%= button_to 'Ver', elemento_reintegro_path(reintegro.elemento,reintegro), method: "get", class: 'btn btn-info bottam' %></a></li>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Editar', edit_elemento_reintegro_path(reintegro.elemento,reintegro), method: "get", class: 'btn btn-warning bottam2' %></a></li>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Eliminar', elemento_reintegro_path(reintegro.elemento,reintegro), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
                 </ul>
               </div>
             </td>
