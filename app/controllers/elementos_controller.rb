@@ -75,6 +75,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc)
     end
 end

@@ -22,4 +22,7 @@ class PaginaController < ApplicationController
     @reintegros = Reintegro.all
     @elementos = Elemento.all
   end
+  def traceability
+    @elementos = Elemento.all
+  end
 end

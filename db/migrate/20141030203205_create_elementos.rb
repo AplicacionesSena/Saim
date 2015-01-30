@@ -10,6 +10,7 @@ class CreateElementos < ActiveRecord::Migration
       t.datetime :fecha_adquisicion
       t.string :valor
       t.boolean :estado
+      t.string :datoc
       t.references :cuentadante, index: true
 
       t.timestamps

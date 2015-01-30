@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get 'pagina/elementosxcuentadantes'
   get 'pagina/etraspasos'
   get 'pagina/ereintegros'
+  get 'pagina/traceability'
 
   resources :tipo_elems
 

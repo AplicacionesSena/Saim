@@ -1,0 +1,17 @@
+<div class="table-responsive">
+<table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Historial Elementos</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <tr>
+              <td class="centro"><%= elemento.datoc %></td>
+            </tr>
+          <% end %>
+        </tbody>
+</table>
+</div>

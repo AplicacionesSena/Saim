@@ -70,6 +70,9 @@
                   <%= f.label :Estado %><br>
                   <%= f.check_box :estado, class: 'form-control tams' %>
                 </div>
+                <div class="field ocultar">
+                  <%= f.text_field :datoc, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' creo un elemento el dia '+(Date.today).to_formatted_s(:rfc822)  %>
+                </div>
                 <hr>
                 <div class="actions mo0g">
                   <%= f.submit "Guardar" %>

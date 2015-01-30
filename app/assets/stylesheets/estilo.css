@@ -406,3 +406,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 .content-box{
 	border-radius: 15px;
 }
+
+.ocultar{
+  display: none;
+}
+
+
+@media(min-width:1366px) {
+  .brand{
+		color: white;
+		font-size: 16px;
+		background: #238276;
+		width: 1366px;
+		margin-left: 250px;
+		height: 70px;
+		text-align: left;
+	}
+	.header{
+		margin-left: 1078px;
+		position: absolute;
+		margin-top: 30px;
+	}
+	.cfdcm{
+		position: absolute;
+		margin-left: 320px;
+		width: 870px;
+		height: 60px;
+		margin-top: -30px;
+	}
+}
