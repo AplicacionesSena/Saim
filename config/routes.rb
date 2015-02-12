@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :traceabilities
+  resources :areas
+
+  resources :floors do
+    resources :areas
+  end
 
   resources :events
 
@@ -19,6 +23,10 @@ Rails.application.routes.draw do
   resources :cuentadantes
 
   resources :elementos
+
+  resources :areas do
+    resources :elementos
+  end
 
   resources :cuentadantes do
     resources :elementos
@@ -47,6 +55,8 @@ Rails.application.routes.draw do
 
   
     get 'allelementos/', to: 'elementos#allelementos', as: 'objetos'
+
+    #get 'allelements/', to: 'elementos#allelements', as: 'objet'
 
     get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
     

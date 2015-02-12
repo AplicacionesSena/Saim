@@ -52,5 +52,6 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'sorcery'
 gem 'lazybox'
-gem 'paperclip'
 gem 'cancan'
+
+gem 'paperclip', github: 'thoughtbot/paperclip'

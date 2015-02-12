@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204160546) do
+ActiveRecord::Schema.define(version: 20150212133241) do
+
+  create_table "areas", force: true do |t|
+    t.string   "nombre"
+    t.string   "shape"
+    t.string   "coords"
+    t.integer  "floor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "areas", ["floor_id"], name: "index_areas_on_floor_id"
 
   create_table "cargos", force: true do |t|
     t.string   "rol"
@@ -47,6 +62,7 @@ ActiveRecord::Schema.define(version: 20141204160546) do
     t.integer  "cuentadante_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "datoc"
   end
 
   create_table "events", force: true do |t|
@@ -57,6 +73,16 @@ ActiveRecord::Schema.define(version: 20141204160546) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "floors", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "reintegros", force: true do |t|

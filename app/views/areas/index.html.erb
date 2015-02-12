@@ -1,0 +1,35 @@
+<% if @floor.id == 1 %>
+	<%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+	<map name="planmap">
+
+	  <% @areas.each do |area| %>
+	    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+	  <% end %>
+	</map>
+<br>
+<% end %>
+
+<% if @floor.id == 2 %>
+	<%= image_tag("Plano Segundo Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+	<map name="planmap">
+
+	  <% @areas.each do |area| %>
+	    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+	  <% end %>
+	</map>
+<br>
+<% end %>
+
+<% if @floor.id == 3 %>
+	<%= image_tag("Plano Tercer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+	<map name="planmap">
+
+	  <% @areas.each do |area| %>
+	    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+	  <% end %>
+	</map>
+<br>
+<% end %>
+
+<%= link_to 'Nueva Area', new_floor_area_path(@floor) %>
+<%= link_to 'Volver A La Tabla Pisos', floors_path %>

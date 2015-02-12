@@ -1,5 +1,5 @@
 class ElementosController < ApplicationController
-  before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]
+  before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]#, :allelements]
   # GET /elementos
   # GET /elementos.json
   def index
@@ -64,7 +64,11 @@ class ElementosController < ApplicationController
 
   def allelementos
     @elementos = Elemento.all
-  end 
+  end
+
+  #def allelements
+  #  @elementos = @area.elementos.all
+  #end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -75,6 +79,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :area_id)
     end
 end

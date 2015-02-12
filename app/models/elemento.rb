@@ -1,6 +1,7 @@
 class Elemento < ActiveRecord::Base
   belongs_to :tipo_elem
   belongs_to :cuentadante
+  belongs_to :area
   has_many :traspasos
   has_many :reintegros
   has_many :traceabilities
