@@ -1,0 +1,183 @@
+                       Prefix Verb   URI Pattern                                                Controller#Action
+                        areas GET    /areas(.:format)                                           areas#index
+                              POST   /areas(.:format)                                           areas#create
+                     new_area GET    /areas/new(.:format)                                       areas#new
+                    edit_area GET    /areas/:id/edit(.:format)                                  areas#edit
+                         area GET    /areas/:id(.:format)                                       areas#show
+                              PATCH  /areas/:id(.:format)                                       areas#update
+                              PUT    /areas/:id(.:format)                                       areas#update
+                              DELETE /areas/:id(.:format)                                       areas#destroy
+                  floor_areas GET    /floors/:floor_id/areas(.:format)                          areas#index
+                              POST   /floors/:floor_id/areas(.:format)                          areas#create
+               new_floor_area GET    /floors/:floor_id/areas/new(.:format)                      areas#new
+              edit_floor_area GET    /floors/:floor_id/areas/:id/edit(.:format)                 areas#edit
+                   floor_area GET    /floors/:floor_id/areas/:id(.:format)                      areas#show
+                              PATCH  /floors/:floor_id/areas/:id(.:format)                      areas#update
+                              PUT    /floors/:floor_id/areas/:id(.:format)                      areas#update
+                              DELETE /floors/:floor_id/areas/:id(.:format)                      areas#destroy
+                       floors GET    /floors(.:format)                                          floors#index
+                              POST   /floors(.:format)                                          floors#create
+                    new_floor GET    /floors/new(.:format)                                      floors#new
+                   edit_floor GET    /floors/:id/edit(.:format)                                 floors#edit
+                        floor GET    /floors/:id(.:format)                                      floors#show
+                              PATCH  /floors/:id(.:format)                                      floors#update
+                              PUT    /floors/:id(.:format)                                      floors#update
+                              DELETE /floors/:id(.:format)                                      floors#destroy
+                       events GET    /events(.:format)                                          events#index
+                              POST   /events(.:format)                                          events#create
+                    new_event GET    /events/new(.:format)                                      events#new
+                   edit_event GET    /events/:id/edit(.:format)                                 events#edit
+                        event GET    /events/:id(.:format)                                      events#show
+                              PATCH  /events/:id(.:format)                                      events#update
+                              PUT    /events/:id(.:format)                                      events#update
+                              DELETE /events/:id(.:format)                                      events#destroy
+                user_sessions GET    /user_sessions(.:format)                                   user_sessions#index
+                              POST   /user_sessions(.:format)                                   user_sessions#create
+             new_user_session GET    /user_sessions/new(.:format)                               user_sessions#new
+            edit_user_session GET    /user_sessions/:id/edit(.:format)                          user_sessions#edit
+                 user_session GET    /user_sessions/:id(.:format)                               user_sessions#show
+                              PATCH  /user_sessions/:id(.:format)                               user_sessions#update
+                              PUT    /user_sessions/:id(.:format)                               user_sessions#update
+                              DELETE /user_sessions/:id(.:format)                               user_sessions#destroy
+                        users GET    /users(.:format)                                           users#index
+                              POST   /users(.:format)                                           users#create
+                     new_user GET    /users/new(.:format)                                       users#new
+                    edit_user GET    /users/:id/edit(.:format)                                  users#edit
+                         user GET    /users/:id(.:format)                                       users#show
+                              PATCH  /users/:id(.:format)                                       users#update
+                              PUT    /users/:id(.:format)                                       users#update
+                              DELETE /users/:id(.:format)                                       users#destroy
+                        login GET    /login(.:format)                                           user_sessions#index
+                       logout GET    /logout(.:format)                                          user_sessions#destroy
+                       cargos GET    /cargos(.:format)                                          cargos#index
+                              POST   /cargos(.:format)                                          cargos#create
+                    new_cargo GET    /cargos/new(.:format)                                      cargos#new
+                   edit_cargo GET    /cargos/:id/edit(.:format)                                 cargos#edit
+                        cargo GET    /cargos/:id(.:format)                                      cargos#show
+                              PATCH  /cargos/:id(.:format)                                      cargos#update
+                              PUT    /cargos/:id(.:format)                                      cargos#update
+                              DELETE /cargos/:id(.:format)                                      cargos#destroy
+                   reintegros GET    /reintegros(.:format)                                      reintegros#index
+                              POST   /reintegros(.:format)                                      reintegros#create
+                new_reintegro GET    /reintegros/new(.:format)                                  reintegros#new
+               edit_reintegro GET    /reintegros/:id/edit(.:format)                             reintegros#edit
+                    reintegro GET    /reintegros/:id(.:format)                                  reintegros#show
+                              PATCH  /reintegros/:id(.:format)                                  reintegros#update
+                              PUT    /reintegros/:id(.:format)                                  reintegros#update
+                              DELETE /reintegros/:id(.:format)                                  reintegros#destroy
+                    traspasos GET    /traspasos(.:format)                                       traspasos#index
+                              POST   /traspasos(.:format)                                       traspasos#create
+                 new_traspaso GET    /traspasos/new(.:format)                                   traspasos#new
+                edit_traspaso GET    /traspasos/:id/edit(.:format)                              traspasos#edit
+                     traspaso GET    /traspasos/:id(.:format)                                   traspasos#show
+                              PATCH  /traspasos/:id(.:format)                                   traspasos#update
+                              PUT    /traspasos/:id(.:format)                                   traspasos#update
+                              DELETE /traspasos/:id(.:format)                                   traspasos#destroy
+                 cuentadantes GET    /cuentadantes(.:format)                                    cuentadantes#index
+                              POST   /cuentadantes(.:format)                                    cuentadantes#create
+              new_cuentadante GET    /cuentadantes/new(.:format)                                cuentadantes#new
+             edit_cuentadante GET    /cuentadantes/:id/edit(.:format)                           cuentadantes#edit
+                  cuentadante GET    /cuentadantes/:id(.:format)                                cuentadantes#show
+                              PATCH  /cuentadantes/:id(.:format)                                cuentadantes#update
+                              PUT    /cuentadantes/:id(.:format)                                cuentadantes#update
+                              DELETE /cuentadantes/:id(.:format)                                cuentadantes#destroy
+                    elementos GET    /elementos(.:format)                                       elementos#index
+                              POST   /elementos(.:format)                                       elementos#create
+                 new_elemento GET    /elementos/new(.:format)                                   elementos#new
+                edit_elemento GET    /elementos/:id/edit(.:format)                              elementos#edit
+                     elemento GET    /elementos/:id(.:format)                                   elementos#show
+                              PATCH  /elementos/:id(.:format)                                   elementos#update
+                              PUT    /elementos/:id(.:format)                                   elementos#update
+                              DELETE /elementos/:id(.:format)                                   elementos#destroy
+               area_elementos GET    /areas/:area_id/elementos(.:format)                        elementos#index
+                              POST   /areas/:area_id/elementos(.:format)                        elementos#create
+            new_area_elemento GET    /areas/:area_id/elementos/new(.:format)                    elementos#new
+           edit_area_elemento GET    /areas/:area_id/elementos/:id/edit(.:format)               elementos#edit
+                area_elemento GET    /areas/:area_id/elementos/:id(.:format)                    elementos#show
+                              PATCH  /areas/:area_id/elementos/:id(.:format)                    elementos#update
+                              PUT    /areas/:area_id/elementos/:id(.:format)                    elementos#update
+                              DELETE /areas/:area_id/elementos/:id(.:format)                    elementos#destroy
+                              GET    /areas(.:format)                                           areas#index
+                              POST   /areas(.:format)                                           areas#create
+                              GET    /areas/new(.:format)                                       areas#new
+                              GET    /areas/:id/edit(.:format)                                  areas#edit
+                              GET    /areas/:id(.:format)                                       areas#show
+                              PATCH  /areas/:id(.:format)                                       areas#update
+                              PUT    /areas/:id(.:format)                                       areas#update
+                              DELETE /areas/:id(.:format)                                       areas#destroy
+        cuentadante_elementos GET    /cuentadantes/:cuentadante_id/elementos(.:format)          elementos#index
+                              POST   /cuentadantes/:cuentadante_id/elementos(.:format)          elementos#create
+     new_cuentadante_elemento GET    /cuentadantes/:cuentadante_id/elementos/new(.:format)      elementos#new
+    edit_cuentadante_elemento GET    /cuentadantes/:cuentadante_id/elementos/:id/edit(.:format) elementos#edit
+         cuentadante_elemento GET    /cuentadantes/:cuentadante_id/elementos/:id(.:format)      elementos#show
+                              PATCH  /cuentadantes/:cuentadante_id/elementos/:id(.:format)      elementos#update
+                              PUT    /cuentadantes/:cuentadante_id/elementos/:id(.:format)      elementos#update
+                              DELETE /cuentadantes/:cuentadante_id/elementos/:id(.:format)      elementos#destroy
+                              GET    /cuentadantes(.:format)                                    cuentadantes#index
+                              POST   /cuentadantes(.:format)                                    cuentadantes#create
+                              GET    /cuentadantes/new(.:format)                                cuentadantes#new
+                              GET    /cuentadantes/:id/edit(.:format)                           cuentadantes#edit
+                              GET    /cuentadantes/:id(.:format)                                cuentadantes#show
+                              PATCH  /cuentadantes/:id(.:format)                                cuentadantes#update
+                              PUT    /cuentadantes/:id(.:format)                                cuentadantes#update
+                              DELETE /cuentadantes/:id(.:format)                                cuentadantes#destroy
+           elemento_traspasos GET    /elementos/:elemento_id/traspasos(.:format)                traspasos#index
+                              POST   /elementos/:elemento_id/traspasos(.:format)                traspasos#create
+        new_elemento_traspaso GET    /elementos/:elemento_id/traspasos/new(.:format)            traspasos#new
+       edit_elemento_traspaso GET    /elementos/:elemento_id/traspasos/:id/edit(.:format)       traspasos#edit
+            elemento_traspaso GET    /elementos/:elemento_id/traspasos/:id(.:format)            traspasos#show
+                              PATCH  /elementos/:elemento_id/traspasos/:id(.:format)            traspasos#update
+                              PUT    /elementos/:elemento_id/traspasos/:id(.:format)            traspasos#update
+                              DELETE /elementos/:elemento_id/traspasos/:id(.:format)            traspasos#destroy
+                              GET    /elementos(.:format)                                       elementos#index
+                              POST   /elementos(.:format)                                       elementos#create
+                              GET    /elementos/new(.:format)                                   elementos#new
+                              GET    /elementos/:id/edit(.:format)                              elementos#edit
+                              GET    /elementos/:id(.:format)                                   elementos#show
+                              PATCH  /elementos/:id(.:format)                                   elementos#update
+                              PUT    /elementos/:id(.:format)                                   elementos#update
+                              DELETE /elementos/:id(.:format)                                   elementos#destroy
+          elemento_reintegros GET    /elementos/:elemento_id/reintegros(.:format)               reintegros#index
+                              POST   /elementos/:elemento_id/reintegros(.:format)               reintegros#create
+       new_elemento_reintegro GET    /elementos/:elemento_id/reintegros/new(.:format)           reintegros#new
+      edit_elemento_reintegro GET    /elementos/:elemento_id/reintegros/:id/edit(.:format)      reintegros#edit
+           elemento_reintegro GET    /elementos/:elemento_id/reintegros/:id(.:format)           reintegros#show
+                              PATCH  /elementos/:elemento_id/reintegros/:id(.:format)           reintegros#update
+                              PUT    /elementos/:elemento_id/reintegros/:id(.:format)           reintegros#update
+                              DELETE /elementos/:elemento_id/reintegros/:id(.:format)           reintegros#destroy
+                              GET    /elementos(.:format)                                       elementos#index
+                              POST   /elementos(.:format)                                       elementos#create
+                              GET    /elementos/new(.:format)                                   elementos#new
+                              GET    /elementos/:id/edit(.:format)                              elementos#edit
+                              GET    /elementos/:id(.:format)                                   elementos#show
+                              PATCH  /elementos/:id(.:format)                                   elementos#update
+                              PUT    /elementos/:id(.:format)                                   elementos#update
+                              DELETE /elementos/:id(.:format)                                   elementos#destroy
+                  pagina_saim GET    /pagina/saim(.:format)                                     pagina#saim
+               pagina_bloqueo GET    /pagina/bloqueo(.:format)                                  pagina#bloqueo
+          pagina_estadisticas GET    /pagina/estadisticas(.:format)                             pagina#estadisticas
+pagina_elementosxcuentadantes GET    /pagina/elementosxcuentadantes(.:format)                   pagina#elementosxcuentadantes
+            pagina_etraspasos GET    /pagina/etraspasos(.:format)                               pagina#etraspasos
+           pagina_ereintegros GET    /pagina/ereintegros(.:format)                              pagina#ereintegros
+          pagina_traceability GET    /pagina/traceability(.:format)                             pagina#traceability
+                   tipo_elems GET    /tipo_elems(.:format)                                      tipo_elems#index
+                              POST   /tipo_elems(.:format)                                      tipo_elems#create
+                new_tipo_elem GET    /tipo_elems/new(.:format)                                  tipo_elems#new
+               edit_tipo_elem GET    /tipo_elems/:id/edit(.:format)                             tipo_elems#edit
+                    tipo_elem GET    /tipo_elems/:id(.:format)                                  tipo_elems#show
+                              PATCH  /tipo_elems/:id(.:format)                                  tipo_elems#update
+                              PUT    /tipo_elems/:id(.:format)                                  tipo_elems#update
+                              DELETE /tipo_elems/:id(.:format)                                  tipo_elems#destroy
+                    tipo_docs GET    /tipo_docs(.:format)                                       tipo_docs#index
+                              POST   /tipo_docs(.:format)                                       tipo_docs#create
+                 new_tipo_doc GET    /tipo_docs/new(.:format)                                   tipo_docs#new
+                edit_tipo_doc GET    /tipo_docs/:id/edit(.:format)                              tipo_docs#edit
+                     tipo_doc GET    /tipo_docs/:id(.:format)                                   tipo_docs#show
+                              PATCH  /tipo_docs/:id(.:format)                                   tipo_docs#update
+                              PUT    /tipo_docs/:id(.:format)                                   tipo_docs#update
+                              DELETE /tipo_docs/:id(.:format)                                   tipo_docs#destroy
+                      objetos GET    /allelementos(.:format)                                    elementos#allelementos
+                        objet GET    /allelements(.:format)                                     elementos#allelements
+                     objetos1 GET    /allreintegros(.:format)                                   reintegros#allreintegros
+                     objetos2 GET    /alltraspasos(.:format)                                    traspasos#alltraspasos
+                         root GET    /                                                          pagina#saim

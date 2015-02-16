@@ -32,7 +32,7 @@
           <% @elementos.each do |elemento| %>
             <tr>
               <td><%= elemento.placa %></td>
-              <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+              <td><%= elemento.tipo_elem.nombre %></td>
               <td><%= elemento.nombre %></td>
               <td>
                 <div class="dc">
@@ -49,7 +49,7 @@
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
               <td><%= elemento.cuentadante.nombre %></td>
-              <td><%= elemento.area.nombre rescue nil%></td>
+              <td><%= elemento.area.nombre %></td>
             </tr>
           <% end %>
         </tbody>
