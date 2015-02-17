@@ -63,7 +63,7 @@ Rails.application.routes.draw do
   
     get 'allelementos/', to: 'elementos#allelementos', as: 'objetos'
 
-    get 'allelements/', to: 'elementos#allelements', as: 'objet'
+    #get 'allelements/', to: 'elementos#allelements', as: 'objet'
 
     get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
     

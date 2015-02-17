@@ -66,10 +66,10 @@ class ElementosController < ApplicationController
     @elementos = Elemento.all
   end
 
-  def allelements
-    @area = Area.find(params[:area_id])
-    @elementos = @area.elementos.all
-  end 
+  #def allelements
+  #  @area = Area.find(params[])
+  #  @elementos = @area.elementos.all
+  #end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
