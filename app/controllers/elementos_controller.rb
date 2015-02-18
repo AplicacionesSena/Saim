@@ -1,5 +1,5 @@
 class ElementosController < ApplicationController
-  before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]#, :allelements]
+  before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]
   # GET /elementos
   # GET /elementos.json
   def index
@@ -65,11 +65,6 @@ class ElementosController < ApplicationController
   def allelementos
     @elementos = Elemento.all
   end
-
-  #def allelements
-  #  @area = Area.find(params[])
-  #  @elementos = @area.elementos.all
-  #end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
