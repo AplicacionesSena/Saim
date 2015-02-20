@@ -6,4 +6,8 @@ class Floor < ActiveRecord::Base
 	# Validaciones de Paperclip
   	validates_attachment_size :image, :less_than => 2.megabytes
   	validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png'], notice: 'El Formato de la imagen no es el correcto'
+
+  	def self.search(search, page)
+		where(['upper(nombre) like ?', "%#{search}%".upcase]).paginate(page: page, per_page: 1).order("id")
+	end
 end

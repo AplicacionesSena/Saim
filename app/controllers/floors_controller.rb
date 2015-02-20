@@ -4,7 +4,8 @@ class FloorsController < ApplicationController
   # GET /floors
   # GET /floors.json
   def index
-    @floors = Floor.all
+    @floors = Floor.search(params[:search], params[:page])
+    @areas = Area.all
   end
 
   # GET /floors/1

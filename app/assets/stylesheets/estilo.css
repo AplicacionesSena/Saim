@@ -411,6 +411,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
   display: none;
 }
 
+.divplan{
+	border: 1px solid black;
+	width: auto;
+	height: 700px;
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow-y:scroll;
+	overflow-x:none;
+}
 
 @media(min-width:1366px) {
   .brand{

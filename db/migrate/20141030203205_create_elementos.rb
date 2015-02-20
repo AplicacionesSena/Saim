@@ -11,8 +11,8 @@ class CreateElementos < ActiveRecord::Migration
       t.string :valor
       t.boolean :estado
       t.string :datoc
+      t.string :datoe
       t.references :cuentadante, index: true
-      t.references :area, index: true
 
       t.timestamps
     end

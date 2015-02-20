@@ -65,12 +65,27 @@
                         		</a>
                             </li>
                             <li class="tam1">
-                        		<a href="/cuentadantes"><%= image_tag("002.png", height: '55', width: '55', class: 'img1') %><p class="text2">Cuentadantes</p>
+                        		<a href="/allcuentadantes"><%= image_tag("002.png", height: '55', width: '55', class: 'img1') %><p class="text2">Cuentadantes</p>
                         		</a>
                             </li>
+                        </ul>
+                    </li>
+                    <li class="tam1">
+                        <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
+                            <p class="text">Planos</p>
+                        </a>
+                        <ul>
                             <li class="tam1">
-                        		<a href="#"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text1">Planos</p>
-                        		</a>
+                                <a href="/floors/1/areas"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text1">Piso#1</p>
+                                </a>
+                            </li>
+                            <li class="tam1">
+                                <a href="/floors/2/areas"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text2">Piso#2</p>
+                                </a>
+                            </li>
+                            <li class="tam1">
+                                <a href="/floors/3/areas"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text1">Piso#3</p>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -125,11 +140,11 @@
                     </li>
                     <% else %>
                     <% end %>
-                    <li class="tam1">
+                    <%#<li class="tam1">
                         <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
-                        	<p class="text">Ubicacion</p>
+                    <%#    	<p class="text">Ubicacion</p>
                         </a>
-                    </li>
+                    </li>%>
                     <li class="tam1">
                         <a href="/pagina/estadisticas"><%= image_tag("058.png", height: '55', width: '55', class: 'img1') %>
                         	<p class="text1"> Estadistica</p>

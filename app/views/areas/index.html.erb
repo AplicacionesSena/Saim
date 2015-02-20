@@ -4,7 +4,6 @@
 
 	  <% @areas.each do |area| %>
 	    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
-	    <%= link_to 'ver elementos', cuentadante_elementos_path(@floor,@cuentadante,area.id) %>
 	  <% end %>
 	</map>
 <br>
