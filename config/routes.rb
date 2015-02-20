@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
 
   resources :areas do
-    resources :elementos
+    resources :cuentadantes
   end
 
   resources :cuentadantes do
@@ -63,7 +63,7 @@ Rails.application.routes.draw do
   
     get 'allelementos/', to: 'elementos#allelementos', as: 'objetos'
 
-    #get 'allelements/', to: 'elementos#allelements', as: 'objet'
+    get 'allcuentadantes/', to: 'cuentadantes#allcuentadantes', as: 'objet'
 
     get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
     

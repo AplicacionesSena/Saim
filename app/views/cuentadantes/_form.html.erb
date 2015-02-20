@@ -1,4 +1,4 @@
-<%= form_for(@cuentadante) do |f| %>
+<%= form_for [@area,@cuentadante] do |f| %>
   <% if @cuentadante.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cuentadante.errors.count, "error") %> prohibited this cuentadante from being saved:</h2>
@@ -37,6 +37,10 @@
                 <div class="form-group mov1">
                   <%= f.label :Documento %><br>
                   <%= f.number_field :documento, class: 'form-control tams' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Telefono %><br>
+                  <%= f.number_field :telefono, class: 'form-control' %>
                 </div>
                 <hr>
                 <div class="actions mo0g">

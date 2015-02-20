@@ -63,7 +63,7 @@ class ElementosController < ApplicationController
   end
 
   def allelementos
-    @elementos = Elemento.all
+    @elementos = Elemento.search(params[:search], params[:page])
   end
 
   #def allelements
@@ -80,6 +80,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :area_id)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :datoe, :area_id)
     end
 end

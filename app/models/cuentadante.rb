@@ -1,5 +1,6 @@
 class Cuentadante < ActiveRecord::Base
   belongs_to :tipo_doc
+  belongs_to :area
   has_many :elementos, :dependent => :destroy
   has_many :traspasos, :dependent => :destroy
   has_many :traceabilities

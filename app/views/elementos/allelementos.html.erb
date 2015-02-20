@@ -1,14 +1,14 @@
 <div class="fondc2" >
 <h1>Listado De Elementos</h1>
-<%#<%= form_tag elementos_path, :method => 'get' do %>
-<%#  <% content_tag :label do %>
-<%#    <div class="form-group pos">
+<%= form_tag elementos_path, :method => 'get' do %>
+  <% content_tag :label do %>
+    <div class="form-group pos">
       Buscar Elemento:
       <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
-<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
-<%#    </div>
+      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+    </div>
   <% end %>
-<%#<% end %>
+<% end %>
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
@@ -72,5 +72,12 @@
       </table>
     </div>
 </div>
+
+<%#<% if can? :create, @elemento %>
 <br>
+<%#<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
+<%#<% end %>
+<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+
 </div>

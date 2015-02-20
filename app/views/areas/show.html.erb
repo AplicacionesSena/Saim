@@ -9,7 +9,7 @@
 	  			<%= image_tag (@area.image.url), height: '600', width: '600' %>
 	  		</div>
 		</p>
-		<%= link_to 'ver elementos', cuentadante_elementos_path(@area.elemento_id) %>
+		<%= link_to 'Ver cuentadantes ⇨ '+ @area.cuentadantes.count.to_s + '', area_cuentadantes_path(@area), class: "btn btn-default btn-sm" %>
 		<%= link_to 'Editar', edit_floor_area_path(@floor,@area) %> |
 		<%= link_to 'Atras', floor_areas_path %>
 	</div>
