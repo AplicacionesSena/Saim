@@ -55,3 +55,5 @@ gem 'lazybox'
 gem 'cancan'
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
+
+gem 'ransack'

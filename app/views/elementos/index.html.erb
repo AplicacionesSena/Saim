@@ -9,6 +9,31 @@
 <%#    </div>
   <% end %>
 <%#<% end %>
+
+
+<%#<%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get'  do %>
+<%#    <%= text_field_tag :search, params[:search_condition], :id => 'search_field' %>
+<%#    <%= submit_tag "Search" %>
+<%#    <p>hello </p>
+<% end %>
+
+
+
+<%= search_form_for @search, url: cuentadante_elementos_path(params[:cuentadante_id]) do |f| %>
+  <%= f.condition_fields do |c| %>
+  <div class="field">
+    <%= c.attribute_fields do |a| %>
+      <%= a.attribute_select associations: [:category] %>
+    <% end %>
+    <%= c.predicate_select %>
+    <%= c.value_fields do |v| %>
+      <%= v.text_field :value %>
+    <% end %>
+    </div>
+  <% end %>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">

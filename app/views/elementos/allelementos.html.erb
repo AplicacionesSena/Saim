@@ -1,13 +1,27 @@
 <div class="fondc2" >
 <h1>Listado De Elementos</h1>
-<%= form_tag elementos_path, :method => 'get' do %>
-  <% content_tag :label do %>
-    <div class="form-group pos">
+<%#<%= form_tag elementos_path, :method => 'get' do %>
+<%#  <% content_tag :label do %>
+<%#    <div class="form-group pos">
       Buscar Elemento:
       <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
-      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+<%#    </div>
+  <% end %>
+<%#<% end %>
+<%= search_form_for @search, url: cuentadante_elementos_path(params[:cuentadante_id]) do |f| %>
+  <%= f.condition_fields do |c| %>
+  <div class="field">
+    <%= c.attribute_fields do |a| %>
+      <%= a.attribute_select associations: [:category] %>
+    <% end %>
+    <%= c.predicate_select %>
+    <%= c.value_fields do |v| %>
+      <%= v.text_field :value %>
+    <% end %>
     </div>
   <% end %>
+  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 <div class="panel-body contabla">
     <div class="table-responsive">
@@ -48,24 +62,7 @@
               <td><%= elemento.fecha_adquisicion %></td>
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
-              <td><%= elemento.cuentadante.nombre %></td>
-              <td>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-info bottam' %></a></li>
-                    <% if can? :update, elemento %>
-                    <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(elemento.cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
-                    <% end %>
-                    <% if can? :destroy, elemento %>
-                    <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(elemento.cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></td></a></li>
-                    <% end %>
-                  </ul>
-                </div>
-              </td>
+              
             </tr>
           <% end %>
         </tbody>
@@ -77,7 +74,7 @@
 <br>
 <%#<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
 <%#<% end %>
-<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+<%#<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 
 </div>
