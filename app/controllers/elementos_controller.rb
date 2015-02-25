@@ -4,9 +4,6 @@ class ElementosController < ApplicationController
   # GET /elementos.json
   def index
     @elementos = @cuentadante.elementos.all
-    @search = Elemento.search(params[:q])
-    @elementos = @search.result
-    @search.build_condition
   end
   
 
@@ -67,6 +64,7 @@ class ElementosController < ApplicationController
 
   def allelementos
     @search = Elemento.search(params[:q])
+    @elemento.cuentadante_id = @cuentadante.id
     @elementos = @search.result
     @search.build_condition
   end

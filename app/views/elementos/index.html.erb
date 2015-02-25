@@ -1,6 +1,6 @@
 <div class="fondc2" >
 <h1>Listado De Elementos</h1>
-<%#<%= form_tag elementos_path, :method => 'get' do %>
+<%#<%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do %>
 <%#  <% content_tag :label do %>
 <%#    <div class="form-group pos">
       Buscar Elemento:
@@ -17,22 +17,6 @@
 <%#    <p>hello </p>
 <% end %>
 
-
-
-<%= search_form_for @search, url: cuentadante_elementos_path(params[:cuentadante_id]) do |f| %>
-  <%= f.condition_fields do |c| %>
-  <div class="field">
-    <%= c.attribute_fields do |a| %>
-      <%= a.attribute_select associations: [:category] %>
-    <% end %>
-    <%= c.predicate_select %>
-    <%= c.value_fields do |v| %>
-      <%= v.text_field :value %>
-    <% end %>
-    </div>
-  <% end %>
-  <div class="actions"><%= f.submit "Search" %></div>
-<% end %>
 
 <div class="panel-body contabla">
     <div class="table-responsive">
@@ -116,5 +100,5 @@
 &raquo;' %>
 <br>
 Elementos: <%= @elementos.count %>
-<%= button_to 'Volver al Listado de Cuentadantes', cuentadantes_path,  :method=>"get", class: "btn btn-primary" %>
+<%#<%= button_to 'Volver al Listado de Cuentadantes', cuentadantes_path,  :method=>"get", class: "btn btn-primary" %>
 </div>

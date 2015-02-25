@@ -9,7 +9,11 @@
 <%#    </div>
   <% end %>
 <%#<% end %>
-<%= search_form_for @search, url: cuentadante_elementos_path(params[:cuentadante_id]) do |f| %>
+<div class="ocultar">
+  <% @elemento.cuentadante.id %>
+</div>
+
+<%= search_form_for @search, cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do |f| %>
   <%= f.condition_fields do |c| %>
   <div class="field">
     <%= c.attribute_fields do |a| %>
@@ -23,6 +27,7 @@
   <% end %>
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
+
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
