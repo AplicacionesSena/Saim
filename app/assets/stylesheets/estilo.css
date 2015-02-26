@@ -444,3 +444,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 		margin-top: -30px;
 	}
 }
+
+.busca1{
+	width: 130px;
+	height: 85px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.busca2{
+	width: 130px;
+	height: 85px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 180px;
+	margin-top: -85px;
+}
+
+.busca3{
+	width: 130px;
+	height: 85px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 350px;
+	margin-top: -85px;
+}
+
+.buscadormultiple{
+	word-break: break-all;
+	word-wrap: break-word;
+	width: 482px;
+	margin-left: 488px;
+	margin-top: -12px;
+}
+
+.plano{
+	/*border: 1px solid black;*/
+	margin-left: -700px;
+}
+
+.buscen_area{
+	position: absolute;
+	border: 1px solid black;
+}

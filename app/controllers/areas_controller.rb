@@ -5,6 +5,7 @@ class AreasController < ApplicationController
   # GET /areas.json
   def index
     @areas = @floor.areas.all
+    @elementos = Elemento.all
   end
 
   # GET /areas/1

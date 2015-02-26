@@ -1,4 +1,6 @@
+
 <% if @floor.id == 1 %>
+<div class="plano">
 	<%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
 	<map name="planmap">
 
@@ -6,6 +8,7 @@
 	    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
 	  <% end %>
 	</map>
+</div>
 <br>
 <% end %>
 
@@ -33,3 +36,8 @@
 
 <%= link_to 'Nueva Area', new_floor_area_path(@floor) %>
 <%= link_to 'Volver A La Tabla Pisos', floors_path %>
+</div>
+
+<%#<div class="buscen_area">
+<%= render "elementos/element" %>
+<%#</div>

@@ -3,7 +3,9 @@ class ElementosController < ApplicationController
   # GET /elementos
   # GET /elementos.json
   def index
-    @elementos = @cuentadante.elementos.all
+    #modelo = params[:modelo]
+    #serial = params[:serial]
+    @elementos = @cuentadante.elementos.search(params[:search], params[:page])#, params[:modelo], params[:serial])
   end
   
 
@@ -63,10 +65,9 @@ class ElementosController < ApplicationController
   end
 
   def allelementos
-    @search = Elemento.search(params[:q])
-    @elemento.cuentadante_id = @cuentadante.id
-    @elementos = @search.result
-    @search.build_condition
+    modelo = params[:modelo]
+    serial = params[:serial]
+    @elementos = Elemento.search(params[:search], params[:modelo], params[:serial], params[:page])
   end
 
   private

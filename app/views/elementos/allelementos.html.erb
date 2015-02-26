@@ -1,31 +1,17 @@
 <div class="fondc2" >
 <h1>Listado De Elementos</h1>
-<%#<%= form_tag elementos_path, :method => 'get' do %>
-<%#  <% content_tag :label do %>
-<%#    <div class="form-group pos">
+<%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do %>
+<p>
+  <% content_tag :label do %>
+    <div class="form-group pos">
       Buscar Elemento:
       <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
-<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
-<%#    </div>
-  <% end %>
-<%#<% end %>
-<div class="ocultar">
-  <% @elemento.cuentadante.id %>
-</div>
-
-<%= search_form_for @search, cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do |f| %>
-  <%= f.condition_fields do |c| %>
-  <div class="field">
-    <%= c.attribute_fields do |a| %>
-      <%= a.attribute_select associations: [:category] %>
-    <% end %>
-    <%= c.predicate_select %>
-    <%= c.value_fields do |v| %>
-      <%= v.text_field :value %>
-    <% end %>
+      <%= text_field_tag :modelo, params[:modelo], class: 'form-control' %>
+      <%= text_field_tag :serial, params[:serial], class: 'form-control' %>
+      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
     </div>
   <% end %>
-  <div class="actions"><%= f.submit "Search" %></div>
+</p>
 <% end %>
 
 <div class="panel-body contabla">
@@ -42,8 +28,6 @@
             <th class="centro">Fecha De Adquisicion</th>
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
-            <th class="centro">Cuentadante</th>
-            <th class="centro">Opciones</th>
           </tr>
         </thead>
 
@@ -79,7 +63,7 @@
 <br>
 <%#<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
 <%#<% end %>
-<%#<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 
 </div>
