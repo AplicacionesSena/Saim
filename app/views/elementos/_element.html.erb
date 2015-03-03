@@ -34,51 +34,52 @@
   
 </div>
 </div>
-
 <div class="panel-body contabla tabla_scroll">
-    
-      <table class="table">
-        <thead>
-          <tr class="success">
-            <th class="centro">Placa</th>
-            <th class="centro">Tipo De Elemento</th>
-            <th class="centro">Nombre</th>
-            <th class="centro">Descripcion</th>
-            <th class="centro">Modelo</th>
-            <th class="centro">Serial</th>
-            <th class="centro">Fecha De Adquisicion</th>
-            <th class="centro">Valor</th>
-            <th class="centro">Estado</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @elementos.each do |elemento| %>
-            <tr>
-              <td><%= elemento.placa %></td>
-              <td><%= elemento.tipo_elem.nombre rescue nil%></td>
-              <td><%= elemento.nombre %></td>
-              <td>
-                <div class="dc">
-                  <%= elemento.descripcion %>
-                </div>
-              </td>
-              <td>
-                <div class="dc2">
-                  <%= elemento.modelo %>
-                </div>
-              </td>
-              <td><%= elemento.serial %></td>
-              <td><%= elemento.fecha_adquisicion %></td>
-              <td><%= elemento.valor %></td>
-              <td><%= elemento.estado %></td>
-              
+<% if @modelo == nil && @serial == nil %>
+  <h1>No Hay Datos De Nada</h1>
+<% else %>
+  <table class="table">
+          <thead>
+            <tr class="success">
+              <th class="centro">Placa</th>
+              <th class="centro">Tipo De Elemento</th>
+              <th class="centro">Nombre</th>
+              <th class="centro">Descripcion</th>
+              <th class="centro">Modelo</th>
+              <th class="centro">Serial</th>
+              <th class="centro">Fecha De Adquisicion</th>
+              <th class="centro">Valor</th>
+              <th class="centro">Estado</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
-   
+          </thead>
+
+          <tbody>
+            <% @elementos.each do |elemento| %>
+              <tr>
+                <td><%= elemento.placa %></td>
+                <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+                <td><%= elemento.nombre %></td>
+                <td>
+                  <div class="dc">
+                    <%= elemento.descripcion %>
+                  </div>
+                </td>
+                <td>
+                  <div class="dc2">
+                    <%= elemento.modelo %>
+                  </div>
+                </td>
+                <td><%= elemento.serial %></td>
+                <td><%= elemento.fecha_adquisicion %></td>
+                <td><%= elemento.valor %></td>
+                <td><%= elemento.estado %></td>
+                
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 </div>
+<% end %>
 
 <%#<% if can? :create, @elemento %>
 <br>
