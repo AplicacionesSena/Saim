@@ -1,13 +1,80 @@
 Rails.application.routes.draw do
+
+  resources :areas
+
+  resources :floors do
+    resources :areas
+  end
+
+  resources :events
+
+  resources :user_sessions
+  resources :users
+
+  get 'login' => 'user_sessions#index', :as => :login
+  get 'logout' => 'user_sessions#destroy', :as => :logout
+
+  resources :cargos
+
+  resources :reintegros
+
+  resources :traspasos
+
+  resources :cuentadantes
+
+  resources :elementos
+
+
+
+
+
+  resources :areas do
+    resources :cuentadantes
+  end
+
+  resources :cuentadantes do
+    resources :elementos
+  end
+
+
+
+
+  resources :elementos do
+    resources :traspasos
+  end
+
+  resources :elementos do
+    resources :reintegros
+  end
+
+  get 'pagina/saim'
+  get 'pagina/bloqueo'
+  get 'pagina/estadisticas'
+  get 'pagina/elementosxcuentadantes'
+  get 'pagina/etraspasos'
+  get 'pagina/ereintegros'
+  get 'pagina/traceability'
+  get 'pagina/index'
   resources :tipo_elems
 
   resources :tipo_docs
+
+
+  
+    get 'allelementos/', to: 'elementos#allelementos', as: 'objetos'
+
+    get 'allcuentadantes/', to: 'cuentadantes#allcuentadantes', as: 'objet'
+
+    get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
+    
+    get 'alltraspasos/', to: 'traspasos#alltraspasos', as: 'objetos2'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'tipo_docs#index'
+  root 'pagina#saim'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

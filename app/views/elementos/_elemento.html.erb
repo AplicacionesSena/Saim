@@ -1,0 +1,39 @@
+<div class="conthistory">
+  <div class="table-responsive">
+  <table class="table">
+          <thead>
+            <tr class="info">
+              <th class="centro">Historial Elementos Creados</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <% @elementos.each do |elemento| %>
+              <tr>
+                <td class="centro success"><%= elemento.datoc %></td>
+              </tr>
+            <% end %>
+          </tbody>
+  </table>
+  </div>
+  
+  <br>
+  
+  <div class="table-responsive">
+  <table class="table">
+          <thead>
+            <tr class="info">
+              <th class="centro">Historial Elementos Modificcados</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <% @elementos.each do |elemento| %>
+              <tr>
+                <td class="centro danger"><%= elemento.datoe%></td>
+              </tr>
+            <% end %>
+          </tbody>
+  </table>
+  </div>
+</div>

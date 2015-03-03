@@ -1,0 +1,45 @@
+<div class="fondc2" >
+<h1>Listado De Usuarios</h1>
+<%= form_tag users_path, :method => 'get' do %>
+  <% content_tag :label do %>
+    <div class="form-group pos">
+      Buscar Usuario:
+      <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
+      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+    </div>
+  <% end %>
+<% end %>
+<div class="panel-body contabla">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Nombre</th>
+            <th class="centro">Email</th>
+            <th class="centro">Documento</th>
+            <th class="centro">Cargo</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Opciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.nombre %></td>
+              <td><%= user.email %></td>
+              <td><%= user.documento %></td>
+              <td><%= user.cargo.rol %></td>
+              <td><%= bloq(user.estado) %></td>
+              <td><a href="#"><%= button_to 'Cambiar Estado', edit_user_path(user), method: "get", class: 'btn btn-warning' %></a>
+                    </ul>
+                  </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<br>
+</div>

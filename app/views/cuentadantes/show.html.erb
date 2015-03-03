@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cuentadante.nombre %>
+</p>
+
+<p>
+  <strong>Tipo doc:</strong>
+  <%= @cuentadante.tipo_doc.sigla %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @cuentadante.documento %>
+</p>
+
+<%= link_to 'Edit', edit_cuentadante_path(@cuentadante) %> |
+<%= link_to 'Back', cuentadantes_path %>

@@ -1,0 +1,49 @@
+<div class="fondc2" >
+<h1>Listado De Traspasos</h1>
+
+<div class="panel-body contabla">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="centro">Nombre elemento</th>
+          <th class="centro">Cuentadante Origen</th>
+          <th class="centro">Cuentadante Destino</th>
+          <th class="centro">Valor Elemento</th>
+          <th class="centro">Fecha de Reintegro</th>
+          <th class="centro">Opciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @reintegros.each do |reintegro| %>
+          <tr>
+            <td><%= reintegro.elemento.nombre %></td>
+            <td><%= reintegro.elemento.cuentadante.nombre %></td>
+            <td><%= reintegro.cuentadante.nombre %></td>
+            <td><%= reintegro.elemento.valor %></td>
+            <td><%= reintegro.fechaReintegro %></td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><%= button_to 'Ver', elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-info bottam' %></a></li>
+                  <% if can? :update, reintegro %>
+                  <li class="divider"></li>
+                  <li><a href="#"><%= button_to 'Editar', edit_elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                  <% end %>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<br>
+<%= button_to 'Nuevo Reintegro', new_elemento_reintegro_path(@elemento), method: "get", class: 'btn btn-primary' %>
+</div>

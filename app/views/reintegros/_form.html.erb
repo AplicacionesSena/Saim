@@ -1,0 +1,41 @@
+<%= form_for [@elemento,@reintegro] do |f| %>
+  <% if @reintegro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reintegro.errors.count, "error") %> prohibited this reintegro from being saved:</h2>
+
+      <ul>
+      <% @reintegro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :elemento_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Nombre_Elemento %><br>
+    <%= @elemento.nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Cuentadante_Origen %><br>
+    <%= @elemento.cuentadante.nombre %>
+  </div>
+  <div class="field">
+    <label>Cuentadante Destino</label><br>
+    
+    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, :prompt => true, :selected => 6, class: "form-control tams" %>
+  </div>
+  <div class="field">
+    <%= f.label :Valor_Elemento %><br>
+    <%= @elemento.valor %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaReintegro %><br>
+    <%= f.datetime_select :fechaReintegro %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

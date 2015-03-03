@@ -1,0 +1,39 @@
+<div class="fondc2" >
+<h1>Listado De Traspasos</h1>
+
+<div class="panel-body contabla">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="centro">Nombre elemento</th>
+          <th class="centro">Cuentadante Origen</th>
+          <th class="centro">Cuentadante Destino</th>
+          <th class="centro">Fecha de Traspaso</th>
+          <th class="centro">Opciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @traspasos.each do |traspaso| %>
+          <tr>
+            <td><%= traspaso.elemento.nombre %></td>
+            <td><%= traspaso.elemento.cuentadante.nombre %></td>
+            <td><%= traspaso.cuentadante.nombre %></td>
+            <td><%= traspaso.fechaTraspaso %></td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><%= button_to 'Ver', elemento_traspaso_path(traspaso.elemento,traspaso), method: "get", class: 'btn btn-info bottam' %></a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

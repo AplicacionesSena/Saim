@@ -1,0 +1,17 @@
+<div class="fondop">
+	<p id="notice"><%= notice %></p>
+	<div class="pisos">
+		<p>
+	  		<%= @floor.nombre %>
+		</p>
+		<p>
+			<div class="zoom">
+	  			<%= image_tag (@floor.image.url), height: '800', width: '1000' %>
+	  		</div>
+		</p>
+		<%= link_to 'Edit', edit_floor_path(@floor) %> |
+		<%= link_to 'Back', floors_path %>
+	</div>
+</div>
+
+

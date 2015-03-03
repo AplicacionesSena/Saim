@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Foto De Perfil:</strong>
+  <%= image_tag (@user.foto.url), height: '100', width: '100' %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @user.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @user.apellido %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @user.tipo_doc.sigla %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @user.documento %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @user.cargo.rol %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @user.estado %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

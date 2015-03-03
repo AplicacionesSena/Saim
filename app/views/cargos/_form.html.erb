@@ -1,0 +1,40 @@
+<%= form_for(@cargo) do |f| %>
+  <% if @cargo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cargo.errors.count, "error") %> prohibited this cargo from being saved:</h2>
+
+      <ul>
+      <% @cargo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.check_box :rol %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :privilegioVer %><br>
+    <%= f.check_box :privilegioVer %>
+  </div>
+  <div class="field">
+    <%= f.label :privilegioEditar %><br>
+    <%= f.check_box :privilegioEditar %>
+  </div>
+  <div class="field">
+    <%= f.label :privilegioEleminar %><br>
+    <%= f.check_box :privilegioEleminar %>
+  </div>
+  <div class="field">
+    <%= f.label :privilegioCrear %><br>
+    <%= f.check_box :privilegioCrear %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

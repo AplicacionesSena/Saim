@@ -1,0 +1,27 @@
+<div class="divplan">
+<h1 class="centro">Listado De Pisos</h1>
+<div class="centro">
+<%#<%= form_tag floors_path, :method => 'get' do %>
+<%#  <% content_tag :label do %>
+<%#    <div class="form-group">
+      Buscar Piso:
+      <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
+<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img11') %>
+<%#    </div>
+  <% end %>
+<%#<% end %>
+</div>
+    <% @floors.each do |floor| %>
+       <p class="centro"><%= floor.nombre %></p><%#</td>%>
+       <%= image_tag(floor.image.url)%><%#</td>%>
+        <%#<td><%= link_to 'Ver', floor %><%#</td>%>
+        <%#<td><%= link_to 'Editar', edit_floor_path(floor) %><%#</td>%>
+        <%#<td><%= link_to 'Eliminar', floor, method: :delete, data: { confirm: 'Estas Seguro?' } %><%#</td>%>
+       <p class="centro"><%= link_to 'Ver Areas', floor_areas_path(floor) %></p>
+    <% end %>
+<p class="centro"><%= link_to 'Nuevo Piso', new_floor_path %></p>
+<hr>
+<div class="centro"><%= will_paginate @floors, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %></div>
+
+</div>

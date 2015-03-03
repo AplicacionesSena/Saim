@@ -1,0 +1,103 @@
+<%= form_for ([@cuentadante, @elemento]) do |f| %>
+  <% if @elemento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@elemento.errors.count, "error") %> prohibited this elemento from being saved:</h2>
+
+      <ul>
+      <% @elemento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4 col-sm-4">
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+            <% if @elemento.placa == nil %>
+              <h3 class="centro">Campos Para Registrar Un Elemento</h3>
+            <% else %>
+               <h3 class="centro">Campos Para Editar Un Elemento</h3>
+            <% end %>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="form-group mo0">
+                  <%= f.label :Placa %><br>
+                  <%= f.text_field :placa, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mov">
+                  <label>Tipo de Elemento</label><br>
+                  <%= f.collection_select :tipo_elem_id, TipoElem.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Tipo De Elemento" %>
+                </div>
+                <br>
+                <div class="form-group mov1">
+                  <%= f.label :Nombre %><br>
+                  <%= f.text_field :nombre, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Descripcion %><br>
+                  <%= f.text_area :descripcion, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Modelo %><br>
+                  <%= f.text_field :modelo, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mov3">
+                  <%= f.label :Serial %><br>
+                  <%= f.text_field :serial, class: 'form-control tams'  %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Fecha_de_Adquisicion %><br>
+                  <%= f.datetime_select :fecha_adquisicion, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Valor %><br>
+                  <%= f.text_field :valor, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov2">
+                  <%= f.label :Estado %><br>
+                  <%= f.check_box :estado, class: 'form-control tams' %>
+                </div>
+                <% if :valor != nil %>
+                <div class="field ocultar">
+                  <%= time = Time.now %>
+                  <%= f.text_field :datoe, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' edito un elemento con la placa numero: '+@elemento.placa+' el '+time.localtime("-05:00").to_s %>
+                </div>
+                <% else %>
+                  <div class="field ocultar">
+                    <%= time = Time.now %>
+                    <%= f.text_field :datoe %>
+                  </div>
+                  <div class="field ocultar">
+                    <%= time = Time.now %>
+                    <%= f.text_field :datoc, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' creo un elemento el '+time.localtime("-05:00").to_s %>
+                  </div>
+                <% end %>
+                <%#<div class="form-group">
+                  <label>Area De Ubicacion</label><br>
+                  <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione El Area Del Elemento" %>
+                <%#</div>%>
+                <hr>
+                <div class="actions mo0g">
+                  <%= f.submit "Guardar" %>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

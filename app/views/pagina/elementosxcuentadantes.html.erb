@@ -1,0 +1,24 @@
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    new Highcharts.Chart({
+          chart: { renderTo: 'orders_chart', type: 'line' },
+          title: { text: 'Elementos por cuentadantes' },
+          xAxis: { categories: <%= @cuentadantes.map { |x| x.documento } %> },
+          yAxis: { title: { text: '# elementos' } },
+      series: [{
+        name: 'Elementos',
+        type: 'column',
+        // pointInterval: <%= @cuentadantes.map { |cue| cue.nombre.to_i } %>,
+        data: <%= @cuentadantes.map { |cue| cue.elementos.count } %>
+      }]
+    });
+  });
+</script>
+
+
+<center><div id="orders_chart" style="width: 960px; height: 500px;"></div></center>
+
+<table class="pretty">
+  <!-- Orders table code here -->
+</table>
+<a href="/pagina/estadisticas" class="btn btn-primary">Menu Estadisticas</a>

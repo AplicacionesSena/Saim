@@ -1,0 +1,11 @@
+<h1 class="centro">Editando Elemento</h1>
+
+<%= render 'form' %>
+<div class="contdiv">
+	<div class="mo0a1">
+	<%= button_to 'Ver', edit_cuentadante_elemento_path(@cuentadante,@elemento), method: "get", class: 'btn btn-primary' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', cuentadante_elementos_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>
