@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150212133241) do
     t.integer  "documento"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "telefono"
+    t.integer  "area_id"
   end
 
   add_index "cuentadantes", ["tipo_doc_id"], name: "index_cuentadantes_on_tipo_doc_id"
@@ -63,6 +65,7 @@ ActiveRecord::Schema.define(version: 20150212133241) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "datoc"
+    t.string   "datoe"
   end
 
   create_table "events", force: true do |t|
@@ -109,24 +112,6 @@ ActiveRecord::Schema.define(version: 20150212133241) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "traceabilities", force: true do |t|
-    t.integer  "cuentadantes_id"
-    t.integer  "elementos_id"
-    t.integer  "events_id"
-    t.integer  "reintegros_id"
-    t.integer  "traspasos_id"
-    t.integer  "users_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "traceabilities", ["cuentadantes_id"], name: "index_traceabilities_on_cuentadantes_id"
-  add_index "traceabilities", ["elementos_id"], name: "index_traceabilities_on_elementos_id"
-  add_index "traceabilities", ["events_id"], name: "index_traceabilities_on_events_id"
-  add_index "traceabilities", ["reintegros_id"], name: "index_traceabilities_on_reintegros_id"
-  add_index "traceabilities", ["traspasos_id"], name: "index_traceabilities_on_traspasos_id"
-  add_index "traceabilities", ["users_id"], name: "index_traceabilities_on_users_id"
 
   create_table "traspasos", force: true do |t|
     t.integer  "elemento_id"
