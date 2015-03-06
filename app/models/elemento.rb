@@ -15,4 +15,7 @@ class Elemento < ActiveRecord::Base
 	def self.serial(serial)
 		where(['serial LIKE :w', :w => "%#{serial}%".upcase])
 	end
+	def self.nombre(nombre)
+		where(['nombre LIKE :x', :x => "%#{nombre}%".upcase])
+	end
 end

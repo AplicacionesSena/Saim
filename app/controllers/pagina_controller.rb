@@ -34,13 +34,17 @@ class PaginaController < ApplicationController
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
-    if @serial == nil && @modelo == nil
-      @elementos = Elemento.search(params[:search])
-    elsif @serial == nil && @search == nil
-      @elementos = Elemento.modelo(params[:modelo])
-    elsif @modelo == nil && @search == nil
-      @elementos = Elemento.serial(params[:serial])
+    @nombre = params[:nombre]
+    if @serial == nil && @modelo == nil && @nombre == nil
+      @elementos = @cuentadante.elementos.search(params[:search])
+    elsif @serial == nil && @search == nil && @nombre == nil
+      @elementos = @cuentadante.elementos.modelo(params[:modelo])
+    elsif @modelo == nil && @search == nil && @nombre == nil
+      @elementos = @cuentadante.elementos.serial(params[:serial])
+    elsif @search == nil && @modelo == nil && @serial == nil
+      @elementos = @cuentadante.elementos.nombre(params[:nombre])
     end
+    
   end
 
   def plano

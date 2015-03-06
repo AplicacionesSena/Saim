@@ -11,6 +11,21 @@
 <%#    </div>
 <%#  <% end %>
 <%#<% end %>
+ <a href="#openModal" class="btTxt">ABRIR VENTANA</a>
+<div id="openModal" class="modalDialogo"><div><a href="#close" title="cerrar" class="cerrar">X</a>
+ 
+<h2>Importar Cuentadantes</h2>
+<%= form_tag import_cuentadantes_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Importar" %>
+<% end %>
+
+</div></div>
+
+
+
+
+
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">

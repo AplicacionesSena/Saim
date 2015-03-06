@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+  resources :cuentadantes do
+    collection { post :import }
+  end
+
+
   resources :areas
 
   resources :floors do

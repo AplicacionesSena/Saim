@@ -1,4 +1,9 @@
-<div class="fondc3" >
+<div class="moventa">
+<a href="#openModal" class="btTxt">Abrir Buscador</a>
+  <div id="openModal" class="modalDialogo">
+    <div>
+      <a href="#close" title="cerrar" class="cerrar">X</a>
+      <div class="fondc3" >
 <h1 class="nomleft">Listado De Elementos</h1>
 
 <div class="buscadormultiple2">
@@ -32,8 +37,22 @@
     <% end %>
   </div>
   
+  <div class="busca4">
+    <%= form_tag @elemento, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Nombre:
+          <%= text_field_tag :nombre, params[:nombre], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+
+
 <div class="panel-body contabla tabla_scroll">
 <% if @modelo == nil && @serial == nil %>
   <h1>No Hay Datos De Nada</h1>

@@ -12,6 +12,13 @@ class CuentadantesController < ApplicationController
   def show
   end
 
+  def import
+    Cuentadante.import(params[:file])
+    redirect_to root_url, notice: "Cuentadantes Importados Con Exito."
+  end
+
+
+
   # GET /cuentadantes/new
   def new
     @cuentadante = Cuentadante.new
@@ -63,6 +70,12 @@ class CuentadantesController < ApplicationController
 
   def allcuentadantes
     @cuentadantes = Cuentadante.search(params[:search], params[:page])
+    @cuentadantes = Cuentadante.order(:name)
+    respond_to do |format|
+      format.html
+      format.csv { send_data @cuentadantes.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   private

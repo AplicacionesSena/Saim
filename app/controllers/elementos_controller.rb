@@ -6,12 +6,15 @@ class ElementosController < ApplicationController
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
-    if @serial == nil && @modelo == nil
+    @nombre = params[:nombre]
+    if @serial == nil && @modelo == nil && @nombre == nil
       @elementos = @cuentadante.elementos.search(params[:search])
-    elsif @serial == nil && @search == nil
+    elsif @serial == nil && @search == nil && @nombre == nil
       @elementos = @cuentadante.elementos.modelo(params[:modelo])
-    elsif @modelo == nil && @search == nil
+    elsif @modelo == nil && @search == nil && @nombre == nil
       @elementos = @cuentadante.elementos.serial(params[:serial])
+    elsif @modelo == nil && @search == nil && @serial == nil
+      @elementos = @cuentadante.elementos.nombre(params[:nombre])
     end
     
   end
@@ -76,13 +79,17 @@ class ElementosController < ApplicationController
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
-    if @serial == nil && @modelo == nil
+    @nombre = params[:nombre]
+    if @serial == nil && @modelo == nil && @nombre == nil
       @elementos = Elemento.search(params[:search])
-    elsif @serial == nil && @search == nil
+    elsif @serial == nil && @search == nil && @nombre == nil
       @elementos = Elemento.modelo(params[:modelo])
-    elsif @modelo == nil && @search == nil
+    elsif @modelo == nil && @search == nil && @nombre == nil
       @elementos = Elemento.serial(params[:serial])
+    elsif @search == nil && @modelo == nil && @serial == nil
+      @elementos = Elemento.nombre(params[:nombre])
     end
+    
   end
 
   private
