@@ -29,6 +29,7 @@ class TraspasosController < ApplicationController
     @traspaso = Traspaso.new(traspaso_params)
     @traspaso.elemento_id = @elemento.id
     @elemento.cuentadante_id = @traspaso.cuentadante_id
+    @elemento.area_id = @elemento.cuentadante.area_id
     @elemento.save
     respond_to do |format|
       if @traspaso.save

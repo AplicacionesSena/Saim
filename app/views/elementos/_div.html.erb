@@ -1,0 +1,20 @@
+
+<% if @modelo != nil %>
+	<% @elementos.each do |elemento| %>
+		<% if elemento.cuentadante.area_id == 1 %>
+			<div class="sec1">	
+			</div>
+		<% end %>
+		<% break %>
+	<% end %>
+<% end %>
+
+<% if @modelo != nil %>
+	<% @elementos.each do |elemento| %>
+		<% if elemento.cuentadante.area_id == 2 %>
+			<div class="sec2">
+			</div>
+		<% end %>
+		<% break %>
+	<% end %>
+<% end %>

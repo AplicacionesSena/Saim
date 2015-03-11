@@ -3,6 +3,7 @@ class ElementosController < ApplicationController
   # GET /elementos
   # GET /elementos.json
   def index
+    
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
@@ -101,6 +102,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :datoe)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :datoe, :area_id)
     end
 end
