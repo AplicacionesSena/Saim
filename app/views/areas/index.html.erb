@@ -2,13 +2,22 @@
 <% if @floor.id == 1 %>
 <div class="contenedortodoplanos">
 	<div class="plano">
+		
 		<%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+		<% if @modelo == "nose" %>
+		<% if @cuentadante %>
+			<% if @elemento.area.id == 1 %>
+				<div class="sec1">	
+				</div>
+			<% end %>
+		<% end %>
 		<map name="planmap">
-	
+		
 		  <% @areas.each do |area| %>
 		    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
 		  <% end %>
 		</map>
+
 	</div>
 </div>
 <br>
@@ -47,4 +56,5 @@
 	<div class="buscen_area">
 		<%= render "pagina/index" %>
 	</div>
-<%#</div>
+	
+<%#</div>%>

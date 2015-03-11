@@ -13,6 +13,7 @@ class CreateElementos < ActiveRecord::Migration
       t.string :datoc
       t.string :datoe
       t.references :cuentadante, index: true
+      t.integer :area_id
 
       t.timestamps
     end

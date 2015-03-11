@@ -85,10 +85,10 @@
                     <%= f.text_field :datoc, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' creo un elemento el '+time.localtime("-05:00").to_s %>
                   </div>
                 <% end %>
-                <%#<div class="form-group">
+                <div class="form-group">
                   <label>Area De Ubicacion</label><br>
                   <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione El Area Del Elemento" %>
-                <%#</div>%>
+                </div>%>
                 <hr>
                 <div class="actions mo0g">
                   <%= f.submit "Guardar" %>

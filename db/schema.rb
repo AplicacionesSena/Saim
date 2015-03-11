@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212133241) do
+ActiveRecord::Schema.define(version: 20150311154059) do
 
   create_table "areas", force: true do |t|
     t.string   "nombre"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150212133241) do
     t.datetime "updated_at"
     t.string   "datoc"
     t.string   "datoe"
+    t.integer  "section_id"
   end
 
   create_table "events", force: true do |t|
@@ -98,6 +99,17 @@ ActiveRecord::Schema.define(version: 20150212133241) do
 
   add_index "reintegros", ["cuentadante_id"], name: "index_reintegros_on_cuentadante_id"
   add_index "reintegros", ["elemento_id"], name: "index_reintegros_on_elemento_id"
+
+  create_table "sections", force: true do |t|
+    t.string   "nombre"
+    t.string   "shape"
+    t.string   "coords"
+    t.integer  "area_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sections", ["area_id"], name: "index_sections_on_area_id"
 
   create_table "tipo_docs", force: true do |t|
     t.string   "sigla"
