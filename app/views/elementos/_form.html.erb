@@ -70,25 +70,27 @@
                   <%= f.label :Estado %><br>
                   <%= f.check_box :estado, class: 'form-control tams' %>
                 </div>
-                <% if :valor != nil %>
-                <div class="field ocultar">
-                  <%= time = Time.now %>
-                  <%= f.text_field :datoe, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' edito un elemento con la placa numero: '+@elemento.placa+' el '+time.localtime("-05:00").to_s %>
-                </div>
-                <% else %>
-                  <div class="field ocultar">
-                    <%= time = Time.now %>
-                    <%= f.text_field :datoe %>
-                  </div>
+                
                   <div class="field ocultar">
                     <%= time = Time.now %>
                     <%= f.text_field :datoc, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' creo un elemento el '+time.localtime("-05:00").to_s %>
                   </div>
+                  <div class="field ocultar">
+                    <%= time = Time.now %>
+                    <%= f.text_field :datoe %>
+                  </div>
+                  <% if :valor != nil %>
+                  <div class="field ocultar">
+                    <%= time = Time.now %>
+                    <%= f.text_field :datoe, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' edito un elemento con la placa numero: '+@elemento.placa+' el '+time.localtime("-05:00").to_s %>
+                  </div>
                 <% end %>
-                <div class="form-group">
+                <div class="form-group ocultar">
                   <label>Area De Ubicacion</label><br>
+                  <%= f.text_field :area_id, class: 'form-control', :value => @cuentadante.area_id %>
+                  <%#
                   <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione El Area Del Elemento" %>
-                </div>%>
+                </div>
                 <hr>
                 <div class="actions mo0g">
                   <%= f.submit "Guardar" %>

@@ -3,7 +3,6 @@ class ElementosController < ApplicationController
   # GET /elementos
   # GET /elementos.json
   def index
-    
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
@@ -30,6 +29,7 @@ class ElementosController < ApplicationController
   # GET /elementos/new
   def new
     @elemento = Elemento.new
+    @elemento.placa = @elemento.placa
   end
 
   # GET /elementos/1/edit
@@ -41,6 +41,9 @@ class ElementosController < ApplicationController
   def create
     @elemento = Elemento.new(elemento_params)
     @elemento.cuentadante_id = @cuentadante.id
+    @cuentadante.area_id = @elemento.area_id
+    @elemento.placa = @elemento.placa
+    @elemento.save
     respond_to do |format|
       if @elemento.save
         format.html { redirect_to cuentadante_elementos_path(@cuentadante)}
