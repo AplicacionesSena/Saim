@@ -3,9 +3,11 @@
 one:
   nombre: MyString
   tipo_doc_id: 
-  documento: 1
+  documento: MyString
+  telefono: MyString
 
 two:
   nombre: MyString
   tipo_doc_id: 
-  documento: 1
+  documento: MyString
+  telefono: MyString

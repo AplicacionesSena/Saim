@@ -1,4 +1,4 @@
-<%= form_for ([@cuentadante, @elemento]) do |f| %>
+<%= form_for [@area,@elemento] do |f| %>
   <% if @elemento.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@elemento.errors.count, "error") %> prohibited this elemento from being saved:</h2>
@@ -79,18 +79,16 @@
                     <%= time = Time.now %>
                     <%= f.text_field :datoe %>
                   </div>
-                  <% if :valor != nil %>
-                  <div class="field ocultar">
+                  <%#<% if :valor != nil %>
+                  <%#<div class="field ocultar">
                     <%= time = Time.now %>
-                    <%= f.text_field :datoe, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' edito un elemento con la placa numero: '+@elemento.placa+' el '+time.localtime("-05:00").to_s %>
+                  <%#  <%= f.text_field :datoe, :value =>'El '+current_user.cargo.rol+' -> '+current_user.nombre+' edito un elemento con la placa numero: '+@elemento.placa+' el '+time.localtime("-05:00").to_s %>
+                  <%#</div>
+                  <% end %>
+                  <div class="form-group">
+                    <label>Cuentadante</label><br>
+                    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Cuentadante" %>
                   </div>
-                <% end %>
-                <div class="form-group ocultar">
-                  <label>Area De Ubicacion</label><br>
-                  <%= f.text_field :area_id, class: 'form-control', :value => @cuentadante.area_id %>
-                  <%#
-                  <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione El Area Del Elemento" %>
-                </div>
                 <hr>
                 <div class="actions mo0g">
                   <%= f.submit "Guardar" %>

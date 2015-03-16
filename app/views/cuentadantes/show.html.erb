@@ -7,7 +7,7 @@
 
 <p>
   <strong>Tipo doc:</strong>
-  <%= @cuentadante.tipo_doc.sigla %>
+  <%= @cuentadante.tipo_doc %>
 </p>
 
 <p>
@@ -15,5 +15,10 @@
   <%= @cuentadante.documento %>
 </p>
 
-<%= link_to 'Edit', edit_area_cuentadante_path(@area,@cuentadante) %> |
-<%= link_to 'Back', area_cuentadantes_path %>
+<p>
+  <strong>Telefono:</strong>
+  <%= @cuentadante.telefono %>
+</p>
+
+<%= link_to 'Edit', edit_cuentadante_path(@cuentadante) %> |
+<%= link_to 'Back', cuentadantes_path %>

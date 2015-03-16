@@ -1,4 +1,4 @@
-<%= form_for [@elemento,@traspaso] do |f| %>
+<%= form_for(@traspaso) do |f| %>
   <% if @traspaso.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@traspaso.errors.count, "error") %> prohibited this traspaso from being saved:</h2>
@@ -10,27 +10,18 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.hidden_field :elemento_id %>
-  </div>
-  <div class="field">
-    <%= f.label :Nombre_Elemento %><br>
-    <%= @elemento.nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :Cuentadante_Origen %><br>
-    <%= @elemento.cuentadante.nombre %>
-  </div>
-  <div class="field">
-    <label>Cuentadante Destino</label><br>
-    
-    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Cuentadante Destino" %>
-  </div>
- 
 
   <div class="field">
-    <%= f.label :Fecha_Traspaso %><br>
-    <%= f.datetime_select :fechaTraspaso %>
+    <%= f.label :elemento_id %><br>
+    <%= f.text_field :elemento_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cuentadante_id %><br>
+    <%= f.text_field :cuentadante_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaTrapaso %><br>
+    <%= f.datetime_select :fechaTrapaso %>
   </div>
   <div class="actions">
     <%= f.submit %>

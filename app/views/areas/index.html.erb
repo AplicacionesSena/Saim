@@ -1,56 +1,58 @@
 
-<% if @floor.id == 1 %>
+<% if @floor.id == 3 %>
 <div class="contenedortodoplanos">
-	<div class="plano">
-		
-		<%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
-		 
-			<%= render "elementos/div"%>
-		<map name="planmap">
-		
-		  <% @areas.each do |area| %>
-		    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
-		  <% end %>
-		</map>
+  <div class="plano">
+    
+    <%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+     
+      <%= render "elementos/div"%>
+    <map name="planmap">
+    
+      <% @areas.each do |area| %>
+        <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+      <% end %>
+    </map>
 
-	</div>
+  </div>
 </div>
 <br>
 <% end %>
 
 <% if @floor.id == 2 %>
 <div class="contenedortodoplanos">
-	<div class="plano2">
-		<%= image_tag("Plano Segundo Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
-		<map name="planmap">
-	
-		  <% @areas.each do |area| %>
-		    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
-		  <% end %>
-		</map>
-	</div>
+  <div class="plano2">
+    <%= image_tag("Plano Segundo Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+    <map name="planmap">
+  
+      <% @areas.each do |area| %>
+        <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+      <% end %>
+    </map>
+  </div>
 </div>
 <br>
 <% end %>
 
-<% if @floor.id == 3 %>
+<% if @floor.id == 1 %>
 <div class="contenedortodoplanos">
-	<div class="plano3">
-		<%= image_tag("Plano Tercer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
-		<map name="planmap">
-	
-		  <% @areas.each do |area| %>
-		    <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
-		  <% end %>
-		</map>
-	</div>
+  <div class="plano3">
+    <%= image_tag("Plano Tercer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+
+    <%= render "elementos/div"%>
+    <map name="planmap">
+  
+      <% @areas.each do |area| %>
+        <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+      <% end %>
+    </map>
+  </div>
 </div>
 <br>
 <% end %>
 <%#<div class="contenedortodoplanos">%>
-	<div class="buscen_area">
-		<%= render "pagina/index" %>
-	</div>
-	
+  <div class="buscen_area">
+    <%= render "pagina/index" %>
+  </div>
+  
 <%#</div>%>
 <%= link_to 'Nueva Area', new_floor_area_path(@floor) %>

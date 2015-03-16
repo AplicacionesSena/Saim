@@ -5,6 +5,7 @@ class AreasController < ApplicationController
   # GET /areas.json
   def index
     @areas = @floor.areas.all
+    @nombre = params[:nombre]
     @serial = params[:serial]
     @modelo = params[:modelo]
     @search = params[:placa]
@@ -14,6 +15,8 @@ class AreasController < ApplicationController
       @elementos = Elemento.modelo(params[:modelo])
     elsif @modelo == nil && @search == nil
       @elementos = Elemento.serial(params[:serial])
+    elsif @search == nil && @modelo == nil && @serial == nil
+      @elementos = Elemento.nombre(params[:nombre])
     end
   end
 
@@ -80,6 +83,6 @@ class AreasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def area_params
-      params.require(:area).permit(:nombre, :coords, :shape, :floor_id, :image)
+      params.require(:area).permit(:nombre, :shape, :coords, :floor_id, :image)
     end
 end

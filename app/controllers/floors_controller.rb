@@ -4,8 +4,7 @@ class FloorsController < ApplicationController
   # GET /floors
   # GET /floors.json
   def index
-    @floors = Floor.search(params[:search], params[:page])
-    @areas = Area.all
+    @floors = Floor.all
   end
 
   # GET /floors/1
@@ -26,7 +25,6 @@ class FloorsController < ApplicationController
   # POST /floors.json
   def create
     @floor = Floor.new(floor_params)
-
     respond_to do |format|
       if @floor.save
         format.html { redirect_to @floor, notice: 'Floor was successfully created.' }

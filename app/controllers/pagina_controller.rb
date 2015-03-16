@@ -36,13 +36,13 @@ class PaginaController < ApplicationController
     @search = params[:placa]
     @nombre = params[:nombre]
     if @serial == nil && @modelo == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.search(params[:search])
+      @elementos = @area.elementos.search(params[:search])
     elsif @serial == nil && @search == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.modelo(params[:modelo])
+      @elementos = @area.elementos.modelo(params[:modelo])
     elsif @modelo == nil && @search == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.serial(params[:serial])
+      @elementos = @area.elementos.serial(params[:serial])
     elsif @search == nil && @modelo == nil && @serial == nil
-      @elementos = @cuentadante.elementos.nombre(params[:nombre])
+      @elementos = @area.elementos.nombre(params[:nombre])
     end
     
   end

@@ -1,16 +1,22 @@
-
-
 <div class="fondc2" >
 <h1>Listado De Cuentadantes</h1>
-<%= form_tag cuentadantes_path, :method => 'get' do %>
-  <% content_tag :label do %>
-    <div class="form-group pos">
+<%#<%= form_tag cuentadantes_path, :method => 'get' do %>
+<%#  <% content_tag :label do %>
+<%#    <div class="form-group pos">
       Buscar Cuentadante:
       <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
-      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img11') %>
-    </div>
-  <% end %>
+<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img11') %>
+<%#    </div>
+<%#  <% end %>
+<%#<% end %>
+<h2>Importar Cuentadantes</h2>
+<%= form_tag import_cuentadantes_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Importar" %>
 <% end %>
+
+
+
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
@@ -21,6 +27,7 @@
             <th class="centro">Documento</th>
             <th class="centro">Telefono</th>
             <th class="centro">Cantidad Elementos</th>
+            <th class="centro">Ubicacion</th>
             <th class="centro">Opciones</th>
           </tr>
         </thead>
@@ -32,20 +39,21 @@
               <td><%= cuentadante.tipo_doc.sigla %></td>
               <td><%= cuentadante.documento %></td>
               <td><%= cuentadante.telefono%></td>
-              <td><%= link_to 'Ver Elementos ⇨ '+ cuentadante.elementos.count.to_s + '', cuentadante_elementos_path(cuentadante), class: "btn btn-default btn-sm" %></td>
+              <td><%= cuentadante.area.nombre %></td>
+              <td><%= cuentadante.elementos.count %></td>
               <td>
                 <div class="btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle " data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
                   </button>
                   <ul class="dropdown-menu drop" role="menu">
-                    <li><a href="#"><%= button_to 'Ver', area_cuentadante_path(cuentadante.area,cuentadante), method: "get", class: 'btn btn-info btn-xs' %></a></li>
+                    <li><a href="#"><%= button_to 'Ver', cuentadante, method: "get", class: 'btn btn-info btn-xs' %></a></li>
                     <% if can? :update, cuentadante %>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Editar', edit_area_cuentadante_path(cuentadante.area,cuentadante), method: "get", class: 'btn btn-warning btn-xs' %></a></li>
+                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_path(cuentadante), method: "get", class: 'btn btn-warning btn-xs' %></a></li>
                     <% end %>
                     <% if can? :destroy, cuentadante %>
                     <li class="divider"></li>
-                    <li class="op1"><a href="#"><%= link_to 'Eliminar', area_cuentadante_path(cuentadante.area,cuentadante), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs col1' %></td></a></li>
+                    <li class="op1"><a href="#"><%= link_to 'Eliminar', cuentadante, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs col1' %></td></a></li>
                     <% end %>
                   </ul>
                 </div>
@@ -58,9 +66,8 @@
   </div>
 <br>
 
-<%#<%= button_to 'Nuevo Cuentadante', new_area_cuentadante_path(@area), method: "get", class: 'btn btn-primary' %>
-<%= will_paginate @cuentadantes, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
-&raquo;' %>
+<%= button_to 'Nuevo Cuentadante', new_cuentadante_path, method: "get", class: 'btn btn-primary' %>
+
 <br>
 Cuentadantes: <%= @cuentadantes.count %>
 

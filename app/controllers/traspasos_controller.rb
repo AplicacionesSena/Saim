@@ -28,9 +28,6 @@ class TraspasosController < ApplicationController
   def create
     @traspaso = Traspaso.new(traspaso_params)
     @traspaso.elemento_id = @elemento.id
-    @elemento.cuentadante_id = @traspaso.cuentadante_id
-    @elemento.area_id = @elemento.cuentadante.area_id
-    @elemento.save
     respond_to do |format|
       if @traspaso.save
         format.html { redirect_to elemento_traspasos_path(@elemento), notice: 'Traspaso was successfully created.' }

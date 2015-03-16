@@ -1,25 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  placa: 1
+  placa: MyString
   tipo_elem_id: 
   nombre: MyString
   descripcion: MyText
   modelo: MyString
   serial: MyString
-  fecha_adquisicion: 2014-10-30 15:32:05
-  valor: 1
+  fecha_adquisicion: 2015-03-13 11:56:46
+  valor: MyString
   estado: false
-  cuentadante_id: 
+  datoc: MyString
+  datoe: MyString
+  area_id: 
 
 two:
-  placa: 1
+  placa: MyString
   tipo_elem_id: 
   nombre: MyString
   descripcion: MyText
   modelo: MyString
   serial: MyString
-  fecha_adquisicion: 2014-10-30 15:32:05
-  valor: 1
+  fecha_adquisicion: 2015-03-13 11:56:46
+  valor: MyString
   estado: false
-  cuentadante_id: 
+  datoc: MyString
+  datoe: MyString
+  area_id: 

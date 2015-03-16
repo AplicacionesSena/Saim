@@ -1,15 +1,51 @@
 Rails.application.routes.draw do
 
+  #_____________________ruta para importaciones
+
   resources :cuentadantes do
     collection { post :import }
   end
 
+  #____________________________________________
 
-  resources :areas
+
+
+
+
+
+
+
+
+  #________________________ruta anidada de cinco
+
+  resources :cuentadantes
 
   resources :floors do
     resources :areas
   end
+
+  resources :areas do
+    resources :elementos
+  end
+
+  resources :elementos do
+    resources :traspasos
+  end
+
+  resources :elementos do
+    resources :reintegros
+  end
+
+
+  #_____________________________________________
+
+
+
+
+
+
+
+
 
   resources :events
 
@@ -21,38 +57,7 @@ Rails.application.routes.draw do
 
   resources :cargos
 
-  resources :reintegros
-
-  resources :traspasos
-
-  resources :cuentadantes
-
-  resources :elementos
-
-
-
-
-
-
-  resources :areas do
-    resources :cuentadantes
-  end
-
-  resources :cuentadantes do
-    resources :elementos
-  end
-
-
-
-
-  resources :elementos do
-    resources :traspasos
-  end
-
-  resources :elementos do
-    resources :reintegros
-  end
-
+  get 'elementos/elementcuenta', :as => :prueba
   get 'pagina/saim'
   get 'pagina/bloqueo'
   get 'pagina/estadisticas'

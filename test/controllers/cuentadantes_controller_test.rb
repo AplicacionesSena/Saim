@@ -18,7 +18,7 @@ class CuentadantesControllerTest < ActionController::TestCase
 
   test "should create cuentadante" do
     assert_difference('Cuentadante.count') do
-      post :create, cuentadante: { documento: @cuentadante.documento, nombre: @cuentadante.nombre, tipo_doc_id: @cuentadante.tipo_doc_id }
+      post :create, cuentadante: { documento: @cuentadante.documento, nombre: @cuentadante.nombre, telefono: @cuentadante.telefono, tipo_doc_id: @cuentadante.tipo_doc_id }
     end
 
     assert_redirected_to cuentadante_path(assigns(:cuentadante))
@@ -35,7 +35,7 @@ class CuentadantesControllerTest < ActionController::TestCase
   end
 
   test "should update cuentadante" do
-    patch :update, id: @cuentadante, cuentadante: { documento: @cuentadante.documento, nombre: @cuentadante.nombre, tipo_doc_id: @cuentadante.tipo_doc_id }
+    patch :update, id: @cuentadante, cuentadante: { documento: @cuentadante.documento, nombre: @cuentadante.nombre, telefono: @cuentadante.telefono, tipo_doc_id: @cuentadante.tipo_doc_id }
     assert_redirected_to cuentadante_path(assigns(:cuentadante))
   end
 

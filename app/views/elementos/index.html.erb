@@ -2,7 +2,7 @@
 <h1>Listado De Elementos</h1>
 <div class="buscadormultiple">
   <div class="busca1">
-    <%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do %>
+    <%= form_tag area_elementos_path(@area, @elemento), :method => 'get' do %>
         <div class="form-group pos">
           Buscar Por Placa:
           <%= text_field_tag :search, params[:search], class: 'form-control tams', :value => nil %>
@@ -12,7 +12,7 @@
   </div>
 
   <div class="busca2">
-    <%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do %>
+    <%= form_tag area_elementos_path(@area, @elemento), :method => 'get' do %>
         <div class="form-group pos">
           Buscar Por Modelo:
           <%= text_field_tag :modelo, params[:modelo], class: 'form-control' , :value => nil %>
@@ -22,7 +22,7 @@
   </div>
 
   <div class="busca3">
-    <%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get' do %>
+    <%= form_tag area_elementos_path(@area, @elemento), :method => 'get' do %>
         <div class="form-group pos">
           Buscar Por Serial:
           <%= text_field_tag :serial, params[:serial], class: 'form-control' , :value => nil %>
@@ -56,6 +56,7 @@
             <th class="centro">Fecha De Adquisicion</th>
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
+            <th class="centro">Cuentadante Actual</th>
             <th class="centro">Opciones</th>
             <th class="centro">Movimientos</th>
           </tr>
@@ -81,19 +82,20 @@
               <td><%= elemento.fecha_adquisicion %></td>
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
+              <td><%= elemento.cuentadante.nombre%></td>
               <td>
                 <div class="btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
                   </button>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><%= button_to 'Ver', cuentadante_elemento_path(@cuentadante,elemento) , method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <li><a href="#"><%= button_to 'Ver', area_elemento_path(@area,elemento) , method: "get", class: 'btn btn-info bottam' %></a></li>
                     <% if can? :update, elemento %>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_elemento_path(@cuentadante,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <li><a href="#"><%= button_to 'Editar', edit_area_elemento_path(@area,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                     <% end %>
                     <% if can? :destroy, elemento %>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Eliminar', cuentadante_elemento_path(@cuentadante,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></a></li>
+                    <li><a href="#"><%= button_to 'Eliminar', area_elemento_path(@area,elemento), method: :delete, data: { confirm: 'Are you sure?', method: "get" }, class: 'btn btn-danger bottam3' %></a></li>
                     <% end %>
                   </ul>
                 </div>
@@ -118,7 +120,7 @@
 
 <% if can? :create, @elemento %>
 <br>
-<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
+<%= button_to 'Nuevo Elemento', new_area_elemento_path(@area), method: "get", class: 'btn btn-primary' %>
 <% end %>
 <%#<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>

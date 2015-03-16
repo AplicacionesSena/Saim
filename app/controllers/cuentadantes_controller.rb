@@ -1,10 +1,11 @@
 class CuentadantesController < ApplicationController
-  before_action :set_cuentadante, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allcuentadantes]
+  before_action :set_cuentadante, only: [:show, :edit, :update, :destroy]
 
   # GET /cuentadantes
   # GET /cuentadantes.json
   def index
-    @cuentadantes = @area.cuentadantes.all
+    @elementos = Elemento.all
+    @cuentadantes = Cuentadante.all
   end
 
   # GET /cuentadantes/1
@@ -16,8 +17,6 @@ class CuentadantesController < ApplicationController
     Cuentadante.import(params[:file])
     redirect_to root_url, notice: "Cuentadantes Importados Con Exito."
   end
-
-
 
   # GET /cuentadantes/new
   def new
@@ -32,10 +31,10 @@ class CuentadantesController < ApplicationController
   # POST /cuentadantes.json
   def create
     @cuentadante = Cuentadante.new(cuentadante_params)
-    @cuentadante.area_id = @area.id
+
     respond_to do |format|
       if @cuentadante.save
-        format.html { redirect_to area_cuentadantes_path(@area), notice: 'Cuentadante was successfully created.' }
+        format.html { redirect_to @cuentadante, notice: 'Cuentadante was successfully created.' }
         format.json { render :show, status: :created, location: @cuentadante }
       else
         format.html { render :new }
@@ -49,7 +48,7 @@ class CuentadantesController < ApplicationController
   def update
     respond_to do |format|
       if @cuentadante.update(cuentadante_params)
-        format.html { redirect_to area_cuentadantes_path(@area), notice: 'Cuentadante was successfully updated.' }
+        format.html { redirect_to @cuentadante, notice: 'Cuentadante was successfully updated.' }
         format.json { render :show, status: :ok, location: @cuentadante }
       else
         format.html { render :edit }
@@ -63,7 +62,7 @@ class CuentadantesController < ApplicationController
   def destroy
     @cuentadante.destroy
     respond_to do |format|
-      format.html { redirect_to area_cuentadantes_url(@area), notice: 'Cuentadante was successfully destroyed.' }
+      format.html { redirect_to cuentadantes_url, notice: 'Cuentadante was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,8 +74,7 @@ class CuentadantesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cuentadante
-      @area = Area.find(params[:area_id])
-      @cuentadante = Cuentadante.find(params[:id]) if params[:id]
+      @cuentadante = Cuentadante.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

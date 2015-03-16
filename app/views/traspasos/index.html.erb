@@ -1,48 +1,29 @@
-<div class="fondc2" >
-<h1>Listado De Traspasos</h1>
+<h1>Listing traspasos</h1>
 
-<div class="panel-body contabla">
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="centro">Nombre elemento</th>
-          <th class="centro">Cuentadante Origen</th>
-          <th class="centro">Cuentadante Destino</th>
-          <th class="centro">Fecha de Traspaso</th>
-          <th class="centro">Opciones</th>
-        </tr>
-      </thead>
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Cuentadante</th>
+      <th>Fechatrapaso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-      <tbody>
-        <% @traspasos.each do |traspaso| %>
-          <tr>
-            <td><%= traspaso.elemento.nombre %></td>
-            <td><%= traspaso.elemento.cuentadante.nombre %></td>
-            <td><%= traspaso.cuentadante.nombre %></td>
-            <td><%= traspaso.fechaTraspaso %></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#"><%= button_to 'Ver', elemento_traspaso_path(@elemento,traspaso), method: "get", class: 'btn btn-info bottam' %></a></li>
-                  <% if can? :update, traspaso %>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Editar', edit_elemento_traspaso_path(@elemento,traspaso), method: "get", class: 'btn btn-warning bottam2' %></a></li>
-                  <% end %>
-                </ul>
-              </div>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</div>
+  <tbody>
+    <% @traspasos.each do |traspaso| %>
+      <tr>
+        <td><%= traspaso.elemento %></td>
+        <td><%= traspaso.cuentadante %></td>
+        <td><%= traspaso.fechaTrapaso %></td>
+        <td><%= link_to 'Show', traspaso %></td>
+        <td><%= link_to 'Edit', edit_traspaso_path(traspaso) %></td>
+        <td><%= link_to 'Destroy', traspaso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<% if can? :create, @traspaso %>
 <br>
-<%= button_to 'Nuevo Traspaso', new_elemento_traspaso_path(@elemento), method: "get", class: 'btn btn-primary' %>
-<% end %>
-</div>
+
+<%= link_to 'New Traspaso', new_traspaso_path %>

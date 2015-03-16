@@ -1,0 +1,7 @@
+<% @elementos.each do |elemento| %>
+		<% if elemento.cuentadante_id == @cuentadante.id %>
+			<%= elemento.nombre %>
+			<%= elemento.area.nombre  %>
+		<% end %>
+		<% break %>
+<% end %>

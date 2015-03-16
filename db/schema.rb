@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311154059) do
+ActiveRecord::Schema.define(version: 20150313165740) do
 
   create_table "areas", force: true do |t|
     t.string   "nombre"
@@ -42,11 +42,10 @@ ActiveRecord::Schema.define(version: 20150311154059) do
   create_table "cuentadantes", force: true do |t|
     t.string   "nombre"
     t.integer  "tipo_doc_id"
-    t.integer  "documento"
+    t.string   "documento"
+    t.string   "telefono"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "telefono"
-    t.integer  "area_id"
   end
 
   add_index "cuentadantes", ["tipo_doc_id"], name: "index_cuentadantes_on_tipo_doc_id"
@@ -61,13 +60,15 @@ ActiveRecord::Schema.define(version: 20150311154059) do
     t.datetime "fecha_adquisicion"
     t.string   "valor"
     t.boolean  "estado"
-    t.integer  "cuentadante_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "datoc"
     t.string   "datoe"
-    t.integer  "section_id"
+    t.integer  "area_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "elementos", ["area_id"], name: "index_elementos_on_area_id"
+  add_index "elementos", ["tipo_elem_id"], name: "index_elementos_on_tipo_elem_id"
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150311154059) do
 
   create_table "floors", force: true do |t|
     t.string   "nombre"
+    t.integer  "cuentadante_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -88,6 +90,8 @@ ActiveRecord::Schema.define(version: 20150311154059) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  add_index "floors", ["cuentadante_id"], name: "index_floors_on_cuentadante_id"
 
   create_table "reintegros", force: true do |t|
     t.integer  "elemento_id"
@@ -99,17 +103,6 @@ ActiveRecord::Schema.define(version: 20150311154059) do
 
   add_index "reintegros", ["cuentadante_id"], name: "index_reintegros_on_cuentadante_id"
   add_index "reintegros", ["elemento_id"], name: "index_reintegros_on_elemento_id"
-
-  create_table "sections", force: true do |t|
-    t.string   "nombre"
-    t.string   "shape"
-    t.string   "coords"
-    t.integer  "area_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "sections", ["area_id"], name: "index_sections_on_area_id"
 
   create_table "tipo_docs", force: true do |t|
     t.string   "sigla"
@@ -128,7 +121,7 @@ ActiveRecord::Schema.define(version: 20150311154059) do
   create_table "traspasos", force: true do |t|
     t.integer  "elemento_id"
     t.integer  "cuentadante_id"
-    t.datetime "fechaTraspaso"
+    t.datetime "fechaTrapaso"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

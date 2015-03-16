@@ -2,6 +2,8 @@
 
 one:
   nombre: MyString
+  cuentadante_id: 
 
 two:
   nombre: MyString
+  cuentadante_id: 

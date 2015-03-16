@@ -18,7 +18,7 @@ class ElementosControllerTest < ActionController::TestCase
 
   test "should create elemento" do
     assert_difference('Elemento.count') do
-      post :create, elemento: { cuentadante_id: @elemento.cuentadante_id, descripcion: @elemento.descripcion, estado: @elemento.estado, fecha_adquisicion: @elemento.fecha_adquisicion, modelo: @elemento.modelo, nombre: @elemento.nombre, placa: @elemento.placa, serial: @elemento.serial, tipo_elem_id: @elemento.tipo_elem_id, valor: @elemento.valor }
+      post :create, elemento: { area_id: @elemento.area_id, datoc: @elemento.datoc, datoe: @elemento.datoe, descripcion: @elemento.descripcion, estado: @elemento.estado, fecha_adquisicion: @elemento.fecha_adquisicion, modelo: @elemento.modelo, nombre: @elemento.nombre, placa: @elemento.placa, serial: @elemento.serial, tipo_elem_id: @elemento.tipo_elem_id, valor: @elemento.valor }
     end
 
     assert_redirected_to elemento_path(assigns(:elemento))
@@ -35,7 +35,7 @@ class ElementosControllerTest < ActionController::TestCase
   end
 
   test "should update elemento" do
-    patch :update, id: @elemento, elemento: { cuentadante_id: @elemento.cuentadante_id, descripcion: @elemento.descripcion, estado: @elemento.estado, fecha_adquisicion: @elemento.fecha_adquisicion, modelo: @elemento.modelo, nombre: @elemento.nombre, placa: @elemento.placa, serial: @elemento.serial, tipo_elem_id: @elemento.tipo_elem_id, valor: @elemento.valor }
+    patch :update, id: @elemento, elemento: { area_id: @elemento.area_id, datoc: @elemento.datoc, datoe: @elemento.datoe, descripcion: @elemento.descripcion, estado: @elemento.estado, fecha_adquisicion: @elemento.fecha_adquisicion, modelo: @elemento.modelo, nombre: @elemento.nombre, placa: @elemento.placa, serial: @elemento.serial, tipo_elem_id: @elemento.tipo_elem_id, valor: @elemento.valor }
     assert_redirected_to elemento_path(assigns(:elemento))
   end
 

@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Tipo De Elemento:</strong>
-  <%= @elemento.tipo_elem.nombre %>
+  <strong>Tipo elem:</strong>
+  <%= @elemento.tipo_elem %>
 </p>
 
 <p>
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-  <strong>Fecha De Adquisicion:</strong>
+  <strong>Fecha adquisicion:</strong>
   <%= @elemento.fecha_adquisicion %>
 </p>
 
@@ -45,5 +45,15 @@
   <%= @elemento.estado %>
 </p>
 
-<%= link_to 'Editar', edit_elemento_path(@elemento) %> |
-<%= link_to 'Atras', elementos_path %>
+<p>
+  <strong>Datoc:</strong>
+  <%= @elemento.datoc %>
+</p>
+
+<p>
+  <strong>Datoe:</strong>
+  <%= @elemento.datoe %>
+</p>
+
+<%= link_to 'Edit', edit_area_elemento_path(@area,@elemento) %> |
+<%= link_to 'Back', area_elementos_path %>

@@ -17,11 +17,10 @@
         <%#<td><%= link_to 'Ver', floor %><%#</td>%>
         <%#<td><%= link_to 'Editar', edit_floor_path(floor) %><%#</td>%>
         <%#<td><%= link_to 'Eliminar', floor, method: :delete, data: { confirm: 'Estas Seguro?' } %><%#</td>%>
-       <p class="centro"><%= link_to 'Ver Areas', floor_areas_path(floor) %></p>
+       <p class="centro"><%= link_to 'Ver Areas ⇨ '+ floor.areas.count.to_s + '', floor_areas_path(floor) %></p>
     <% end %>
 <p class="centro"><%= link_to 'Nuevo Piso', new_floor_path %></p>
 <hr>
-<div class="centro"><%= will_paginate @floors, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
-&raquo;' %></div>
+</div>
 
 </div>

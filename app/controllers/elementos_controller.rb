@@ -1,5 +1,6 @@
 class ElementosController < ApplicationController
   before_action :set_elemento, only: [:show, :edit, :update, :destroy, :index, :new, :create], except: [:allelementos]
+
   # GET /elementos
   # GET /elementos.json
   def index
@@ -8,22 +9,19 @@ class ElementosController < ApplicationController
     @search = params[:placa]
     @nombre = params[:nombre]
     if @serial == nil && @modelo == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.search(params[:search])
+      @elementos = @area.elementos.search(params[:search])
     elsif @serial == nil && @search == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.modelo(params[:modelo])
+      @elementos = @area.elementos.modelo(params[:modelo])
     elsif @modelo == nil && @search == nil && @nombre == nil
-      @elementos = @cuentadante.elementos.serial(params[:serial])
+      @elementos = @area.elementos.serial(params[:serial])
     elsif @modelo == nil && @search == nil && @serial == nil
-      @elementos = @cuentadante.elementos.nombre(params[:nombre])
+      @elementos = @area.elementos.nombre(params[:nombre])
     end
-    
   end
-  
 
   # GET /elementos/1
   # GET /elementos/1.json
   def show
-
   end
 
   # GET /elementos/new
@@ -40,13 +38,10 @@ class ElementosController < ApplicationController
   # POST /elementos.json
   def create
     @elemento = Elemento.new(elemento_params)
-    @elemento.cuentadante_id = @cuentadante.id
-    @cuentadante.area_id = @elemento.area_id
-    @elemento.placa = @elemento.placa
-    @elemento.save
+    @elemento.area_id = @area.id
     respond_to do |format|
       if @elemento.save
-        format.html { redirect_to cuentadante_elementos_path(@cuentadante)}
+        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully created.' }
         format.json { render :show, status: :created, location: @elemento }
       else
         format.html { render :new }
@@ -60,7 +55,7 @@ class ElementosController < ApplicationController
   def update
     respond_to do |format|
       if @elemento.update(elemento_params)
-        format.html { redirect_to cuentadante_elementos_path(@cuentadante)}
+        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully updated.' }
         format.json { render :show, status: :ok, location: @elemento }
       else
         format.html { render :edit }
@@ -74,7 +69,7 @@ class ElementosController < ApplicationController
   def destroy
     @elemento.destroy
     respond_to do |format|
-      format.html { redirect_to cuentadante_elementos_url(@cuentadante), notice: 'Elemento was successfully destroyed.' }
+      format.html { redirect_to area_elementos_url(@area), notice: 'Elemento was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -99,12 +94,12 @@ class ElementosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_elemento
-      @cuentadante = Cuentadante.find(params[:cuentadante_id])
+      @area = Area.find(params[:area_id])
       @elemento = Elemento.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :cuentadante_id, :datoc, :datoe, :area_id)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :datoc, :datoe, :area_id, :cuentdante_id)
     end
 end

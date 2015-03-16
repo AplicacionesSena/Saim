@@ -18,7 +18,7 @@ class TraspasosControllerTest < ActionController::TestCase
 
   test "should create traspaso" do
     assert_difference('Traspaso.count') do
-      post :create, traspaso: { cuentadante_id: @traspaso.cuentadante_id, elemento_id: @traspaso.elemento_id, fechaTraspaso: @traspaso.fechaTraspaso }
+      post :create, traspaso: { cuentadante_id: @traspaso.cuentadante_id, elemento_id: @traspaso.elemento_id, fechaTrapaso: @traspaso.fechaTrapaso }
     end
 
     assert_redirected_to traspaso_path(assigns(:traspaso))
@@ -35,7 +35,7 @@ class TraspasosControllerTest < ActionController::TestCase
   end
 
   test "should update traspaso" do
-    patch :update, id: @traspaso, traspaso: { cuentadante_id: @traspaso.cuentadante_id, elemento_id: @traspaso.elemento_id, fechaTraspaso: @traspaso.fechaTraspaso }
+    patch :update, id: @traspaso, traspaso: { cuentadante_id: @traspaso.cuentadante_id, elemento_id: @traspaso.elemento_id, fechaTrapaso: @traspaso.fechaTrapaso }
     assert_redirected_to traspaso_path(assigns(:traspaso))
   end
 

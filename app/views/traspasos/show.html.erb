@@ -6,14 +6,14 @@
 </p>
 
 <p>
-  <strong>Cuentadantedestino:</strong>
-  <%= @traspaso.cuentadanteDestino %>
+  <strong>Cuentadante:</strong>
+  <%= @traspaso.cuentadante %>
 </p>
 
 <p>
-  <strong>Fechatraspaso:</strong>
-  <%= @traspaso.fechaTraspaso %>
+  <strong>Fechatrapaso:</strong>
+  <%= @traspaso.fechaTrapaso %>
 </p>
 
-<%= link_to 'Edit', edit_elemento_traspaso_path(@elemento,@traspaso) %> |
-<%= link_to 'Back', elemento_traspasos_path %>
+<%= link_to 'Edit', edit_traspaso_path(@traspaso) %> |
+<%= link_to 'Back', traspasos_path %>

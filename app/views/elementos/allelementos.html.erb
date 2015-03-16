@@ -48,6 +48,7 @@
             <th class="centro">Fecha De Adquisicion</th>
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
+            <th class="centro">Cuentadante Actual</th>
           </tr>
         </thead>
 
@@ -71,7 +72,7 @@
               <td><%= elemento.fecha_adquisicion %></td>
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
-              
+              <td><%= elemento.cuentadante.nombre%></td>
             </tr>
           <% end %>
         </tbody>
@@ -81,7 +82,7 @@
 
 <%#<% if can? :create, @elemento %>
 <br>
-<%#<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
+<%#<%= button_to 'Nuevo Elemento', new_area_elemento_path(@area), method: "get", class: 'btn btn-primary' %>
 <%#<% end %>
 
 

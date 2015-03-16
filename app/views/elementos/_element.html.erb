@@ -69,6 +69,7 @@
               <th class="centro">Fecha De Adquisicion</th>
               <th class="centro">Valor</th>
               <th class="centro">Estado</th>
+              <th class="centro">Ubicacion</th>
             </tr>
           </thead>
 
@@ -92,7 +93,7 @@
                 <td><%= elemento.fecha_adquisicion %></td>
                 <td><%= elemento.valor %></td>
                 <td><%= elemento.estado %></td>
-                
+                <td><%= elemento.area.nombre %></td>
               </tr>
             <% end %>
           </tbody>
