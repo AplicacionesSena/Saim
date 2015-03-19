@@ -34,6 +34,12 @@
   
 </div>
 
+<h2>Importar Elementos</h2>
+<%= form_tag import_elementos_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Importar" %>
+<% end %>
+
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
@@ -49,6 +55,7 @@
             <th class="centro">Valor</th>
             <th class="centro">Estado</th>
             <th class="centro">Cuentadante Actual</th>
+            <th class="centro">Ubicacion Elemento</th>
           </tr>
         </thead>
 
@@ -73,6 +80,7 @@
               <td><%= elemento.valor %></td>
               <td><%= elemento.estado %></td>
               <td><%= elemento.cuentadante.nombre%></td>
+              <td><%= elemento.area.nombre %></td>
             </tr>
           <% end %>
         </tbody>

@@ -29,6 +29,10 @@ Rails.application.routes.draw do
   end
 
   resources :elementos do
+    collection { post :import }
+  end
+
+  resources :elementos do
     resources :traspasos
   end
 

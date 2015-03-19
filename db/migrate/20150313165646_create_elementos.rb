@@ -14,6 +14,9 @@ class CreateElementos < ActiveRecord::Migration
       t.string :datoe
       t.references :area, index: true
       t.integer :cuentadante_id
+      t.string :marca
+      t.string :cantidad
+      t.string :valor_total
 
       t.timestamps
     end

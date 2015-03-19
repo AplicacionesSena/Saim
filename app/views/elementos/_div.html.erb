@@ -1,20 +1,1782 @@
-
-<% if @modelo != nil %>
-	<% @elementos.each do |elemento| %>
-		<% if elemento.area_id == 2 %>
-			<div class="sec1">	
-			</div>
+<%#--------------------------------------------------------Tercer Piso-Areas-------------------------------------------------------%>
+	<%#---------------------------------------------------------Ambiente_303-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec1">	
+					</div>
+				<% end %>
+			<% end %>
 		<% end %>
-		<% break %>
-	<% end %>
-<% end %>
-
-<% if @modelo != nil %>
-	<% @elementos.each do |elemento| %>
-		<% if elemento.area_id == 3 %>
-			<div class="sec2">
-			</div>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec1">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
 		<% end %>
-		<% break %>
-	<% end %>
-<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec1">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec1">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------------Ambiente_302-------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 3 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec2">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 3 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec2">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 3 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec2">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 3 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec2">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#------------------------------------------------------Certificacion---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 4 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec5">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 4 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec5">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 4 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec5">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 4 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec5">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Ambiente_301-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 5 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec6">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 5 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec6">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 5 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec6">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 5 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec6">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-----------------------------------------------------Sala_De_Instructores---------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 6 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec7">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 6 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec7">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 6 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec7">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 6 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec7">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Pasillo1_Piso3-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 7 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec8">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 7 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec8">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 7 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec8">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 7 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec8">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+<%#--------------------------------------------------------------------------------------------------------------------------------%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%#--------------------------------------------------------Segundo Piso-Areas------------------------------------------------------%>
+	<%#--------------------------------------------------------Empresarios---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 33  %>
+					<div class="sec9">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 33 %>
+					<div class="sec9">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 33 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec9">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 33 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec9">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+	
+	<%#-----------------------------------------------------Bienestar_Al_Aprendiz--------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 34  %>
+					<div class="sec10">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 34 %>
+					<div class="sec10">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 34 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec10">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 34 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec10">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+	
+	<%#-------------------------------------------------------Almacen_Ventas-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 35  %>
+					<div class="sec11">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 35 %>
+					<div class="sec11">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 35 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec11">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 35 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec11">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-----------------------------------------------------Taller_De_Confeccion---------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 36  %>
+					<div class="sec12">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 36 %>
+					<div class="sec12">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 36 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec12">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 36 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec12">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Subdireccion---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 37  %>
+					<div class="sec13">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 37 %>
+					<div class="sec13">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 37 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec13">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 37 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec13">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------Gestion_Administrativa----------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 38  %>
+					<div class="sec14">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 38 %>
+					<div class="sec14">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 38 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec14">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 38 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec14">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Sistemas-----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 39  %>
+					<div class="sec4">
+
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 39 %>
+					<div class="sec4">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 39 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec4">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 39 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec4">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-----------------------------------------------Coordinacion_De_Formacion----------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 40  %>
+					<div class="sec15">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 40 %>
+					<div class="sec15">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 40 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec15">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 40 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec15">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Pasarela1-----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 41  %>
+					<div class="sec16">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 41 %>
+					<div class="sec16">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 41 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec16">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 41 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec16">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Pasarela2-----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 42  %>
+					<div class="sec17">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 42 %>
+					<div class="sec17">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 42 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec17">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 42 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec17">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Pasillo1_Piso2-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 43  %>
+					<div class="sec18">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 43 %>
+					<div class="sec18">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 43 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec18">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 43 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec18">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Pasillo2_Piso2-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 44  %>
+					<div class="sec19">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 44 %>
+					<div class="sec19">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 44 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec19">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 44 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec19">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#----------------------------------------------------------------------------------------------------------------------------%>
+<%#--------------------------------------------------------------------------------------------------------------------------------%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%#--------------------------------------------------------Tercer Piso-Areas------------------------------------------------------%>
+	<%#-------------------------------------------------------Baño_Mujeres--------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 1  %>
+					<div class="sec20">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 1 %>
+					<div class="sec20">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 1 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec20">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 1 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec20">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Baño_Hombres-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 8  %>
+					<div class="sec21">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 8 %>
+					<div class="sec21">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 8 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec21">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 8 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec21">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_109-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 9 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec3">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 9 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec3">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 9 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec3">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 9 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec3">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_108-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 10 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec22">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 10 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec22">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 10 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec22">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 10 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec22">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_107-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 11 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec23">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 11 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec23">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 11 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec23">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 11 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec23">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Electronica-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 12 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec24">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 12 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec24">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 12 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec24">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 12 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec24">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Mecanica----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 13 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec25">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 13 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec25">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 13 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec25">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 13 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec25">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Joyeria----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 14 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec26">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 14 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec26">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 14 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec26">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 14 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec26">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Drapeado----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 15 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec27">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 15 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec27">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 15 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec27">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 15 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec27">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Diseño3----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 16 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec28">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 16 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec28">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 16 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec28">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 16 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec28">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Diseño2----------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 17 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec29">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 17 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec29">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 17 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec29">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 17 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec29">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#------------------------------------------------------------CAD------------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 18 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec30">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 18 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec30">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 18 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec30">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 18 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec30">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#---------------------------------------------------------Laboratorio-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 19 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec31">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 19 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec31">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 19 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec31">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 19 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec31">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#----------------------------------------------------------Cocineta---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 20 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec32">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 20 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec32">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 20 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec32">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 20 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec32">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-----------------------------------------------------------Archivo---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 21 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec33">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 21 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec33">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 21 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec33">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 21 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec33">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Bodega_Telas-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 22 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec34">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 22 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec34">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 22 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec34">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 22 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec34">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_106-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 23 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec35">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 23 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec35">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 23 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec35">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 23 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec35">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Conectividad-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 24 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec36">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 24 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec36">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 24 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec36">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 24 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec36">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#----------------------------------------------------------Oficina1---------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 25 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec37">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 25 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec37">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 25 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec37">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 25 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec37">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_105-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 26 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec38">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 26 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec38">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 26 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec38">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 26 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec38">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_104-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 27 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec39">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 27 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec39">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 27 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec39">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 27 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec39">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+	
+	<%#--------------------------------------------------------Ambiente_103-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 28 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec40">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 28 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec40">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 28 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec40">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 28 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec40">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#--------------------------------------------------------Ambiente_102-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 29 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec41">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 29 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec41">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 29 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec41">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 29 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec41">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+	
+	<%#--------------------------------------------------------Ambiente_101-------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 30 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec42">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 30 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec42">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 30 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec42">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 30 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec42">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Pasillo1_Piso1------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 31 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec43">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 31 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec43">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 31 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec43">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 31 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec43">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+
+	<%#-------------------------------------------------------Pasillo1_Piso2------------------------------------------------------%>
+		<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 32 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec44">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 32 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec44">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 32 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec44">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 32 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec44">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>

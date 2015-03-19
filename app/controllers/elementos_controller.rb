@@ -24,6 +24,11 @@ class ElementosController < ApplicationController
   def show
   end
 
+  def import
+    Elemento.import(params[:file])
+    redirect_to root_url, notice: "Elementos Importados Con Exito."
+  end
+
   # GET /elementos/new
   def new
     @elemento = Elemento.new
@@ -39,6 +44,10 @@ class ElementosController < ApplicationController
   def create
     @elemento = Elemento.new(elemento_params)
     @elemento.area_id = @area.id
+    if @elemento.cantidad == nil
+      @elemento.valor_total = @elemento.valor.to_i
+    end
+    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
     respond_to do |format|
       if @elemento.save
         format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully created.' }
@@ -53,6 +62,8 @@ class ElementosController < ApplicationController
   # PATCH/PUT /elementos/1
   # PATCH/PUT /elementos/1.json
   def update
+    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
+    @elemento.save
     respond_to do |format|
       if @elemento.update(elemento_params)
         format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully updated.' }
@@ -100,6 +111,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :datoc, :datoe, :area_id, :cuentdante_id)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :datoc, :datoe, :area_id, :cuentadante_id, :cantidad, :valor_total, :marca)
     end
 end

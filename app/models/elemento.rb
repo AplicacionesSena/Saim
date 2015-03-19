@@ -17,4 +17,10 @@ class Elemento < ActiveRecord::Base
 	def self.nombre(nombre)
 		where(['nombre LIKE :x', :x => "%#{nombre}%".upcase])
 	end
+
+	def self.import(file)
+    	CSV.foreach(file.path, headers: true) do |row|
+        Elemento.create! row.to_hash
+    end
+end
 end

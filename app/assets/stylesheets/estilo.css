@@ -511,6 +511,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 	word-wrap: break-word;
 	overflow-x:scroll;
 	overflow-y:none;
+	height: 560px;
 }
 .plano3{
 	/*border: 1px solid black;*/
@@ -520,6 +521,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 	word-wrap: break-word;
 	overflow-x:scroll;
 	overflow-y:none;
+	height: 560px;
 }
 
 .buscen_area{
@@ -672,13 +674,19 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 
 
 
-/*________________________________SECCIONES ESTILO__________________________________________*/
 
 
 
 
+
+
+
+/*____________________________________________________AREAS TERCER PISO ESTILO_____________________________________________________*/
+
+/*_____________________________________________________________Areas_______________________________________________________________*/
 .sec1{
 	border: 2px solid red;
+	background-color:red;
 	width: 40px;
 	height: 40px;
 	margin-left: 60px;
@@ -688,9 +696,450 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 
 .sec2{
 	border: 2px solid red;
+	background-color:red;
 	width: 40px;
 	height: 40px;
 	margin-left: 230px;
 	margin-top: -250px;
 	position: relative;
 }
+.sec5{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 50px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec6{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 230px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec7{
+	border: 2px solid red;
+	background-color:red; 
+	width: 40px;
+	height: 40px;
+	margin-left: 90px;
+	margin-top: -90px;
+	position: relative;
+}
+.sec8{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 130px;
+	margin-top: -187px;
+	position: relative;
+}
+/*_________________________________________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________________________________AREAS SEGUNDO PISO ESTILO_____________________________________________________*/
+
+/*____________________________________________________________Areas________________________________________________________________*/
+.sec9{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 222px;
+	margin-top: -346px;
+	position: relative;
+}
+.sec10{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 388px;
+	margin-top: -350px;
+	position: relative;
+}
+.sec11{
+	border: 2px solid red;
+	background-color:red;
+	width: 20px;
+	height: 20px;
+	margin-left: 420px;
+	margin-top: -300px;
+	position: relative;
+}
+.sec12{
+	border: 2px solid red;
+	background-color:red;
+	width: 60px;
+	height: 60px;
+	margin-left: 620px;
+	margin-top: -500px;
+	position: relative;
+}
+.sec13{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 830px;
+	margin-top: -270px;
+	position: relative;
+}
+.sec14{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 830px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec15{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 580px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec16{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 440px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec17{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 260px;
+	margin-top: -180px;
+	position: relative;
+}
+.sec18{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 480px;
+	margin-top: -270px;
+	position: relative;
+}
+.sec19{
+	border: 2px solid red;
+	background-color:red;
+	width: 20px;
+	height: 20px;
+	margin-left: 740px;
+	margin-top: -170px;
+	position: relative;
+}
+.sec4{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 666px;
+	margin-top: -202px;
+	position: relative;
+}
+/*_________________________________________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________________________________AREAS PRIMER PISO ESTILO______________________________________________________*/
+
+/*____________________________________________________________Areas________________________________________________________________*/
+.sec20{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 70px;
+	margin-top: -280px;
+	position: relative;
+}
+.sec21{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 70px;
+	margin-top: -160px;
+	position: relative;
+}
+.sec3{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 230px;
+	margin-top: -320px;
+	position: relative;
+}
+.sec22{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 330px;
+	margin-top: -330px;
+	position: relative;
+}
+.sec23{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 430px;
+	margin-top: -306px;
+	position: relative;
+}
+.sec24{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 430px;
+	margin-top: -362px;
+	position: relative;
+}
+.sec25{
+	border: 2px solid red;
+	background-color:red;
+	width: 60px;
+	height: 60px;
+	margin-left: 380px;
+	margin-top: -490px;
+	position: relative;
+}
+.sec26{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 390px;
+	margin-top: -620px;
+	position: relative;
+}
+.sec27{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 600px;
+	margin-top: -620px;
+	position: relative;
+}
+.sec28{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 600px;
+	margin-top: -526px;
+	position: relative;
+}
+.sec29{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 600px;
+	margin-top: -438px;
+	position: relative;
+}
+.sec30{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 570px;
+	margin-top: -334px;
+	position: relative;
+}
+.sec31{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 646px;
+	margin-top: -334px;
+	position: relative;
+}
+.sec32{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 736px;
+	margin-top: -198px;
+	position: relative;
+}
+.sec33{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 718px;
+	margin-top: -152px;
+	position: relative;
+}
+.sec34{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 718px;
+	margin-top: -112px;
+	position: relative;
+}
+.sec35{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 620px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec36{
+	border: 2px solid red;
+	background-color:red;
+	width: 34px;
+	height: 34px;
+	margin-left: 550px;
+	margin-top: -152px;
+	position: relative;
+}
+.sec37{
+	border: 2px solid red;
+	background-color:red;
+	width: 26px;
+	height: 26px;
+	margin-left: 556px;
+	margin-top: -198px;
+	position: relative;
+}
+.sec38{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 438px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec39{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 358px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec40{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 294px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec41{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 230px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec42{
+	border: 2px solid red;
+	background-color:red;
+	width: 40px;
+	height: 40px;
+	margin-left: 164px;
+	margin-top: -162px;
+	position: relative;
+}
+.sec43{
+	border: 2px solid red;
+	background-color:red;
+	width: 34px;
+	height: 34px;
+	margin-left: 464px;
+	margin-top: -248px;
+	position: relative;
+}
+.sec44{
+	border: 2px solid red;
+	background-color:red;
+	width: 30px;
+	height: 30px;
+	margin-left: 507px;
+	margin-top: -466px;
+	position: relative;
+}
+/*_________________________________________________________________________________________________________________________________*/
