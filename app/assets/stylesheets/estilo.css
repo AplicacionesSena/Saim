@@ -1143,3 +1143,18 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 	position: relative;
 }
 /*_________________________________________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+.tablar{
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow-y:hidden;
+	overflow-x:scroll;	
+}

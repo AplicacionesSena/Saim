@@ -39,7 +39,7 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Importar" %>
 <% end %>
-
+<div class="tablar">
 <div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
@@ -53,6 +53,8 @@
             <th class="centro">Serial</th>
             <th class="centro">Fecha De Adquisicion</th>
             <th class="centro">Valor</th>
+            <th class="centro">Marca</th>
+            <th class="centro">Cantidad</th>
             <th class="centro">Estado</th>
             <th class="centro">Cuentadante Actual</th>
             <th class="centro">Ubicacion Elemento</th>
@@ -78,6 +80,8 @@
               <td><%= elemento.serial %></td>
               <td><%= elemento.fecha_adquisicion %></td>
               <td><%= elemento.valor %></td>
+              <td><%= elemento.marca %></td>
+              <td><%= elemento.cantidad %></td>
               <td><%= elemento.estado %></td>
               <td><%= elemento.cuentadante.nombre%></td>
               <td><%= elemento.area.nombre %></td>
@@ -87,7 +91,7 @@
       </table>
     </div>
 </div>
-
+</div>
 <%#<% if can? :create, @elemento %>
 <br>
 <%#<%= button_to 'Nuevo Elemento', new_area_elemento_path(@area), method: "get", class: 'btn btn-primary' %>

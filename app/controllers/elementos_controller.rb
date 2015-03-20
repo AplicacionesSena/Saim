@@ -27,6 +27,8 @@ class ElementosController < ApplicationController
   def import
     Elemento.import(params[:file])
     redirect_to root_url, notice: "Elementos Importados Con Exito."
+    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
+    @elemento.save
   end
 
   # GET /elementos/new
