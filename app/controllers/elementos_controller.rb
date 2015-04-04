@@ -6,17 +6,18 @@ class ElementosController < ApplicationController
   def index
     @serial = params[:serial]
     @modelo = params[:modelo]
-    @search = params[:placa]
+    @search = params[:search]
     @nombre = params[:nombre]
-    if @serial == nil && @modelo == nil && @nombre == nil
-      @elementos = @area.elementos.search(params[:search])
+    if @nombre == nil && @modelo == nil && @serial == nil
+      @elementos = @area.elementos.search(params[:search], params[:page])
     elsif @serial == nil && @search == nil && @nombre == nil
-      @elementos = @area.elementos.modelo(params[:modelo])
+      @elementos = @area.elementos.modelo(params[:modelo], params[:page])
     elsif @modelo == nil && @search == nil && @nombre == nil
-      @elementos = @area.elementos.serial(params[:serial])
+      @elementos = @area.elementos.serial(params[:serial], params[:page])
     elsif @modelo == nil && @search == nil && @serial == nil
-      @elementos = @area.elementos.nombre(params[:nombre])
+      @elementos = @area.elementos.nombre(params[:nombre], params[:page])
     end
+    @cargos = Cargo.all
   end
 
   # GET /elementos/1
@@ -44,6 +45,7 @@ class ElementosController < ApplicationController
   # POST /elementos
   # POST /elementos.json
   def create
+    @cargos = Cargo.all
     @elemento = Elemento.new(elemento_params)
     @elemento.area_id = @area.id
     if @elemento.cantidad == nil
@@ -93,13 +95,13 @@ class ElementosController < ApplicationController
     @search = params[:placa]
     @nombre = params[:nombre]
     if @serial == nil && @modelo == nil && @nombre == nil
-      @elementos = Elemento.search(params[:search])
+      @elementos = Elemento.search(params[:search], params[:page])
     elsif @serial == nil && @search == nil && @nombre == nil
-      @elementos = Elemento.modelo(params[:modelo])
+      @elementos = Elemento.modelo(params[:modelo], params[:page])
     elsif @modelo == nil && @search == nil && @nombre == nil
-      @elementos = Elemento.serial(params[:serial])
+      @elementos = Elemento.serial(params[:serial], params[:page])
     elsif @search == nil && @modelo == nil && @serial == nil
-      @elementos = Elemento.nombre(params[:nombre])
+      @elementos = Elemento.nombre(params[:nombre], params[:page])
     end
     
   end
@@ -113,6 +115,6 @@ class ElementosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elemento_params
-      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :datoc, :datoe, :area_id, :cuentadante_id, :cantidad, :valor_total, :marca)
+      params.require(:elemento).permit(:placa, :tipo_elem_id, :nombre, :descripcion, :modelo, :serial, :fecha_adquisicion, :valor, :estado, :area_id, :cuentadante_id, :cantidad, :valor_total, :marca)
     end
 end

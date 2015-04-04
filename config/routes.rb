@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :transfers
+
   #_____________________ruta para importaciones
 
   resources :cuentadantes do
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
 
 
 
-
+  resources :reintegros
 
 
 
@@ -33,7 +35,7 @@ Rails.application.routes.draw do
   end
 
   resources :elementos do
-    resources :traspasos
+    resources :transfers
   end
 
   resources :elementos do
@@ -66,6 +68,7 @@ Rails.application.routes.draw do
   get 'pagina/bloqueo'
   get 'pagina/estadisticas'
   get 'pagina/elementosxcuentadantes'
+  get 'pagina/elementosxareas'
   get 'pagina/etraspasos'
   get 'pagina/ereintegros'
   get 'pagina/traceability'
@@ -82,7 +85,7 @@ Rails.application.routes.draw do
 
     get 'allreintegros/', to: 'reintegros#allreintegros', as: 'objetos1'
     
-    get 'alltraspasos/', to: 'traspasos#alltraspasos', as: 'objetos2'
+    get 'alltransfers/', to: 'transfers#alltransfers', as: 'objetos2'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

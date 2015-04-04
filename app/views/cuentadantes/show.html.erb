@@ -7,7 +7,7 @@
 
 <p>
   <strong>Tipo doc:</strong>
-  <%= @cuentadante.tipo_doc %>
+  <%= @cuentadante.tipo_doc.sigla %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @cuentadante.telefono %>
 </p>
 
-<%= link_to 'Edit', edit_cuentadante_path(@cuentadante) %> |
-<%= link_to 'Back', cuentadantes_path %>
+<%= button_to 'Editar', edit_cuentadante_path(@cuentadante), method: "get", class: 'btn btn-warning' %> |
+<%= button_to 'Atras', cuentadantes_path, method: "get", class: 'btn btn-success' %>

@@ -22,7 +22,7 @@ class Ability
         if user.cargo.rol = "Usuario"
             if user.cargo.privilegioVer == true
                 can :read, Reintegro
-                can :read, Traspaso
+                can :read, Transfer
                 can :read, Cuentadante
                 can :read, Elemento
                 can :read, Event

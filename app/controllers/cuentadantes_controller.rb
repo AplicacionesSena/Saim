@@ -6,6 +6,13 @@ class CuentadantesController < ApplicationController
   def index
     @elementos = Elemento.all
     @cuentadantes = Cuentadante.all
+    @search = params[:nombre]
+    @documento = params[:documento]
+    if @documento == nil
+      @cuentadantes = Cuentadante.search(params[:search], params[:page])
+    elsif @search == nil
+      @cuentadantes = Cuentadante.documento(params[:documento], params[:page])
+    end
   end
 
   # GET /cuentadantes/1

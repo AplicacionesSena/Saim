@@ -1,5 +1,5 @@
 <div class="fondc2" >
-<h1>Listado De Traspasos</h1>
+<h1>Listado De Reintegros</h1>
 
 <div class="panel-body contabla">
   <div class="table-responsive">
@@ -19,7 +19,7 @@
         <% @reintegros.each do |reintegro| %>
           <tr>
             <td><%= reintegro.elemento.nombre %></td>
-            <td><%= reintegro.elemento.cuentadante.nombre %></td>
+            <td><%= reintegro.cuentaorigen %></td>
             <td><%= reintegro.cuentadante.nombre %></td>
             <td><%= reintegro.elemento.valor %></td>
             <td><%= reintegro.fechaReintegro %></td>

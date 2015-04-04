@@ -27,6 +27,7 @@ class ReintegrosController < ApplicationController
   def create
     @reintegro = Reintegro.new(reintegro_params)
     @reintegro.elemento_id = @elemento.id
+    @reintegro.cuentaorigen = @elemento.cuentadante_id
     @elemento.cuentadante_id = @reintegro.cuentadante_id
     @elemento.save
     respond_to do |format|
@@ -81,6 +82,6 @@ class ReintegrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reintegro_params
-      params.require(:reintegro).permit(:elemento_id, :cuentadante_id, :fechaReintegro)
+      params.require(:reintegro).permit(:elemento_id, :cuentadante_id, :fechaReintegro, :cuentaorigen)
     end
 end

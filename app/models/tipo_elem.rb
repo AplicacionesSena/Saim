@@ -1,3 +1,3 @@
 class TipoElem < ActiveRecord::Base
-	has_many :elementos
+	has_many :elementos, :dependent => :destroy
 end

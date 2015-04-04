@@ -69,6 +69,11 @@ ul {
 	width: 190px;
 	text-align: center;
 }
+.mo02{
+	width: 190px;
+	text-align: center;
+	margin-left: 296px;
+}
 .mo0a{
 	margin-left: 436px;
 	width: 190px;
@@ -89,6 +94,11 @@ ul {
 	text-align: center;
 	margin-top: -93px;
 }
+.movselect2{
+	text-align: center;
+	margin-left: 590px;
+	margin-top: -68px;
+}
 .movcedu{
 	margin-left: 10px;
 	margin-top: -93px;
@@ -107,13 +117,13 @@ ul {
 	text-align: center;
 }
 .mov2{
-	margin-left: 520px;
+	margin-left: 580px;
 	margin-top: -90px;
 	width: 190px;
 	text-align: center;
 }
 .mov3{
-	margin-left: 520px;
+	margin-left: 580px;
 	margin-top: -99px;
 	width: 190px;
 	text-align: center;
@@ -138,8 +148,9 @@ ul {
 	text-align: center;
 }
 .contabla{
-	margin-top: -20px;
+	margin-top: -5px;
 }
+
 .drop{
 	width: 70px;
 	text-align: center;
@@ -148,16 +159,22 @@ ul {
 	width: 30px;
 	height: 26px;
 	padding: 1px;
+	font-family: verdana;
 }
 .bottam2{
-	width: 40px;
+	width: 48px;
 	height: 26px;
+	font-family: verdana;
 }
 .bottam3{
-	width: 52px;
+	width: 60px;
 	height: 26px;
-	margin-left: -3px;
+	margin-top: -20px;
+	margin-left: -8px;
+	font-family: verdana;
+	text-align: center;
 }
+
 .bottam4{
 	width: 82px;
 	height: 36px;
@@ -264,7 +281,7 @@ ul {
 	margin-left: -5px;
 }
 .fondc1{
-	width: 600px;
+	width: auto;
 	height: auto;
 	margin-left: 240px;
 	border:2px solid #ddd;
@@ -283,6 +300,7 @@ ul {
 	overflow-y:scroll;*/
 	text-align: center;
 	box-shadow: 0px 0px 8px 0px black;
+	margin-top: -22px;
 }
 .centro{
 	text-align: center;
@@ -422,6 +440,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 	overflow-x:none;
 }
 
+
+
+
+
+
+
+
 @media(min-width:1366px) {
   .brand{
 		color: white;
@@ -445,6 +470,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 		margin-top: -30px;
 	}
 }
+
+
+
+
+
+
 
 .busca1{
 	width: 130px;
@@ -477,6 +508,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 	word-break: break-all;
 	word-wrap: break-word;
 	margin-left: 650px;
+	margin-top: -85px;
+}
+
+.busca1-2{
+	width: 130px;
+	height: 85px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 80px;
+	margin-top: -40px;
+}
+
+.busca2-2{
+	width: 130px;
+	height: 85px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 290px;
 	margin-top: -85px;
 }
 
@@ -555,6 +604,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 	overflow-y:scroll;
 	box-shadow: 0px 0px 8px 0px black;
 	margin-top:130px;
+}
+
+.tabla_scroll2{
+	width: auto;
+	height: 350px;
+	border:2px solid #ddd;
+	border-radius: 6px;
+	overflow-x:scroll;
+	overflow-y:scroll;
+	box-shadow: 0px 0px 8px 0px black;
+	margin-top:-10px;
 }
 
 .contenedortodoplanos{
@@ -1254,5 +1314,44 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 	word-break: break-all;
 	word-wrap: break-word;
 	overflow-y:hidden;
-	overflow-x:scroll;	
+	overflow-x:scroll;
+	width: auto;
+	height: 350px;
+	border:2px solid #ddd;
+	border-radius: 6px;
+	box-shadow: 0px 0px 8px 0px black;	
+}
+
+.importitulo{
+	text-align: center;
+	margin-top: -8px;
+}
+.import{
+	text-align: center;
+	width: 400px;
+	height: 90px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 540px;
+	margin-top: -14px;
+}
+.fileimport{
+	margin-left: 100px;
+}
+
+.importitulo2{
+	text-align: center;
+	margin-top: -8px;
+}
+.import2{
+	text-align: center;
+	width: 400px;
+	height: 90px;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 540px;
+	margin-top: -16px;
+}
+.fileimport2{
+	margin-left: 100px;
 }

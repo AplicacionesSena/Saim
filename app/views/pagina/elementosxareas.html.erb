@@ -2,14 +2,13 @@
   $(function () {
     new Highcharts.Chart({
           chart: { renderTo: 'orders_chart', type: 'line' },
-          title: { text: 'Elementos por cuentadantes' },
-          xAxis: { categories: <%= @cuentadantes.map { |x| x.documento } %> },
+          title: { text: 'Elementos por Areas' },
+          xAxis: { categories: <%= @areas.map { |x| x.id } %> },
           yAxis: { allowDecimals: false, title: { text: '# elementos' } },
       series: [{
-        name: 'Elementos',
+        name: 'Cantidad Elementos',
         type: 'column',
-        // pointInterval: <%= @cuentadantes.map { |cue| cue.nombre.to_i } %>,
-        data: <%= @cuentadantes.map { |cuentadante| cuentadante.elementos.count } %>
+        data: <%= @areas.map { |area| area.elementos.count } %>
       }]
     });
   });

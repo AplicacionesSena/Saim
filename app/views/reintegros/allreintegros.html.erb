@@ -19,7 +19,7 @@
         <% @reintegros.each do |reintegro| %>
           <tr>
             <td><%= reintegro.elemento.nombre %></td>
-            <td><%= reintegro.elemento.cuentadante.nombre %></td>
+            <td><%= reintegro.cuentaorigen %></td>
             <td><%= reintegro.cuentadante.nombre %></td>
             <td><%= reintegro.elemento.valor %></td>
             <td><%= reintegro.fechaReintegro %></td>

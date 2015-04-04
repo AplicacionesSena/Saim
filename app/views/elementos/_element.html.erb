@@ -53,11 +53,11 @@
 </div>
 
 <% if @floor.id == 3 %>
+ 
 <div class="panel-body contabla tabla_scroll">
-  <% if @modelo == nil && @serial == nil %>
-    <h1>No Hay Datos De Nada</h1>
-  <% else %>
-    
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
       <table class="table">
         <thead>
           <tr class="success">
@@ -98,12 +98,14 @@
                 <td><%= elemento.area.nombre %></td>
               </tr>
             <% end %>
-            <% break %>
           <% end %>
         </tbody>
       </table>
-  <% end %>
+      <% end %>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
 </div>
+
 <% end %>
 
 
@@ -111,11 +113,7 @@
 
 <% if @floor.id == 2 %>
 <div class="panel-body contabla tabla_scroll">
-  <% if @modelo == nil && @serial == nil %>
-    <h1>No Hay Datos De Nada</h1>
-  <% else %>
-    
-      <table class="table">
+    <table class="table">
         <thead>
           <tr class="success">
             <th class="centro">Placa</th>
@@ -159,8 +157,8 @@
           <% end %>
         </tbody>
       </table>
-  <% end %>
 </div>
+Elementos: <%= @elementos.count %>
 <% end %>
 
 
@@ -168,10 +166,6 @@
 
 <% if @floor.id == 1 %>
 <div class="panel-body contabla tabla_scroll">
-  <% if @modelo == nil && @serial == nil %>
-    <h1>No Hay Datos De Nada</h1>
-  <% else %>
-    
       <table class="table">
         <thead>
           <tr class="success">
@@ -216,14 +210,15 @@
           <% end %>
         </tbody>
       </table>
-  <% end %>
 </div>
+Elementos: <%= @elementos.count %>
 <% end %>
 
 
 <%#<% if can? :create, @elemento %>
 <br>
-<%#<%= button_to 'Nuevo Elemento', new_cuentadante_elemento_path(@cuentadante), method: "get", class: 'btn btn-primary' %>
 <%#<% end %>
+
+
 
 

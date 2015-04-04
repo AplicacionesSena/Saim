@@ -7,8 +7,7 @@
 					</div>
 				<% end %>
 			<% end %>
-		<% end %>
-		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+		<% elsif @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec1">	
@@ -16,8 +15,7 @@
 				<% end %>
 				<% break %>
 			<% end %>
-		<% end %>
-		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+		<% elsif @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec1">	
@@ -25,8 +23,7 @@
 				<% end %>
 				<% break %>
 			<% end %>
-		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% elsif @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 2 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec1">	
@@ -65,7 +62,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 3 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec2">	
@@ -104,7 +101,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 4 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec5">	
@@ -143,7 +140,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 5 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec6">	
@@ -182,7 +179,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 6 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec7">	
@@ -221,7 +218,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 7 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec8">	
@@ -297,7 +294,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 33 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec9">	
@@ -336,7 +333,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 34 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec10">	
@@ -375,7 +372,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 35 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec11">	
@@ -414,7 +411,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 36 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec12">	
@@ -453,7 +450,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 37 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec13">	
@@ -492,7 +489,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 38 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec14">	
@@ -532,7 +529,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 39 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec4">	
@@ -571,7 +568,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 40 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec15">	
@@ -610,7 +607,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 41 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec16">	
@@ -649,7 +646,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 42 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec17">	
@@ -688,7 +685,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 43 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec18">	
@@ -727,7 +724,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 44 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec19">	
@@ -795,7 +792,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 1 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec20">	
@@ -834,7 +831,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 8 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec21">	
@@ -873,7 +870,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 9 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec3">	
@@ -912,7 +909,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 10 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec22">	
@@ -951,7 +948,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 11 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec23">	
@@ -990,7 +987,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 12 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec24">	
@@ -1029,7 +1026,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 13 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec25">	
@@ -1068,7 +1065,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 14 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec26">	
@@ -1107,7 +1104,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 15 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec27">	
@@ -1146,7 +1143,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 16 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec28">	
@@ -1185,7 +1182,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 17 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec29">	
@@ -1224,7 +1221,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 18 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec30">	
@@ -1263,7 +1260,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 19 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec31">	
@@ -1302,7 +1299,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 20 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec32">	
@@ -1341,7 +1338,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 21 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec33">	
@@ -1380,7 +1377,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 22 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec34">	
@@ -1419,7 +1416,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 23 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec35">	
@@ -1458,7 +1455,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 24 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec36">	
@@ -1497,7 +1494,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 25 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec37">	
@@ -1536,7 +1533,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 26 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec38">	
@@ -1575,7 +1572,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 27 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec39">	
@@ -1614,7 +1611,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 28 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec40">	
@@ -1653,7 +1650,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 29 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec41">	
@@ -1692,7 +1689,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 30 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec42">	
@@ -1731,7 +1728,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 31 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec43">	
@@ -1770,7 +1767,7 @@
 				<% break %>
 			<% end %>
 		<% end %>
-		<% if @nombre != nil && @search != nil && @serial == nil && @modelo == nil %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
 			<% @elementos.each do |elemento| %>
 				<% if elemento.area_id == 32 && elemento.area.floor_id ==  @floor.id %>
 					<div class="sec44">	

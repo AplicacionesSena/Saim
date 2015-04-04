@@ -10,7 +10,7 @@
           <tbody>
             <% @elementos.each do |elemento| %>
               <tr>
-                <td class="centro success"><%= elemento.datoc %></td>
+                <td class="centro success"><p>Se creo un elemento el <%= elemento.created_at %></p></td>
               </tr>
             <% end %>
           </tbody>
@@ -30,7 +30,7 @@
           <tbody>
             <% @elementos.each do |elemento| %>
               <tr>
-                <td class="centro danger"><%= elemento.datoe%></td>
+                <td class="centro danger"><p>Se edito un elemento el <%= elemento.created_at %></p></td>
               </tr>
             <% end %>
           </tbody>

@@ -1,9 +1,9 @@
-class CreateTraspasos < ActiveRecord::Migration
+class CreateTransfers < ActiveRecord::Migration
   def change
-    create_table :traspasos do |t|
+    create_table :transfers do |t|
       t.references :elemento, index: true
       t.references :cuentadante, index: true
-      t.datetime :fechaTrapaso
+      t.datetime :fechaTraspaso
 
       t.timestamps
     end

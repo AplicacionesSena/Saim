@@ -34,13 +34,18 @@
   
 </div>
 
-<h2>Importar Elementos</h2>
-<%= form_tag import_elementos_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Importar" %>
-<% end %>
+<div class="import">
+  <h2 class="importitulo">Importar Elementos</h2>
+  <%= form_tag import_elementos_path, multipart: true do %>
+    <div class="fileimport">
+    <%= file_field_tag :file %>
+    </div>
+    <%= submit_tag "Importar" %>
+  <% end %>
+</div>
+
 <div class="tablar">
-<div class="panel-body contabla">
+<div class="panel-body contabla ">
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -96,6 +101,8 @@
 <br>
 <%#<%= button_to 'Nuevo Elemento', new_area_elemento_path(@area), method: "get", class: 'btn btn-primary' %>
 <%#<% end %>
-
-
+<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+<br>
+Elementos: <%= @elementos.count %>
 </div>

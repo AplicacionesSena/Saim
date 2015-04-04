@@ -1,6 +1,12 @@
-<h1>Editing cuentadante</h1>
+<h1 class="centro">Editar cuentadante</h1>
 
 <%= render 'form' %>
+<div class="contdiv">
+	<div class="mo0a1">
+	<%= link_to 'Ver', @cuentadante, method: "get", class: 'btn btn-primary' %>
+	</div>
+	<div class="mo0a2">
+	<%= link_to 'Atras', cuentadantes_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>
 
-<%= link_to 'Show', @cuentadante %> |
-<%= link_to 'Back', cuentadantes_path %>

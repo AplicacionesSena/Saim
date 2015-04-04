@@ -1,4 +1,4 @@
-<% @traspasosxdia = Traspaso.group("DATE(fechaTrapaso)").count
+<% @traspasosxdia = Transfer.group("DATE(fechaTraspaso)").count
         @cantidad = @traspasosxdia.values
         @fecha = @traspasosxdia.keys
 %>

@@ -1,6 +1,11 @@
-<h1>Editing elemento</h1>
+<h1 class="centro">Editar Elemento</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', area_elemento_path(@area,@elemento) %> |
-<%= link_to 'Back', area_elementos_path %>
+<div class="contdiv">
+	<div class="mo0a1">
+	<%= button_to 'Ver', area_elemento_path(@area,@elemento), method: "get", class: 'btn btn-primary' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', area_elementos_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>

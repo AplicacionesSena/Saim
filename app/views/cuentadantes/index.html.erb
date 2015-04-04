@@ -1,19 +1,40 @@
 <div class="fondc2" >
 <h1>Listado De Cuentadantes</h1>
-<%#<%= form_tag cuentadantes_path, :method => 'get' do %>
-<%#  <% content_tag :label do %>
-<%#    <div class="form-group pos">
-      Buscar Cuentadante:
-      <%= text_field_tag :search, params[:search], class: 'form-control tams' %>
-<%#      <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img11') %>
-<%#    </div>
-<%#  <% end %>
-<%#<% end %>
-<h2>Importar Cuentadantes</h2>
-<%= form_tag import_cuentadantes_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Importar" %>
-<% end %>
+<hr class="divider">
+
+<div class="buscadormultiple">
+  
+  <div class="busca1-2">
+    <%= form_tag @cuentadante, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Nombre:
+          <%= text_field_tag :search, params[:search], class: 'form-control tams', :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="busca2-2">
+    <%= form_tag @cuentadante, :method => 'get' do %>
+        <div class="form-group pos2">
+          Buscar X Documento:
+          <%= text_field_tag :documento, params[:documento], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+  
+</div>
+
+<div class="import2">
+  <h2 class="importitulo2">Importar Cuentadantes</h2>
+  <%= form_tag import_cuentadantes_path, multipart: true do %>
+    <div class="fileimport2">
+    <%= file_field_tag :file %>
+    </div>
+    <%= submit_tag "Importar" %>
+  <% end %>
+</div>
 
 
 
@@ -50,14 +71,14 @@
                   <button type="button" class="btn btn-default dropdown-toggle " data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
                   </button>
                   <ul class="dropdown-menu drop" role="menu">
-                    <li><a href="#"><%= button_to 'Ver', cuentadante, method: "get", class: 'btn btn-info btn-xs' %></a></li>
+                    <li><a href="#"><%= button_to 'Ver', cuentadante, method: "get", class: 'btn btn-info bottam' %></a></li>
                     <% if can? :update, cuentadante %>
                     <li class="divider"></li>
-                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_path(cuentadante), method: "get", class: 'btn btn-warning btn-xs' %></a></li>
+                    <li><a href="#"><%= button_to 'Editar', edit_cuentadante_path(cuentadante), method: "get", class: 'btn btn-warning bottam2' %></a></li>
                     <% end %>
                     <% if can? :destroy, cuentadante %>
                     <li class="divider"></li>
-                    <li class="op1"><a href="#"><%= link_to 'Eliminar', cuentadante, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs col1' %></td></a></li>
+                    <li class="op1"><a href="#"><%= link_to '<i class="btn btn-danger btn-xs bottam3">Eliminar</i>'.html_safe, cuentadante, method: :delete, data: { confirm: 'Estas Segur@?' } %></td></a></li>
                     <% end %>
                   </ul>
                 </div>

@@ -5,18 +5,18 @@ class AreasController < ApplicationController
   # GET /areas.json
   def index
     @areas = @floor.areas.all
-    @nombre = params[:nombre]
     @serial = params[:serial]
     @modelo = params[:modelo]
-    @search = params[:placa]
-    if @serial == nil && @modelo == nil
-      @elementos = Elemento.search(params[:search])
-    elsif @serial == nil && @search == nil
-      @elementos = Elemento.modelo(params[:modelo])
-    elsif @modelo == nil && @search == nil
-      @elementos = Elemento.serial(params[:serial])
+    @search = params[:search]
+    @nombre = params[:nombre]
+    if @serial == nil && @modelo == nil && @nombre == nil
+      @elementos = Elemento.search(params[:search], params[:page])
+    elsif @serial == nil && @search == nil && @nombre == nil
+      @elementos = Elemento.modelo(params[:modelo], params[:page])
+    elsif @modelo == nil && @search == nil && @nombre == nil
+      @elementos = Elemento.serial(params[:serial], params[:page])
     elsif @search == nil && @modelo == nil && @serial == nil
-      @elementos = Elemento.nombre(params[:nombre])
+      @elementos = Elemento.nombre(params[:nombre], params[:page])
     end
   end
 

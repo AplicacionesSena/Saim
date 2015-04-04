@@ -11,12 +11,18 @@ class PaginaController < ApplicationController
   def estadisticas
   end
 
+  def elementosxareas
+    @areas = Area.all
+    @elementos = Elemento.all
+  end
+
   def elementosxcuentadantes
   	@cuentadantes = Cuentadante.all
+    @elementos = Elemento.all
   end
 
   def etraspasos
-  	@traspasos = Traspaso.all
+  	@transfers = Transfer.all
   	@elementos = Elemento.all
   end
 
@@ -33,16 +39,16 @@ class PaginaController < ApplicationController
     @areas = Area.all
     @serial = params[:serial]
     @modelo = params[:modelo]
-    @search = params[:placa]
+    @search = params[:search]
     @nombre = params[:nombre]
     if @serial == nil && @modelo == nil && @nombre == nil
-      @elementos = @area.elementos.search(params[:search])
+      @elementos = Elemento.search(params[:search], params[:page])
     elsif @serial == nil && @search == nil && @nombre == nil
-      @elementos = @area.elementos.modelo(params[:modelo])
+      @elementos = Elemento.modelo(params[:modelo], params[:page])
     elsif @modelo == nil && @search == nil && @nombre == nil
-      @elementos = @area.elementos.serial(params[:serial])
+      @elementos = Elemento.serial(params[:serial], params[:page])
     elsif @search == nil && @modelo == nil && @serial == nil
-      @elementos = @area.elementos.nombre(params[:nombre])
+      @elementos = Elemento.nombre(params[:nombre], params[:page])
     end
     
   end

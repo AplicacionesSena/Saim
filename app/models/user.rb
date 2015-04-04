@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   belongs_to :tipo_doc
   belongs_to :cargo
   has_many :events, :dependent => :destroy
-  has_many :traceabilities
   has_attached_file :foto, :default_url => "/users"
   do_not_validate_attachment_file_type :foto
 

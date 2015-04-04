@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313165740) do
+ActiveRecord::Schema.define(version: 20150404161627) do
 
   create_table "areas", force: true do |t|
     t.string   "nombre"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150313165740) do
     t.string   "telefono"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "area_id"
   end
 
   add_index "cuentadantes", ["tipo_doc_id"], name: "index_cuentadantes_on_tipo_doc_id"
@@ -60,15 +61,14 @@ ActiveRecord::Schema.define(version: 20150313165740) do
     t.datetime "fecha_adquisicion"
     t.string   "valor"
     t.boolean  "estado"
-    t.string   "datoc"
-    t.string   "datoe"
     t.integer  "area_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cuentadante_id"
+    t.float    "cantidad"
+    t.float    "valor_total"
+    t.string   "marca"
   end
-
-  add_index "elementos", ["area_id"], name: "index_elementos_on_area_id"
-  add_index "elementos", ["tipo_elem_id"], name: "index_elementos_on_tipo_elem_id"
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -82,7 +82,6 @@ ActiveRecord::Schema.define(version: 20150313165740) do
 
   create_table "floors", force: true do |t|
     t.string   "nombre"
-    t.integer  "cuentadante_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -90,8 +89,6 @@ ActiveRecord::Schema.define(version: 20150313165740) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
-
-  add_index "floors", ["cuentadante_id"], name: "index_floors_on_cuentadante_id"
 
   create_table "reintegros", force: true do |t|
     t.integer  "elemento_id"
@@ -118,16 +115,16 @@ ActiveRecord::Schema.define(version: 20150313165740) do
     t.datetime "updated_at"
   end
 
-  create_table "traspasos", force: true do |t|
+  create_table "transfers", force: true do |t|
     t.integer  "elemento_id"
     t.integer  "cuentadante_id"
-    t.datetime "fechaTrapaso"
+    t.datetime "fechaTraspaso"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "traspasos", ["cuentadante_id"], name: "index_traspasos_on_cuentadante_id"
-  add_index "traspasos", ["elemento_id"], name: "index_traspasos_on_elemento_id"
+  add_index "transfers", ["cuentadante_id"], name: "index_transfers_on_cuentadante_id"
+  add_index "transfers", ["elemento_id"], name: "index_transfers_on_elemento_id"
 
   create_table "users", force: true do |t|
     t.string   "email",             null: false
