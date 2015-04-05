@@ -8,14 +8,20 @@ class ElementosController < ApplicationController
     @modelo = params[:modelo]
     @search = params[:search]
     @nombre = params[:nombre]
-    if @nombre == nil && @modelo == nil && @serial == nil
+    
+    if @nombre == nil && @modelo == nil && @serial == nil && @buscar == nil
       @elementos = @area.elementos.search(params[:search], params[:page])
-    elsif @serial == nil && @search == nil && @nombre == nil
+    elsif @serial == nil && @search == nil && @nombre == nil && @buscar == nil
       @elementos = @area.elementos.modelo(params[:modelo], params[:page])
-    elsif @modelo == nil && @search == nil && @nombre == nil
+    elsif @modelo == nil && @search == nil && @nombre == nil && @buscar == nil
       @elementos = @area.elementos.serial(params[:serial], params[:page])
-    elsif @modelo == nil && @search == nil && @serial == nil
+    elsif @modelo == nil && @search == nil && @serial == nil && @buscar == nil
       @elementos = @area.elementos.nombre(params[:nombre], params[:page])
+    end
+
+    @buscar = params[:buscar]
+    if @serial == nil && @modelo == nil && @nombre == nil && @search == nil
+      @elementos = @area.elementos.buscar(params[:buscar], params[:page])
     end
     @cargos = Cargo.all
   end
@@ -102,6 +108,11 @@ class ElementosController < ApplicationController
       @elementos = Elemento.serial(params[:serial], params[:page])
     elsif @search == nil && @modelo == nil && @serial == nil
       @elementos = Elemento.nombre(params[:nombre], params[:page])
+    end
+
+    @buscar = params[:buscar]
+    if @serial == nil && @modelo == nil && @nombre == nil && @search == nil
+      @elementos = Elemento.buscar(params[:buscar], params[:page])
     end
     
   end

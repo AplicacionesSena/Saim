@@ -1,37 +1,16 @@
 <div class="fondc2" >
 <h1>Listado De Elementos</h1>
 
-<div class="buscadormultiple">
-  <div class="busca1">
+<div class="buscadormultiple3">
+  <div class="busca1-3">
     <%= form_tag @elemento, :method => 'get' do %>
         <div class="form-group pos">
-          Buscar Por Placa:
-          <%= text_field_tag :search, params[:search], class: 'form-control tams', :value => nil %>
+          Buscar:
+          <%= text_field_tag :buscar, params[:buscar], class: 'form-control' , :value => nil %>
           <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
         </div>
     <% end %>
   </div>
-
-  <div class="busca2">
-    <%= form_tag @elemento, :method => 'get' do %>
-        <div class="form-group pos">
-          Buscar Por Modelo:
-          <%= text_field_tag :modelo, params[:modelo], class: 'form-control' , :value => nil %>
-          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
-        </div>
-    <% end %>
-  </div>
-
-  <div class="busca3">
-    <%= form_tag @elemento, :method => 'get' do %>
-        <div class="form-group pos">
-          Buscar Por Serial:
-          <%= text_field_tag :serial, params[:serial], class: 'form-control' , :value => nil %>
-          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
-        </div>
-    <% end %>
-  </div>
-  
 </div>
 
 <div class="import">
@@ -45,7 +24,7 @@
 </div>
 
 <div class="tablar">
-<div class="panel-body contabla ">
+<div class="panel-body contabla">
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -87,7 +66,7 @@
               <td><%= elemento.valor %></td>
               <td><%= elemento.marca %></td>
               <td><%= elemento.cantidad %></td>
-              <td><%= elemento.estado %></td>
+              <td><%= est(elemento.estado) %></td>
               <td><%= elemento.cuentadante.nombre%></td>
               <td><%= elemento.area.nombre %></td>
             </tr>

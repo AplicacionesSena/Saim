@@ -79,15 +79,20 @@
                   <%= f.label :Cantidad %><br>
                   <%= f.text_field :cantidad, class: 'form-control tams'  %>
                 </div>
-                  
-                  <div class="form-group movselect2">
-                    <label>Cuentadante</label><br>
-                    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Cuentadante" %>
-                  </div>
-                <hr>
-                <div class="actions mo0g">
-                  <%= f.submit "Guardar" %>
+                <div class="form-group movselect2">
+                  <label>Cuentadante</label><br>
+                  <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Cuentadante" %>
                 </div>
+                <hr>
+                <% if @elemento.placa == nil %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Guardar", class: "btn btn-success" %>
+                  </div>
+                <% else %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Actualizar", class: "btn btn-warning" %>
+                  </div>              
+                <% end %>
               </form>
             </div>
           </div>

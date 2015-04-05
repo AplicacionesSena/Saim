@@ -94,16 +94,17 @@
                 <td><%= elemento.serial %></td>
                 <td><%= elemento.fecha_adquisicion %></td>
                 <td><%= elemento.valor %></td>
-                <td><%= elemento.estado %></td>
+                <td><%= est(elemento.estado) %></td>
                 <td><%= elemento.area.nombre %></td>
               </tr>
             <% end %>
+            <% break %>
           <% end %>
         </tbody>
       </table>
-      <% end %>
       <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
+      <% end %>
 </div>
 
 <% end %>
@@ -113,6 +114,9 @@
 
 <% if @floor.id == 2 %>
 <div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
     <table class="table">
         <thead>
           <tr class="success">
@@ -157,8 +161,11 @@
           <% end %>
         </tbody>
       </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
 </div>
-Elementos: <%= @elementos.count %>
+
 <% end %>
 
 
@@ -166,6 +173,9 @@ Elementos: <%= @elementos.count %>
 
 <% if @floor.id == 1 %>
 <div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
       <table class="table">
         <thead>
           <tr class="success">
@@ -210,8 +220,10 @@ Elementos: <%= @elementos.count %>
           <% end %>
         </tbody>
       </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
 </div>
-Elementos: <%= @elementos.count %>
 <% end %>
 
 

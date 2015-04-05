@@ -44,9 +44,15 @@
                   <%= f.number_field :telefono, class: 'form-control tams' %>
                 </div>
                 <hr>
-                <div class="actions mo0g">
-                  <%= f.submit "Guardar" %>
-                </div>
+                <% if @cuentadante.nombre == nil %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Guardar", class: "btn btn-success" %>
+                  </div>
+                <% else %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Actualizar", class: "btn btn-warning" %>
+                  </div>              
+                <% end %>
               </form>
             </div>
           </div>

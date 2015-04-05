@@ -11,31 +11,60 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.hidden_field :elemento_id %>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <% if @reintegro.cuentadante_id == "Marleny Garcia" %>
+              <h3 class="centro">Campos Para Registrar Un Traspaso</h3>
+            <% elsif @reintegro.elemento_id != nil %>
+               <h3 class="centro">Campos Para Editar Un Traspaso</h3>
+            <% end %>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="formcentro">
+                  <div class="field">
+                    <%= f.hidden_field :elemento_id %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :Nombre_Elemento %><br>
+                    <%= @elemento.nombre %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :Cuentadante_Origen %><br>
+                    <%= @elemento.cuentadante.nombre %>
+                  </div>
+                  <div class="field">
+                    <label>Cuentadante Destino</label><br>
+                    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, :prompt => true, :selected => 5, class: "form-control tams" %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :Valor_Elemento %><br>
+                    <%= @elemento.valor %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :fechaReintegro %><br>
+                    <%= f.datetime_select :fechaReintegro %>
+                  </div>
+                </div>
+                <% if @reintegro.cuentadante_id == "Marleny Garcia" %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Guardar", class: "btn btn-success" %>
+                  </div>
+                <% elsif @reintegro.elemento_id != nil %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Actualizar", class: "btn btn-warning" %>
+                  </div>              
+                <% end %>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Nombre_Elemento %><br>
-    <%= @elemento.nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :Cuentadante_Origen %><br>
-    <%= @elemento.cuentadante.nombre %>
-  </div>
-  <div class="field">
-    <label>Cuentadante Destino</label><br>
-    
-    <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, :prompt => true, :selected => 5, class: "form-control tams" %>
-  </div>
-  <div class="field">
-    <%= f.label :Valor_Elemento %><br>
-    <%= @elemento.valor %>
-  </div>
-  <div class="field">
-    <%= f.label :fechaReintegro %><br>
-    <%= f.datetime_select :fechaReintegro %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>

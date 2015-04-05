@@ -1,3 +1,4 @@
+<div class="showcentro">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +8,7 @@
 
 <p>
   <strong>Tipo elem:</strong>
-  <%= @elemento.tipo_elem %>
+  <%= @elemento.tipo_elem.nombre %>
 </p>
 
 <p>
@@ -42,8 +43,14 @@
 
 <p>
   <strong>Estado:</strong>
-  <%= @elemento.estado %>
+  <%= est(@elemento.estado) %>
 </p>
-
-<%= button_to 'Editar', edit_area_elemento_path(@area,@elemento), method: "get", class: 'btn btn-warning' %> |
-<%= button_to 'Atras', area_elementos_path, method: "get", class: 'btn btn-success' %>
+</div>
+<div class="contdiv3">
+  <div class="mo0a1-2">
+  <%= button_to 'Editar', edit_area_elemento_path(@area,@elemento), method: "get", class: 'btn btn-warning' %>
+  </div>
+  <div class="mo0a2">
+  <%= button_to 'Atras', area_elementos_path, method: "get", class: 'btn btn-success' %>
+  </div>
+</div>

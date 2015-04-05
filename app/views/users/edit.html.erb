@@ -1,10 +1,10 @@
 <% if current_user %>
-	<% if @user.email == 'Saim@gmail.com' || @user.email == current_user.email || @user.cargo_id != 1 %>
+	<% if current_user.email == 'Saim@gmail.com' || current_user.email == @user.email || current_user.cargo_id != 1 %>
 
 		<%= render 'form' %>
-		<div class="contdiv">
+		<div class="contdiv4">
 			<div class="mo0a1">
-			<%= button_to 'Ver', @user, method: "get", class: 'btn btn-primary' %>
+			<%= button_to 'Ver', @user, method: "get", class: 'btn btn-info' %>
 			</div>
 			<div class="mo0a2">
 			<%= button_to 'Atras', users_path, method: "get", class: 'btn btn-primary' %>
