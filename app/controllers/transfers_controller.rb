@@ -27,7 +27,7 @@ class TransfersController < ApplicationController
   def create
     @transfer = Transfer.new(transfer_params)
     @transfer.elemento_id = @elemento.id
-    @transfer.cuentaorigen = @elemento.cuentadante_id
+    @transfer.cuentaorigen = @elemento.cuentadante.nombre
     @elemento.cuentadante_id = @transfer.cuentadante_id
     @elemento.save
     respond_to do |format|

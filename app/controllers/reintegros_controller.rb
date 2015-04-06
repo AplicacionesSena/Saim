@@ -27,7 +27,7 @@ class ReintegrosController < ApplicationController
   def create
     @reintegro = Reintegro.new(reintegro_params)
     @reintegro.elemento_id = @elemento.id
-    @reintegro.cuentaorigen = @elemento.cuentadante_id
+    @reintegro.cuentaorigen = @elemento.cuentadante.nombre
     @elemento.cuentadante_id = @reintegro.cuentadante_id
     @elemento.save
     respond_to do |format|

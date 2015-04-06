@@ -31,12 +31,12 @@
                       <%= button_to 'Ver', elemento_transfer_path(@elemento,transfer), method: "get", class: 'btn btn-info bottam'%>
                     </a>
                   </li>
-                  <% if can? :update, transfer %>
-                  <li class="divider"></li>
+                  <%#<% if can? :update, transfer %>
+                  <%#<li class="divider"></li>
                   <li>
                     <a href="#">
                       <%= button_to 'Editar', edit_elemento_transfer_path(@elemento,transfer), method: "get", class: 'btn btn-warning bottam2' %>
-                    </a>
+                  <%#  </a>
                   </li>
                   <% end %>
                 </ul>

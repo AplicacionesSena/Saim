@@ -29,10 +29,10 @@
                 </button>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#"><%= button_to 'Ver', elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-info bottam' %></a></li>
-                  <% if can? :update, reintegro %>
-                  <li class="divider"></li>
-                  <li><a href="#"><%= button_to 'Editar', edit_elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-warning bottam2' %></a></li>
-                  <% end %>
+                  <%#<% if can? :update, reintegro %>
+                  <%#<li class="divider"></li>
+                  <li><a href="#"><%= button_to 'Editar', edit_elemento_reintegro_path(@elemento,reintegro), method: "get", class: 'btn btn-warning bottam2' %><%#</a></li>
+                  <%#<% end %>
                 </ul>
               </div>
             </td>
