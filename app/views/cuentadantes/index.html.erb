@@ -94,6 +94,9 @@
 <%= button_to 'Nuevo Cuentadante', new_cuentadante_path, method: "get", class: 'btn btn-primary' %>
 
 <br>
+<%= will_paginate @cuentadantes, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+<br>
 Cuentadantes: <%= @cuentadantes.count %>
 
 </div>

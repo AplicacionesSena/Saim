@@ -5,7 +5,14 @@ class Cuentadante < ActiveRecord::Base
   has_many :reintegros, :dependent => :destroy
   belongs_to :area
 
-  	def self.search(search, page)
+  validates :nombre, presence: { :message => "Por favor Verifique que el campo no este vacio" }
+  validates :tipo_doc_id, presence: { :message => "Por favor Escoja un tipo de documento" }
+  validates :documento, presence: { :message => "Por favor Verifique que el campo no este vacio" }
+  validates :documento, numericality: { :message => "Ingrese solo numeros por favor" }
+  validates :telefono, presence: { :message => "Por favor Verifique que el campo no este vacio" }
+  validates :telefono, numericality: { :message => "Ingrese solo numeros por favor" }
+
+  def self.search(search, page)
 		where(['nombre LIKE :s', :s => "%#{search}%".upcase]).paginate(page: page, per_page: 5).order("id")
 	end
 	def self.documento(documento, page)

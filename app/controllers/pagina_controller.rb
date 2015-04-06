@@ -55,4 +55,6 @@ class PaginaController < ApplicationController
 
   def plano
   end
+  def contactenos
+  end
 end

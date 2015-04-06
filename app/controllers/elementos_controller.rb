@@ -34,8 +34,8 @@ class ElementosController < ApplicationController
   def import
     Elemento.import(params[:file])
     redirect_to root_url, notice: "Elementos Importados Con Exito."
-    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
-    @elemento.save
+    #@elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
+    #@elemento.save
   end
 
   # GET /elementos/new
@@ -60,7 +60,7 @@ class ElementosController < ApplicationController
     @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
     respond_to do |format|
       if @elemento.save
-        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully created.' }
+        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento Creado con exito' }
         format.json { render :show, status: :created, location: @elemento }
       else
         format.html { render :new }
@@ -76,7 +76,7 @@ class ElementosController < ApplicationController
     @elemento.save
     respond_to do |format|
       if @elemento.update(elemento_params)
-        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento was successfully updated.' }
+        format.html { redirect_to area_elementos_path(@area), notice: 'Elemento actualizado con exito' }
         format.json { render :show, status: :ok, location: @elemento }
       else
         format.html { render :edit }
@@ -90,7 +90,7 @@ class ElementosController < ApplicationController
   def destroy
     @elemento.destroy
     respond_to do |format|
-      format.html { redirect_to area_elementos_url(@area), notice: 'Elemento was successfully destroyed.' }
+      format.html { redirect_to area_elementos_url(@area), notice: 'Elemento eliminado con exito' }
       format.json { head :no_content }
     end
   end

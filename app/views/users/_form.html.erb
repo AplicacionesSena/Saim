@@ -1,16 +1,16 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <div class="error">
+      <h2><%= pluralize(@user.errors.count, "Errores,") %> No Puede Guardar El Formulario Verifique por favor</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="list">-><%= message %><-</li>
       <% end %>
       </ul>
     </div>
   <% end %>
-  <div class="panel-body">
+  <div class="panel-body movp">
     <div class="row">
       <div class="col-md-6">
         <div class="col-md-4 col-sm-4">

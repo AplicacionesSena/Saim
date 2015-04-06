@@ -73,6 +73,7 @@ Rails.application.routes.draw do
   get 'pagina/ereintegros'
   get 'pagina/traceability'
   get 'pagina/index'
+  get 'pagina/contactenos'
   resources :tipo_elems
 
   resources :tipo_docs

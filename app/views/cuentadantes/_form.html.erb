@@ -44,6 +44,10 @@
                   <%= f.number_field :telefono, class: 'form-control tams' %>
                 </div>
                 <hr>
+                <div class="form-group mo03">
+                  <label>Ubicacion:</label><br>
+                  <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Ubicacion" %>
+                </div>
                 <% if @cuentadante.nombre == nil %>
                   <div class="actions mo0g">
                     <%= f.submit "Guardar", class: "btn btn-success" %>
