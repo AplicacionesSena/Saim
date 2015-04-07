@@ -8,7 +8,7 @@
           chart: { renderTo: 'orders_chart', type: 'line' },
           title: { text: 'Reintegros por dia' },
           xAxis: { type: 'datetime'},
-          yAxis: { title: { text: '# reintegros' } },
+          yAxis: { allowDecimals: false, title: { text: '# reintegros' } },
       series: [{
         name: 'Reintegros',
         type: 'line',

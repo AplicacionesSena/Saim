@@ -43,6 +43,7 @@
       <table class="table">
         <thead>
           <tr class="success">
+            <th class="centro">ID</th>
             <th class="centro">Nombre</th>
             <th class="centro">Tipo De Documento</th>
             <th class="centro">Documento</th>
@@ -56,6 +57,7 @@
         <tbody>
           <% @cuentadantes.each do |cuentadante| %>
             <tr>
+              <td><%= cuentadante.id %></td>
               <td><%= cuentadante.nombre %></td>
               <td><%= cuentadante.tipo_doc.sigla %></td>
               <td><%= cuentadante.documento %></td>
