@@ -5,6 +5,8 @@ class TransfersController < ApplicationController
   # GET /transfers.json
   def index
     @transfers = @elemento.transfers.all
+    @areas = Area.all
+    @elemento.area_id
   end
 
   # GET /transfers/1
