@@ -1,26 +1,28 @@
 <div class="fondc2elemento" >
-<h1>Listado De Elementos</h1>
+<div class="buscador_importar">
+  <h1>Listado De Elementos</h1>
 
-<div class="buscadormultiple3">
-  <div class="busca1-3">
-    <%= form_tag @elemento, :method => 'get' do %>
-        <div class="form-group pos">
-          Buscar:
-          <%= text_field_tag :buscar, params[:buscar], class: 'form-control' , :value => nil %>
-          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
-        </div>
+  <div class="buscadormultiple3">
+    <div class="busca1-3">
+      <%= form_tag @elemento, :method => 'get' do %>
+          <div class="form-group">
+            Buscar:
+            <%= text_field_tag :buscar, params[:buscar], class: 'form-control' , :value => nil %>
+            <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="import">
+    <h2 class="importitulo">Importar Elementos</h2>
+    <%= form_tag import_elementos_path, multipart: true do %>
+      <div class="fileimport">
+      <%= file_field_tag :file %>
+      </div>
+      <%= submit_tag "Importar" %>
     <% end %>
   </div>
-</div>
-
-<div class="import">
-  <h2 class="importitulo">Importar Elementos</h2>
-  <%= form_tag import_elementos_path, multipart: true do %>
-    <div class="fileimport">
-    <%= file_field_tag :file %>
-    </div>
-    <%= submit_tag "Importar" %>
-  <% end %>
 </div>
 
 <div class="tablar">
