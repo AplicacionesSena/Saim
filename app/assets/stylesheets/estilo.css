@@ -98,7 +98,7 @@ ul {
 }
 .mo0atraselemento{
 	margin-top: -30px;
-	margin-left: 420px;
+	margin-left: 416px;
 	width: 190px;
 	text-align: center;
 }
@@ -593,6 +593,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 		word-wrap: break-word;
 		margin-left: 350px;
 		margin-top: -10px;
+	}
+	.mo0atraselemento{
+		margin-top: -30px;
+		margin-left: 420px;
+		width: 190px;
+		text-align: center;
 	}
 }
 
