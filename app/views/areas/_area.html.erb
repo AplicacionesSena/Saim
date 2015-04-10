@@ -1,0 +1,28 @@
+<div class="moventa2">
+<a href="#openModal2" class="btTxt2">Lista-Areas</a>
+  <div id="openModal2" class="modalDialogo2">
+    <div>
+    	<a href="#close" title="cerrar2" class="cerrar2">X</a>
+    		<div class="fondc4" >
+    			<div class="panel-body tabla_scroll2">
+					<table class="table">
+					    <thead>
+					        <tr class="success">
+					        	<th class="centro">Id</th>
+						        <th class="centro">Nombre</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+							<% @areas.each do |area| %>
+							<tr>
+								<td><%= area.id %></td>
+								<td><%= area.nombre %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+    		</div>
+    	</div>
+    </div>
+</div>

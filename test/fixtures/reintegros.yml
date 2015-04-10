@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  elemento_id: 
+  cuentadante_id: 
+  fechaReintegro: 2015-03-13 11:57:40
+
+two:
+  elemento_id: 
+  cuentadante_id: 
+  fechaReintegro: 2015-03-13 11:57:40

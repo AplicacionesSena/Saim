@@ -1,0 +1,103 @@
+<%= form_for [@area,@elemento] do |f| %>
+  <% if @elemento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@elemento.errors.count, "error") %> prohibited this elemento from being saved:</h2>
+
+      <ul>
+      <% @elemento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <% if @elemento.placa == nil %>
+              <h3 class="centro">Campos Para Registrar Un Elemento</h3>
+            <% else %>
+               <h3 class="centro">Campos Para Editar Un Elemento</h3>
+            <% end %>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="form-group mo0">
+                  <%= f.label :Placa %><br>
+                  <%= f.text_field :placa, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mov">
+                  <label>Tipo de Elemento</label><br>
+                  <%= f.collection_select :tipo_elem_id, TipoElem.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Tipo De Elemento" %>
+                </div>
+                <br>
+                <div class="form-group mov1">
+                  <%= f.label :Nombre %><br>
+                  <%= f.text_field :nombre, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Descripcion %><br>
+                  <%= f.text_area :descripcion, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Modelo %><br>
+                  <%= f.text_field :modelo, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mov3">
+                  <%= f.label :Serial %><br>
+                  <%= f.text_field :serial, class: 'form-control tams'  %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Fecha_de_Adquisicion %><br>
+                  <%= f.datetime_select :fecha_adquisicion, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Valor %><br>
+                  <%= f.text_field :valor, class: 'form-control tams' %>
+                </div>
+                <br>
+                <div class="form-group mov2">
+                  <%= f.label :Estado %><br>
+                  <%= f.check_box :estado, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mo0">
+                  <%= f.label :Marca %><br>
+                  <%= f.text_field :marca, class: 'form-control tams'  %>
+                </div>
+                <br>
+                <div class="form-group mov01">
+                  <%= f.label :Cantidad %><br>
+                  <%= f.text_field :cantidad, class: 'form-control tams'  %>
+                </div>
+                <div class="form-group movselect2">
+                  <label>Cuentadante</label><br>
+                  <%= f.collection_select :cuentadante_id, Cuentadante.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Cuentadante" %>
+                </div>
+                <hr>
+                <% if @elemento.placa == nil %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Guardar", class: "btn btn-success" %>
+                  </div>
+                <% else %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Actualizar", class: "btn btn-warning" %>
+                  </div>              
+                <% end %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

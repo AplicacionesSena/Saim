@@ -1,0 +1,11 @@
+<h1 class="centro">Editar Reintegro</h1>
+
+<%= render 'form' %>
+<div class="contdiv2">
+	<div class="mo0a1">
+	<%= button_to 'Ver', elemento_reintegro_path(@elemento,@reintegro), method: "get", class: 'btn btn-info' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', elemento_reintegros_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>

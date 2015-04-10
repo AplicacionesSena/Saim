@@ -1,0 +1,114 @@
+<div class="fondc2" >
+<h1>Listado De Elementos</h1>
+<div class="buscadormultiple3">
+  <div class="busca1-3">
+    <%= form_tag area_elementos_path(@area, @elemento), :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar:
+          <%= text_field_tag :buscar, params[:buscar], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<%#<%= form_tag cuentadante_elementos_path(@cuentadante, @elemento), :method => 'get'  do %>
+<%#    <%= text_field_tag :search, params[:search_condition], :id => 'search_field' %>
+<%#    <%= submit_tag "Search" %>
+<%#    <p>hello </p>
+<% end %>
+
+
+<div class="panel-body contabla tabla_scroll3">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Marca</th>
+            <th class="centro">Cantidad</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Valor_Total</th>
+            <th class="centro">Cuentadante Actual</th>
+            <th class="centro">Opciones</th>
+            <th class="centro">Movimientos</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <tr>
+              <td><%= elemento.placa %></td>
+              <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+              <td><%= elemento.nombre %></td>
+              <td>
+                <div class="dc">
+                  <%= elemento.descripcion %>
+                </div>
+              </td>
+              <td>
+                <div class="dc2">
+                  <%= elemento.modelo %>
+                </div>
+              </td>
+              <td><%= elemento.serial %></td>
+              <td><%= elemento.fecha_adquisicion %></td>
+              <td><%= elemento.valor %></td>
+              <td><%= elemento.marca %></td>
+              <td><%= elemento.cantidad %></td>
+              <td><%= est(elemento.estado) %></td>
+              <td><%= elemento.valor_total %></td>
+              <td><%= elemento.cuentadante.nombre rescue nil%></td>
+
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><%= button_to 'Ver', area_elemento_path(@area,elemento) , method: "get", class: 'btn btn-info bottam' %></a></li>
+                    <% if can? :update, elemento %>
+                    <li class="divider"></li>
+                    <li><a href="#"><%= button_to 'Editar', edit_area_elemento_path(@area,elemento), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                    <% end %>
+                    <% if can? :destroy, elemento %>
+                    <li class="divider"></li>
+                    <li><a href="#"><%= link_to '<i class="btn btn-danger btn-xs bottam3">Eliminar</i>'.html_safe, area_elemento_path(@area,elemento), method: :delete, data: { confirm: 'Estas Segur@?' }%></a></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="tamli"><a href="#"><%= button_to 'Traspaso', elemento_transfers_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
+                    <li class="divider"></li>
+                    <li class="tamli"><a href="#"><%= button_to 'Reintegro', elemento_reintegros_path(elemento), :method=>"get", class: 'btn btn-info' %></a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<% if can? :create, @elemento %>
+<br>
+<%= button_to 'Nuevo Elemento', new_area_elemento_path(@area), method: "get", class: 'btn btn-primary' %>
+<% end %>
+<%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+<br>
+Elementos: <%= @elementos.count %>
+<%#<%= button_to 'Volver al Listado de Cuentadantes', cuentadantes_path,  :method=>"get", class: "btn btn-primary" %>
+</div>

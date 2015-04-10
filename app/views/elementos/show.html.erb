@@ -1,0 +1,56 @@
+<div class="showcentro">
+<%#<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @elemento.placa %>
+</p>
+
+<p>
+  <strong>Tipo elem:</strong>
+  <%= @elemento.tipo_elem.nombre %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @elemento.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @elemento.descripcion %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @elemento.modelo %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @elemento.serial %>
+</p>
+
+<p>
+  <strong>Fecha adquisicion:</strong>
+  <%= @elemento.fecha_adquisicion %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @elemento.valor %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= est(@elemento.estado) %>
+</p>
+</div>
+<div class="contdiv3">
+  <div class="mo0a1-2">
+  <%= button_to 'Editar', edit_area_elemento_path(@area,@elemento), method: "get", class: 'btn btn-warning' %>
+  </div>
+  <div class="mo0a2">
+  <%= button_to 'Atras', area_elementos_path, method: "get", class: 'btn btn-success' %>
+  </div>
+</div>

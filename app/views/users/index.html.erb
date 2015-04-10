@@ -1,0 +1,64 @@
+<% if current_user %>
+<div class="fondc2" >
+<h1>Listado De Usuarios</h1>
+<div class="panel-body contabla">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Nombre</th>
+            <th class="centro">Apellido</th>
+            <th class="centro">Email</th>
+            <th class="centro">Tipodoc</th>
+            <th class="centro">Documento</th>
+            <th class="centro">Cargo</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Opciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.nombre %></td>
+              <td><%= user.apellido %></td>
+              <td><%= user.email %></td>
+              <td><%= user.tipo_doc.descripcion %></td>
+              <td><%= user.documento %></td>
+              <td><%= user.cargo.rol %></td>
+              <td><%= bloq(user.estado) %></td>
+              <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><%= image_tag("opcion.png", height: '10', width: '18', class: 'img1') %>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#"><%= button_to 'Ver', user, method: "get", class: 'btn btn-info bottam' %></a></li>
+                      <% if user.cargo_id != 1 || user.email == current_user.email || current_user.id == 5 %>
+                        <li class="divider"></li>
+                        <li><a href="#"><%= button_to 'Editar', edit_user_path(user), method: "get", class: 'btn btn-warning bottam2' %></a></li>
+                      <% end %>
+                    </ul>
+                  </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<br>
+
+<%= button_to 'Nuevo Usuario', new_user_path, method: "get", class: 'btn btn-primary' %>
+<%= will_paginate @users, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+<br>
+Usuarios: <%= @users.count %>
+</div>
+<% else %>
+  <div class="panel panel-danger">
+    <div class="panel-heading">Acceso Denegado</div>
+    <div class="panel-body">
+      <p>Usted No Esta Autorizado Para Entrar En Esta Pagina</p>
+    </div>
+  </div>
+<% end %>

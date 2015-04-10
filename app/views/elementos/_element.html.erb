@@ -1,0 +1,316 @@
+<div class="moventa">
+<a href="#openModal" class="btTxt">Abrir Buscador</a>
+  <div id="openModal" class="modalDialogo">
+    <div>
+      <a href="#close" title="cerrar" class="cerrar">X</a>
+      <div class="fondc3" >
+<h1 class="nomleft">Listado De Elementos</h1>
+
+<div class="buscadormultiple2">
+  <div class="busca1">
+    <%= form_tag @elemento, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Placa:
+          <%= text_field_tag :search, params[:search], class: 'form-control tams', :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="busca2">
+    <%= form_tag @elemento, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Modelo:
+          <%= text_field_tag :modelo, params[:modelo], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="busca3">
+    <%= form_tag @elemento, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Serial:
+          <%= text_field_tag :serial, params[:serial], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+  
+  <div class="busca4">
+    <%= form_tag @elemento, :method => 'get' do %>
+        <div class="form-group pos">
+          Buscar Por Nombre:
+          <%= text_field_tag :nombre, params[:nombre], class: 'form-control' , :value => nil %>
+          <%= image_submit_tag("busca.png", height: '16', width: '18', class: 'img1') %>
+        </div>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<% if @floor.id == 3 %>
+ 
+<div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Ubicacion</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <% if elemento.area.floor_id == 3 %>
+              <tr>
+                <td><%= elemento.placa %></td>
+                <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+                <td><%= elemento.nombre %></td>
+                <td>
+                  <div class="dc">
+                    <%= elemento.descripcion %>
+                  </div>
+                </td>
+                <td>
+                  <div class="dc2">
+                    <%= elemento.modelo %>
+                  </div>
+                </td>
+                <td><%= elemento.serial %></td>
+                <td><%= elemento.fecha_adquisicion %></td>
+                <td><%= elemento.valor %></td>
+                <td><%= est(elemento.estado) %></td>
+                <td><%= elemento.area.nombre %></td>
+              </tr>
+            <% end %>
+            <% break %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
+</div>
+
+<% end %>
+
+
+
+
+<% if @floor.id == 2 %>
+<div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
+    <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Ubicacion</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <% if elemento.area.floor_id == 2 %>
+              <tr>
+                <td><%= elemento.placa %></td>
+                <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+                <td><%= elemento.nombre %></td>
+                <td>
+                  <div class="dc">
+                    <%= elemento.descripcion %>
+                  </div>
+                </td>
+                <td>
+                  <div class="dc2">
+                    <%= elemento.modelo %>
+                  </div>
+                </td>
+                <td><%= elemento.serial %></td>
+                <td><%= elemento.fecha_adquisicion %></td>
+                <td><%= elemento.valor %></td>
+                <td><%= elemento.estado %></td>
+                <td><%= elemento.area.nombre %></td>
+              </tr>
+            <% end %>
+            <% break %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
+</div>
+
+<% end %>
+
+
+
+
+<% if @floor.id == 1 %>
+<div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Ubicacion</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <% if elemento.area.floor_id == 1 %>
+              <tr>
+                <td><%= elemento.placa %></td>
+                <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+                <td><%= elemento.nombre %></td>
+                <td>
+                  <div class="dc">
+                    <%= elemento.descripcion %>
+                  </div>
+                </td>
+                <td>
+                  <div class="dc2">
+                    <%= elemento.modelo %>
+                  </div>
+                </td>
+                <td><%= elemento.serial %></td>
+                <td><%= elemento.fecha_adquisicion %></td>
+                <td><%= elemento.valor %></td>
+                <td><%= elemento.estado %></td>
+                <td><%= elemento.area.nombre %></td>
+              </tr>
+            <% end %>
+            <% break %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if @floor.id == 4 %>
+ 
+<div class="panel-body contabla tabla_scroll">
+<% if @search == nil && @modelo == nil && @serial == nil && @nombre == nil && %>
+<p>No Hay Datos</p>
+<% else %>
+      <table class="table">
+        <thead>
+          <tr class="success">
+            <th class="centro">Placa</th>
+            <th class="centro">Tipo De Elemento</th>
+            <th class="centro">Nombre</th>
+            <th class="centro">Descripcion</th>
+            <th class="centro">Modelo</th>
+            <th class="centro">Serial</th>
+            <th class="centro">Fecha De Adquisicion</th>
+            <th class="centro">Valor</th>
+            <th class="centro">Estado</th>
+            <th class="centro">Ubicacion</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @elementos.each do |elemento| %>
+            <% if elemento.area.floor_id == 4 %>
+              <tr>
+                <td><%= elemento.placa %></td>
+                <td><%= elemento.tipo_elem.nombre rescue nil%></td>
+                <td><%= elemento.nombre %></td>
+                <td>
+                  <div class="dc">
+                    <%= elemento.descripcion %>
+                  </div>
+                </td>
+                <td>
+                  <div class="dc2">
+                    <%= elemento.modelo %>
+                  </div>
+                </td>
+                <td><%= elemento.serial %></td>
+                <td><%= elemento.fecha_adquisicion %></td>
+                <td><%= elemento.valor %></td>
+                <td><%= est(elemento.estado) %></td>
+                <td><%= elemento.area.nombre %></td>
+              </tr>
+            <% end %>
+            <% break %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @elementos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+      <% end %>
+</div>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+<%#<% if can? :create, @elemento %>
+<br>
+<%#<% end %>
+
+
+
+

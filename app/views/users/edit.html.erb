@@ -1,0 +1,28 @@
+<% if current_user %>
+	<% if current_user.email == 'Saim@gmail.com' || current_user.email == @user.email || current_user.cargo_id != 1 %>
+
+		<%= render 'form' %>
+		<div class="contdiv4">
+			<div class="mo0a1">
+			<%= button_to 'Ver', @user, method: "get", class: 'btn btn-info' %>
+			</div>
+			<div class="mo0a2">
+			<%= button_to 'Atras', users_path, method: "get", class: 'btn btn-primary' %>
+			</div>
+		</div>
+	<% else %>
+		<div class="panel panel-danger centro">
+	    	<div class="panel-heading centro">Acceso Denegado</div>
+	    	<div class="panel-body centro">
+	      		<p>Usted No Esta Autorizado Para Entrar En Esta Pagina</p>
+	   	 	</div>
+	  	</div>
+	<% end %>
+<% else %>
+	<div class="panel panel-danger centro">
+    	<div class="panel-heading centro">Acceso Denegado</div>
+    	<div class="panel-body centro">
+      		<p>Usted No Esta Autorizado Para Entrar En Esta Pagina</p>
+   	 	</div>
+  	</div>
+<% end %>

@@ -1,0 +1,31 @@
+<div class="showcentro">
+<%#<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cuentadante.nombre %>
+</p>
+
+<p>
+  <strong>Tipo doc:</strong>
+  <%= @cuentadante.tipo_doc.sigla %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @cuentadante.documento %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @cuentadante.telefono %>
+</p>
+</div>
+<div class="contdiv3">
+	<div class="mo0a1-2">
+	<%= button_to 'Editar', edit_cuentadante_path(@cuentadante), method: "get", class: 'btn btn-warning' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', cuentadantes_path, method: "get", class: 'btn btn-success' %>
+	</div>
+</div>

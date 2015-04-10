@@ -1,0 +1,31 @@
+<div class="showcentro">
+<%#<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre Elemento:</strong>
+  <%= @reintegro.elemento.nombre %>
+</p>
+
+<p>
+	<strong>Cuentadante Origen:</strong>
+	<%= @reintegro.cuentaorigen %>
+</p>
+
+<p>
+  <strong>Cuentadante:</strong>
+  <%= @reintegro.cuentadante.nombre %>
+</p>
+
+<p>
+  <strong>Fecha Reintegro:</strong>
+  <%= @reintegro.fechaReintegro %>
+</p>
+</div>
+<div class="contdiv3">
+	<div class="mo0a1-2">
+	<%= button_to 'Editar', edit_elemento_reintegro_path(@elemento,@reintegro), method: "get", class: 'btn btn-warning' %>
+	</div>
+	<div class="mo0a2">
+	<%= button_to 'Atras', elemento_reintegros_path, method: "get", class: 'btn btn-success' %>
+	</div>
+</div>

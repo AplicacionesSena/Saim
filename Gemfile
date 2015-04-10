@@ -46,3 +46,14 @@ group :development do
 	gem 'quiet_assets'
 	gem 'rails_layout'
 end
+
+gem 'will_paginate'
+
+gem 'simple_form'
+gem 'sorcery'
+gem 'lazybox'
+gem 'cancan'
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
+
+gem 'ransack'

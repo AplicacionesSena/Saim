@@ -1,0 +1,10 @@
+
+
+<%= render 'form' %>
+<% if current_user %>
+<div class="contdiv4">
+	<div class="centrob">
+		<%= button_to 'Atras', users_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>
+<% end %>

@@ -1,0 +1,49 @@
+<div class="showcentro">
+<%#<p id="notice"><%= notice %>
+<p>
+  <strong>Foto De Perfil:</strong>
+  <%= image_tag (@user.foto.url), height: '100', width: '100' %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @user.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @user.apellido %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @user.tipo_doc.sigla %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @user.documento %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @user.cargo.rol %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= bloq(@user.estado) %>
+</p>
+</div>
+<div class="contdiv3">
+  <div class="mo0a1-2">
+  <%= button_to 'Editar', edit_user_path(@user), method: "get", class: 'btn btn-warning' %>
+  </div>
+  <div class="mo0a2">
+  <%= button_to 'Back', users_path, method: "get", class: 'btn btn-success' %>
+  </div>
+</div>

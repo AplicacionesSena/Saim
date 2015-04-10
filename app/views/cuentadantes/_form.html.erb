@@ -1,0 +1,67 @@
+<%= form_for(@cuentadante) do |f| %>
+  <% if @cuentadante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cuentadante.errors.count, "error") %> prohibited this cuentadante from being saved:</h2>
+
+      <ul>
+      <% @cuentadante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <% if @cuentadante.nombre == nil %>
+              <h3 class="centro">Campos Para Registrar Un Cuentadante</h3>
+            <% else %>
+              <h3 class="centro">Campos Para Editar Un Cuentadante</h3>
+            <% end %>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+               <div class="form-group mo0">
+                  <%= f.label :Nombre %><br>
+                  <%= f.text_field :nombre, class: 'form-control tams1' %>
+                </div>
+                <hr>
+                <div class="form-group movcedu">
+                  <label>Tipo de Documento</label><br>
+                  <%= f.collection_select :tipo_doc_id, TipoDoc.all, :id, :sigla, class: "form-control tams", prompt: "Seleccione Tipo De Documento" %>
+                </div>
+                <br>
+                <div class="form-group mov1">
+                  <%= f.label :Documento %><br>
+                  <%= f.number_field :documento, class: 'form-control tams' %>
+                </div>
+                <div class="form-group mo02">
+                  <%= f.label :Telefono %><br>
+                  <%= f.number_field :telefono, class: 'form-control tams' %>
+                </div>
+                <hr>
+                <div class="form-group mo03">
+                  <label>Ubicacion:</label><br>
+                  <%= f.collection_select :area_id, Area.all, :id, :nombre, class: "form-control tams", prompt: "Seleccione Ubicacion" %>
+                </div>
+                <% if @cuentadante.nombre == nil %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Guardar", class: "btn btn-success" %>
+                  </div>
+                <% else %>
+                  <div class="actions mo0g">
+                    <%= f.submit "Actualizar", class: "btn btn-warning" %>
+                  </div>              
+                <% end %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

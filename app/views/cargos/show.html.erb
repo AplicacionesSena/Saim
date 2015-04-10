@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cargo.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @cargo.descripcion %>
+</p>
+
+<p>
+  <strong>Privilegiover:</strong>
+  <%= @cargo.privilegioVer %>
+</p>
+
+<p>
+  <strong>Privilegioeditar:</strong>
+  <%= @cargo.privilegioEditar %>
+</p>
+
+<p>
+  <strong>Privilegioeleminar:</strong>
+  <%= @cargo.privilegioEleminar %>
+</p>
+
+<p>
+  <strong>Privilegiocrear:</strong>
+  <%= @cargo.privilegioCrear %>
+</p>
+
+<%= link_to 'Edit', edit_cargo_path(@cargo) %> |
+<%= link_to 'Back', cargos_path %>

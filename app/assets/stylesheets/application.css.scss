@@ -10,10 +10,18 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require lazybox
  *= require_tree .
  *= require_self
  *= require custom
  *= require estilo
  *= require bootstrap
  *= require font-awesome
+ *= require styles
+ *= require opcionlog
+ *= require fullcalendar
+ *= require minimenudesp
+ *= require menucir
+ *=	require demo
+ *= require style8
  */
