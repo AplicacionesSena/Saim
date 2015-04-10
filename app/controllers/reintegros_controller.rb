@@ -5,6 +5,10 @@ class ReintegrosController < ApplicationController
   # GET /reintegros.json
   def index
     @reintegros = @elemento.reintegros.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+    end
   end
 
   # GET /reintegros/1

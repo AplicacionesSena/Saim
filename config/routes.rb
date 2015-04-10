@@ -71,6 +71,7 @@ Rails.application.routes.draw do
   get 'pagina/elementosxareas'
   get 'pagina/etraspasos'
   get 'pagina/ereintegros'
+  get 'pagina/estreintegr'
   get 'pagina/traceability'
   get 'pagina/index'
   get 'pagina/contactenos'

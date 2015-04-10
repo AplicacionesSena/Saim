@@ -12,18 +12,80 @@
       series: [{
         name: 'Traspasos',
         type: 'line',
-        pointInterval: <%= 1.day * 1000 %>,
-        pointStart: <%= 0.2.weeks.ago.at_midnight.to_i * 1000 %>,
+        pointInterval: <%= 1.day * 1000%>,
+        pointStart: <%= 0.5.weeks.ago.at_midnight.to_i * 1000%>,
         data: <%= @cantidad %>
       }]
     });
   });
 </script>
 
+<div id="mydiv">
+  <center>
+    <div id="orders_chart" style="width: 960px; height: 500px;">
+    </div>
+  </center>
+  <div class="ocultar">
+      <div class="panel-body contabla">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="centro">Nombre Elemento</th>
+              <th class="centro">Cuentadante Origen</th>
+              <th class="centro">Cuentadante Destino</th>
+              <th class="centro">Fecha De Traspaso</th>
+            </tr>
+          </thead>
 
-<center><div id="orders_chart" style="width: 960px; height: 500px;"></div></center>
-
+          <tbody>
+            <% @transfers.each do |transfer| %>
+              <tr>
+                <td><%= transfer.elemento.nombre %></td>
+                <td><%= transfer.cuentaorigen %></td>
+                <td><%= transfer.cuentadante.nombre %></td>
+                <td><%= transfer.fechaTraspaso %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+</div>
 <table class="pretty">
   <!-- Orders table code here -->
 </table>
 <a href="/pagina/estadisticas" class="btn btn-primary">Menu Estadisticas</a>
+
+
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script> 
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup($(elem).html());
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'my div', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>PPDF Estadisticas Cantidad De Traspasos</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+
+</script>
+
+
+<input type="button" value="Print Div" onclick="PrintElem('#mydiv')" />

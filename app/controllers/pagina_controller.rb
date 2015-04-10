@@ -26,7 +26,10 @@ class PaginaController < ApplicationController
   	@elementos = Elemento.all
   end
 
-  def ereintgros
+  def estreintgr
+    
+  end
+  def ereintegros
     @reintegros = Reintegro.all
     @elementos = Elemento.all
   end

@@ -15,7 +15,28 @@
 </script>
 
 <div id="mydiv">
-<center><div id="orders_chart" style="width: 960px; height: 500px;"></div></center>
+  <center>
+    <div id="orders_chart" style="width: 960px; height: 500px;">
+    </div>
+  </center>
+  <div class="ocultar">
+    <table class="table">
+      <thead>
+        <tr class="success">
+          <th class="centro">Nombre Del Area</th> 
+          <th class="centro">Cantidad De Elementos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @areas.each do |area| %>
+        <tr>
+          <td><%= area.nombre %></td>
+          <td>En Esta Area Hay -> <%= area.elementos.count %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <table class="pretty">
@@ -35,7 +56,7 @@
     function Popup(data) 
     {
         var mywindow = window.open('', 'my div', 'height=400,width=600');
-        mywindow.document.write('<html><head><title>my div</title>');
+        mywindow.document.write('<html><head><title>PPDF Estadisticas Cantidad De Elementos Por Areas</title>');
         /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
         mywindow.document.write('</head><body >');
         mywindow.document.write(data);
