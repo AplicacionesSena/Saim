@@ -12,14 +12,17 @@
 <%#<% end %>
 </div>
     <% @floors.each do |floor| %>
-       <p class="centro"><%= floor.nombre %></p><%#</td>%>
+       <h1 class="centro"><%= floor.nombre %></h1><%#</td>%>
        <%= image_tag(floor.image.url)%><%#</td>%>
         <%#<td><%= link_to 'Ver', floor %><%#</td>%>
         <%#<td><%= link_to 'Editar', edit_floor_path(floor) %><%#</td>%>
-        <%#<td><%= link_to 'Eliminar', floor, method: :delete, data: { confirm: 'Estas Seguro?' } %><%#</td>%>
-       <p class="centro"><%= link_to 'Ver Areas ⇨ '+ floor.areas.count.to_s + '', floor_areas_path(floor) %></p>
+        <%#<td><%= link_to 'Eliminar', floor, method: :delete, data: { confirm: 'Estas Seguro?' } %><%#</td>%><%= button_to 'Ver Areas ⇨ '+ floor.areas.count.to_s + '', floor_areas_path(floor), class: "btn btn-default movercentro" %>
+       <div class="editar_indexareas">
+        <%= button_to "Editar", edit_floor_path(floor), method: "get",class: 'btn btn-warning' %>
+       </div>
+       <hr>
     <% end %>
-<p class="centro"><%= link_to 'Nuevo Piso', new_floor_path %></p>
+    <%= button_to 'Nuevo Piso', new_floor_path, method: "get", class: 'btn btn-primary movercentro' %>
 <hr>
 </div>
 

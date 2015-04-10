@@ -1,6 +1,10 @@
-<h1>Editing area</h1>
-
 <%= render 'form' %>
 
-<%= link_to 'Show', floor_area_path(@floor,@area) %> |
-<%= link_to 'Back', floor_areas_path %>
+<div class="contdiv4">
+	<div class="ver_area">
+	<%= button_to 'Ver', floor_area_path(@floor,@area), method: "get", class: 'btn btn-info' %>
+	</div>
+	<div class="atras_indexarea">
+	<%= button_to 'Atras', floor_areas_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>

@@ -145,6 +145,17 @@ ul {
 	width: 202px;
 	text-align: center;
 }
+.mov01-3{
+	margin-left: 286px;
+	margin-top: -70px;
+	width: 202px;
+	text-align: center;
+}
+.mov01-4{
+	margin-left: 280px;
+	width: 202px;
+	text-align: center;
+}
 .mov1{
 	margin-left: 580px;
 	margin-top: -82px;
@@ -160,6 +171,12 @@ ul {
 .mov3{
 	margin-left: 580px;
 	margin-top: -99px;
+	width: 190px;
+	text-align: center;
+}
+.mov3-2{
+	margin-left: 580px;
+	margin-top: -70px;
 	width: 190px;
 	text-align: center;
 }
@@ -511,11 +528,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 .divplan{
 	border: 1px solid black;
 	width: auto;
-	height: 700px;
+	height: 640px;
 	word-break: break-all;
 	word-wrap: break-word;
 	overflow-y:scroll;
 	overflow-x:none;
+	border-radius: 50px;
 }
 
 
@@ -1613,10 +1631,40 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 .nomleft{
 	margin-top: -10px;
 }
-
-
-
-
+.fondop{
+	border:1px solid black;
+	width: 400px;
+	box-shadow: 0px 0px 8px 0px black;
+	text-align: center;
+	margin-left: 350px;
+}
+.editar_area{
+	margin-left: -70px;
+}
+.eliminar_area{
+	margin-left: 70px;
+	margin-top: -34px;
+}
+.ver_area{
+	margin-left: 500px;
+}
+.ver_piso{
+	margin-left: 500px;
+}
+.atras_indexarea{
+	margin-left: 550px;
+	margin-top: -34px;
+}
+.atras_indexpisos{
+	margin-left: 550px;
+	margin-top: -34px;
+}
+.editar_indexareas{
+	margin-left: 500px;
+}
+.movercentro{
+	margin-left: 480px;
+}
 
 
 
