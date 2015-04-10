@@ -362,7 +362,8 @@ ul {
 }
 
 .paginacion_y_contador{
-	margin-top: -26px;
+	margin-top: -17px;
+	height: 70px;
 }
 .conthistory{
 	word-break: break-all;
@@ -1450,6 +1451,37 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 	position: relative;
 }
 /*_________________________________________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________________________________AREAS Piso Virtual______________________________________________________*/
+
+/*____________________________________________________________Areas________________________________________________________________*/
+.sec45{
+	border: 2px solid red;
+	background-color:red;
+	width: 150px;
+	height: 150px;
+	margin-left: 300px;
+	margin-top: -300px;
+	position: relative;
+}
+
+
+
+
+
+
 
 
 

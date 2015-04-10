@@ -1777,3 +1777,78 @@
 			<% end %>
 		<% end %>
 	<%#---------------------------------------------------------------------------------------------------------------------------%>
+<%#--------------------------------------------------------------------------------------------------------------------------------%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%#--------------------------------------------------------Area_Virtual-Areas-------------------------------------------------------%>
+	<%#---------------------------------------------------------Almacen_Virtual-------------------------------------------------------%>
+	<% if @modelo != nil && @serial == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 45 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec45">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @serial != nil && @modelo == nil && @search == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 45 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec45">
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @search != nil && @serial == nil && @modelo == nil && @nombre == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 45 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec45">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+		<% if @nombre != nil && @search == nil && @serial == nil && @modelo == nil %>
+			<% @elementos.each do |elemento| %>
+				<% if elemento.area_id == 45 && elemento.area.floor_id ==  @floor.id %>
+					<div class="sec45">	
+					</div>
+				<% end %>
+				<% break %>
+			<% end %>
+		<% end %>
+	<%#---------------------------------------------------------------------------------------------------------------------------%>
+<%#--------------------------------------------------------------------------------------------------------------------------------%>

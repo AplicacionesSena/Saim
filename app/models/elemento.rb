@@ -23,6 +23,11 @@ class Elemento < ActiveRecord::Base
 
 	def self.import(file)
     	CSV.foreach(file.path, headers: true) do |row|
+    		if row["area_id"] == nil
+    			row["area_id"] = 45
+    		else
+    			
+    		end
         Elemento.create! row.to_hash
     end
 end

@@ -17,6 +17,7 @@
 
   </div>
 </div>
+<a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
 <br>
 <% end %>
 
@@ -34,6 +35,7 @@
     </map>
   </div>
 </div>
+<a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
 <br>
 <% end %>
 
@@ -52,8 +54,37 @@
     </map>
   </div>
 </div>
+<a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
 <br>
 <% end %>
+
+
+
+
+
+
+<% if @floor.id == 4 %>
+<div class="contenedortodoplanos">
+  <div class="plano">
+    
+    <%= image_tag("universo.jpg", alt: 'Planets', usemap: '#planmap') %>
+     
+      <%= render "elementos/div"%>
+    <map name="planmap">
+    
+      <% @areas.each do |area| %>
+        <area alt="" title="" href="/floors/<%= @floor.id %>/areas/<%= area.id %>" shape="<%= area.shape %>" coords="<%= area.coords %>" />
+      <% end %>
+    </map>
+
+  </div>
+</div>
+<br>
+<% end %>
+
+
+
+
 
 <%#<div class="contenedortodoplanos">%>
   <div class="buscen_area">

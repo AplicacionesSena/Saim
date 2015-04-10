@@ -32,6 +32,7 @@
           <thead>
             <tr>
               <th class="centro">Nombre Elemento</th>
+              <th class="centro">Placa</th>
               <th class="centro">Cuentadante Origen</th>
               <th class="centro">Cuentadante Destino</th>
               <th class="centro">Fecha De Traspaso</th>
@@ -42,6 +43,7 @@
             <% @transfers.each do |transfer| %>
               <tr>
                 <td><%= transfer.elemento.nombre %></td>
+                <td><%= transfer.elemento.placa %></td>
                 <td><%= transfer.cuentaorigen %></td>
                 <td><%= transfer.cuentadante.nombre %></td>
                 <td><%= transfer.fechaTraspaso %></td>
@@ -88,4 +90,4 @@
 </script>
 
 
-<input type="button" value="Print Div" onclick="PrintElem('#mydiv')" />
+<input type="button" value="Imprimir Estadistica Traspasos" onclick="PrintElem('#mydiv')" class="btn btn-info" />
