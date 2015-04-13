@@ -5,7 +5,7 @@ class PaginaController < ApplicationController
   end
 
   def bloqueo
-  	@users = User.all
+  	@users = User.search(params[:search], params[:page])
   end
 
   def estadisticas

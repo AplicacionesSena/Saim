@@ -71,14 +71,14 @@
                         </ul>
                     </li>
                     <li class="tam1">
-                        <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
+                        <a href="/floors"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
                             <p class="text">Planos</p>
                         </a>
                         <ul>
-                            <li class="tam1">
-                                <a href="/floors"><%= image_tag("PLanos.png", height: '55', width: '55', class: 'img1') %><p class="text1">Planos</p>
+                            <%#<li class="tam1">
+                                <a href="/floors"><%= image_tag("PLanos.png", height: '55', width: '55', class: 'img1') %><%#<p class="text1">Planos%><%#</p>
                                 </a>
-                            </li>
+                            <%#</li>%>
                             <li class="tam1">
                                 <a href="/floors/1/areas"><%= image_tag("041.png", height: '55', width: '55', class: 'img1') %><p class="text1">Piso#1</p>
                                 </a>
@@ -126,24 +126,24 @@
                             <% end %>
                         </ul>
                     </li>
-                    <% if current_user.email == "Saim@gmail.com" %>
-                    <li class="tam1">
+                    <%#<% if current_user.email == "Saim@gmail.com" %>
+                    <%#<li class="tam1">
                         <a href="#" ><%= image_tag("026.png", height: '55', width: '55', class: 'img1') %>
-                        	<p class="text4">Configurar Tipos</p>
+                    <%#    	<p class="text4">Configurar Tipos</p>
                         </a>
                         <ul>
                             <li class="tam1">
-                        		<a href="/tipo_docs"><%= image_tag("005.png", height: '55', width: '55', class: 'img1') %><p class="text4">Tipos De Documentos</p>
+                        		<a href="/tipo_docs"><%= image_tag("005.png", height: '55', width: '55', class: 'img1') %><%#<p class="text4">Tipos De Documentos</p>
                         		</a>
                             </li>
                             <li class="tam1">
-                        		<a href="/tipo_elems"><%= image_tag("045.png", height: '55', width: '55', class: 'img1') %><p class="text4">Tipos De Elementos</p>
+                        		<a href="/tipo_elems"><%= image_tag("045.png", height: '55', width: '55', class: 'img1') %><%#<p class="text4">Tipos De Elementos</p>
                         		</a>
                             </li>
                         </ul>
                     </li>
                     <% else %>
-                    <% end %>
+                    <%#<% end %>
                     <%#<li class="tam1">
                         <a href="#"><%= image_tag("040.png", height: '55', width: '55', class: 'img1') %>
                     <%#    	<p class="text">Ubicacion</p>

@@ -34,9 +34,9 @@
         <%= @event.end %>
       </p>
 
-      <%= link_to 'Editar', edit_event_path(@event) %>
-      <%= link_to 'Eliminar', event_path(@event), method: :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => "Esta Seguro?")) } %>
-      <%= link_to 'Atras', events_path %>
+      <%= button_to 'Editar', edit_event_path(@event), method: "get", class: 'btn btn-warning' %>
+      <%= link_to '<i class="btn btn-danger btn-xs">Eliminar</i>'.html_safe, event_path(@event), method: :delete, data: { confirm: 'Estas Segur@?' } %>
+      <%= button_to 'Atras', events_path, method: "get", class: 'btn btn-success' %>
     </div>
   </div>
 </div>
