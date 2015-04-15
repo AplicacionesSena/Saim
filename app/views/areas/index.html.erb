@@ -5,7 +5,7 @@
 <div class="contenedortodoplanos">
   <div class="plano">
     
-    <%= image_tag("Plano Primer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+    <%= image_tag (@floor.image.url), alt: 'Planets', usemap: '#planmap' %>
      
       <%= render "elementos/div"%>
     <map name="planmap">
@@ -18,13 +18,15 @@
   </div>
 </div>
 <a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
+<a href="http://imagemap-generator.dariodomi.de/" class="btn btn-info">Generador De Coordenadas</a>
+<%= link_to "Nueva Area", new_floor_area_path(@floor), class: 'btn btn-primary' %>>
 <br>
 <% end %>
 
 <% if @floor.id == 2 %>
 <div class="contenedortodoplanos">
   <div class="plano2">
-    <%= image_tag("Plano Segundo Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+    <%= image_tag (@floor.image.url), alt: 'Planets', usemap: '#planmap' %>
 
       <%= render "elementos/div" %>
     <map name="planmap">
@@ -36,6 +38,8 @@
   </div>
 </div>
 <a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
+<a href="http://imagemap-generator.dariodomi.de/" class="btn btn-info">Generador De Coordenadas</a>
+<%= link_to "Nueva Area", new_floor_area_path(@floor), class: 'btn btn-primary' %>
 <br>
 <% end %>
 
@@ -43,7 +47,7 @@
 <div class="contenedortodoplanos">
   <div class="plano3">
 
-    <%= image_tag("Plano Tercer Piso CFDCM.png", alt: 'Planets', usemap: '#planmap') %>
+    <%= image_tag (@floor.image.url), alt: 'Planets', usemap: '#planmap' %>
 
     <%= render "elementos/div"%>
     <map name="planmap">
@@ -55,6 +59,8 @@
   </div>
 </div>
 <a href="/floors/4/areas" class="btn btn-primary">PLano Virtual</a>
+<a href="http://imagemap-generator.dariodomi.de/" class="btn btn-info">Generador De Coordenadas</a>
+<%= link_to "Nueva Area", new_floor_area_path(@floor), class: 'btn btn-primary' %>
 <br>
 <% end %>
 
@@ -67,7 +73,7 @@
 <div class="contenedortodoplanos">
   <div class="plano">
     
-    <%= image_tag("universo.jpg", alt: 'Planets', usemap: '#planmap') %>
+    <%= image_tag (@floor.image.url), alt: 'Planets', usemap: '#planmap' %>
      
       <%= render "elementos/div"%>
     <map name="planmap">
@@ -79,6 +85,8 @@
 
   </div>
 </div>
+<a href="http://imagemap-generator.dariodomi.de/" class="btn btn-info">Generador De Coordenadas</a>
+<%= link_to "Nueva Area", new_floor_area_path(@floor), class: 'btn btn-primary' %>
 <br>
 <% end %>
 

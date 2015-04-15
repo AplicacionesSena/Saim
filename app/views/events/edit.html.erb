@@ -8,8 +8,8 @@
   		<div class="tab-pane fade active in cont1" id="inicio">
 			<h1>Editar evento</h1>
 			<%= render 'form' %>
-			<%= link_to 'Ver', @event %> |
-			<%= link_to 'Atras', events_path %>
+			<%= button_to 'Ver', @event, method: "get", class: 'btn btn-info' %>
+			<%= button_to 'Atras', events_path, method: "get", class: 'btn btn-primary' %>
 		</div>
 	</div>
 </div>

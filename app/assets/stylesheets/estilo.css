@@ -113,6 +113,12 @@ ul {
 	width: 190px;
 	text-align: center;
 }
+.mo0a2atraspisoshow{
+	margin-left: 476px;
+	margin-top: -30px;
+	width: 190px;
+	text-align: center;
+}
 .mo0a1-2{
 	margin-left: 412px;
 	margin-top: -30px;
@@ -145,6 +151,17 @@ ul {
 	width: 202px;
 	text-align: center;
 }
+.mov01-3{
+	margin-left: 286px;
+	margin-top: -70px;
+	width: 202px;
+	text-align: center;
+}
+.mov01-4{
+	margin-left: 280px;
+	width: 202px;
+	text-align: center;
+}
 .mov1{
 	margin-left: 580px;
 	margin-top: -82px;
@@ -160,6 +177,12 @@ ul {
 .mov3{
 	margin-left: 580px;
 	margin-top: -99px;
+	width: 190px;
+	text-align: center;
+}
+.mov3-2{
+	margin-left: 580px;
+	margin-top: -70px;
 	width: 190px;
 	text-align: center;
 }
@@ -180,6 +203,10 @@ ul {
 	margin-top: 50px;
 	position: absolute;
 }
+.contdiv3verpiso{
+	margin-top: 50px;
+	margin-left: -340px;
+}
 .contdiv4{
 	margin-top: -40px;
 	margin-left: -20px;
@@ -197,6 +224,9 @@ ul {
 }
 .contabla{
 	margin-top: -5px;
+}
+.contabla_userpartial{
+	margin-top: -35px;
 }
 
 .drop{
@@ -350,6 +380,17 @@ ul {
 	box-shadow: 0px 0px 8px 0px black;
 	margin-top: -22px;
 }
+.fondc2usuariopartial{
+	width: auto;
+	height: 650px;
+	border:2px solid #ddd;
+	border-radius: 6px;
+	/*overflow-x:hidden;
+	overflow-y:scroll;*/
+	text-align: center;
+	box-shadow: 0px 0px 8px 0px black;
+	margin-top: -22px;
+}
 .fondc2elemento{
 	width: auto;
 	height: auto;
@@ -364,6 +405,16 @@ ul {
 .paginacion_y_contador{
 	margin-top: -17px;
 	height: 70px;
+}
+.paginacion_y_contador2{
+	margin-top: -17px;
+	height: 70px;
+	text-align: center;
+}
+.paginacion_usuario{
+	margin-top: -70px;
+	height: 70px;
+	text-align: center;
 }
 .conthistory{
 	word-break: break-all;
@@ -509,13 +560,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccddff', end
 }
 
 .divplan{
-	border: 1px solid black;
 	width: auto;
-	height: 700px;
+	height: 640px;
 	word-break: break-all;
 	word-wrap: break-word;
 	overflow-y:scroll;
 	overflow-x:none;
+	border-radius: 50px;
+	margin-top: -20px;
 }
 
 
@@ -1613,14 +1665,61 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 .nomleft{
 	margin-top: -10px;
 }
+.fondop{
+	border:1px solid black;
+	width: 400px;
+	box-shadow: 0px 0px 8px 0px black;
+	text-align: center;
+	margin-left: 350px;
+}
+.editar_area{
+	margin-left: -70px;
+}
+.eliminar_area{
+	margin-left: 70px;
+	margin-top: -34px;
+}
+.ver_area{
+	margin-left: 500px;
+}
+.ver_piso{
+	margin-left: 500px;
+}
+.atras_indexarea{
+	margin-left: 550px;
+	margin-top: -30px;
+}
+.atras_indexpisos{
+	margin-left: 550px;
+	margin-top: -30px;
+}
+.editar_indexareas{
+	margin-left: 500px;
+}
+.editar_indexpisos{
+	text-align: center;
+	margin-top: -15px;
+}
+.movercentro{
+	margin-left: 480px;
+}
+.pisosdatos{
+	margin-top: -55px;
+	border: 1px solid black;
+	height: 470px;
+	width: 500px;
+	margin-left: 290px;
+	box-shadow: 0px 0px 8px 0px black;
+	border-radius: 50px;
+}
+.botguarpiso{
+	margin-top: -12px;
+	margin-left: 490px;
+}
 
-
-
-
-
-
-
-
+.buscador_userpartial{
+	margin-top: -30px;
+}
 
 
 

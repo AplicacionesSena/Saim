@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @floor.nombre %>
-</p>
-
-<%= link_to 'Edit', edit_floor_path(@floor) %> |
-<%= link_to 'Back', floors_path %>
+<div class="showcentro">
+	<div class="fondop">
+	<p id="notice"><%= notice %></p>
+		<p>
+		  <strong>Nombre:</strong>
+		  <%= @floor.nombre %>
+		</p>
+		<div class="contdiv3verpiso">
+			<div class="mo0a1-2">
+			<%= button_to 'Editar', edit_floor_path(@floor), method: "get", class: 'btn btn-warning' %>
+			</div>
+			<div class="mo0a2atraspisoshow">
+			<%= button_to 'Atras', floors_path, method: "get", class: 'btn btn-success' %>
+			</div>
+		</div>
+	</div>
+</div>

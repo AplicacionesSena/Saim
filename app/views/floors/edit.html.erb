@@ -1,6 +1,10 @@
-<h1>Editing floor</h1>
-
 <%= render 'form' %>
 
-<%= link_to 'Show', @floor %> |
-<%= link_to 'Back', floors_path %>
+<div class="contdiv4">
+	<div class="ver_piso">
+	<%= button_to 'Ver', @floor, method: "get", class: 'btn btn-info' %>
+	</div>
+	<div class="atras_indexpisos">
+	<%= button_to 'Atras', floors_path, method: "get", class: 'btn btn-primary' %>
+	</div>
+</div>

@@ -4,7 +4,7 @@ class FloorsController < ApplicationController
   # GET /floors
   # GET /floors.json
   def index
-    @floors = Floor.all
+    @floors = Floor.search(params[:search], params[:page])
   end
 
   # GET /floors/1
@@ -27,7 +27,7 @@ class FloorsController < ApplicationController
     @floor = Floor.new(floor_params)
     respond_to do |format|
       if @floor.save
-        format.html { redirect_to @floor, notice: 'Floor was successfully created.' }
+        format.html { redirect_to @floor, notice: 'Piso Creado Con Exito.' }
         format.json { render :show, status: :created, location: @floor }
       else
         format.html { render :new }
@@ -41,7 +41,7 @@ class FloorsController < ApplicationController
   def update
     respond_to do |format|
       if @floor.update(floor_params)
-        format.html { redirect_to @floor, notice: 'Floor was successfully updated.' }
+        format.html { redirect_to @floor, notice: 'Piso Actualizado Con Exito.' }
         format.json { render :show, status: :ok, location: @floor }
       else
         format.html { render :edit }
@@ -55,7 +55,7 @@ class FloorsController < ApplicationController
   def destroy
     @floor.destroy
     respond_to do |format|
-      format.html { redirect_to floors_url, notice: 'Floor was successfully destroyed.' }
+      format.html { redirect_to floors_url, notice: 'Piso Eliminado Con Exito.' }
       format.json { head :no_content }
     end
   end
