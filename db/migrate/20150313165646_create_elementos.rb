@@ -8,15 +8,15 @@ class CreateElementos < ActiveRecord::Migration
       t.string :modelo
       t.string :serial
       t.datetime :fecha_adquisicion
-      t.string :valor
+      t.float :valor
       t.boolean :estado
       t.string :datoc
       t.string :datoe
       t.references :area, index: true
       t.integer :cuentadante_id
       t.string :marca
-      t.string :cantidad
-      t.string :valor_total
+      t.float :cantidad
+      t.float :valor_total
 
       t.timestamps
     end

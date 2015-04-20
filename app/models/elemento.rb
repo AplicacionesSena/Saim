@@ -5,6 +5,12 @@ class Elemento < ActiveRecord::Base
   has_many :transfers, :dependent => :destroy
   has_many :reintegros, :dependent => :destroy
 
+  before_validation :set_valor_total
+
+  def set_valor_total
+  	self.valor_total = cantidad.to_i * valor.to_i
+  end
+
   	def self.search(search, page)
 		where(['placa LIKE :s', :s => "%#{search}%".upcase]).paginate(page: page, per_page: 1).order("id")
 	end
@@ -28,6 +34,7 @@ class Elemento < ActiveRecord::Base
     		else
     			
     		end
+    		row["valor_total"] = row["cantidad.to_i * valor.to_i"]
         Elemento.create! row.to_hash
     end
 end
