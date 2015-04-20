@@ -54,10 +54,6 @@ class ElementosController < ApplicationController
     @cargos = Cargo.all
     @elemento = Elemento.new(elemento_params)
     @elemento.area_id = @area.id
-    if @elemento.cantidad == nil
-      @elemento.valor_total = @elemento.valor.to_i
-    end
-    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
     respond_to do |format|
       if @elemento.save
         format.html { redirect_to area_elementos_path(@area), notice: 'Elemento Creado con exito' }
@@ -72,8 +68,6 @@ class ElementosController < ApplicationController
   # PATCH/PUT /elementos/1
   # PATCH/PUT /elementos/1.json
   def update
-    @elemento.valor_total = @elemento.cantidad.to_i * @elemento.valor.to_i
-    @elemento.save
     respond_to do |format|
       if @elemento.update(elemento_params)
         format.html { redirect_to area_elementos_path(@area), notice: 'Elemento actualizado con exito' }
